@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>老年大学系统—学期管理</title>
+    <link rel="stylesheet" href="plugins/layui-v2.4.3/layui/css/layui.css"/>
+    <link rel="stylesheet" href="css/common_style.css" />
+    <link rel="stylesheet" href="css/xqgl.css" />
+    <style>
+        body .demo-class .layui-layer-title{ color:red; font-weight: bold; font-size: 18px;}
+        .layui-layer-dialog{
+            border:#3d9def solid 0.3rem;
+            border-radius: 0.4rem;
+        }
+        .layui-layer-title{
+            height: 35px;
+        }
+        .layui-layer-content{
+            text-align: center; font-size: 20px!important; position: absolute; top:3rem;
+        }
+    </style>
+</head>
+<body>
+    <!--学期管理内容-->
+    <div class="layui-body xqglContent">
+		<span class="layui-breadcrumb xqgl_nav">
+			<a href="javascript:;"><cite>学期管理</cite></a><span lay-separator="">></span>
+            <a href="javascript:;"><cite>修改</cite></a>
+		</span>
+       <!--选择框-->
+       <div class="biaoGe">
+          <section >
+            <span class="xqlb_bt fl">学期修改</span>
+            <a href="xqgl.html" class="xqxz_cancel fr" id="xzxq" >
+                <i class=""></i>返回
+            </a>
+          </section>
+          <!---选择框开始-->
+          <section class="xqgl_xz">
+              <form class="layui-form" action="">
+                  <div class="layui-form-item">
+                      <label class="layui-form-label">学期名称：</label>
+                      <div class="layui-input-inline xqmc">
+                          <input type="text" name="title" id="title" required  lay-verify="required"
+                                 autocomplete="off" class="layui-input">
+                      </div>
+                  </div>
+
+                  <div class="layui-form-item">
+                      <label class="layui-form-label">开始时间：</label>
+                      <div class="layui-input-inline xqmc">
+                          <input type="text" name="getTime" id="getTime" required  lay-verify="required"
+                                 autocomplete="off" class="layui-input layui-disabled" disabled>
+                      </div>
+                  </div>
+
+                  <div class="layui-form-item">
+                      <label class="layui-form-label">结束时间：</label>
+                      <div class="layui-input-inline xqmc">
+                          <input type="text" name="endTime" id="endTime" required  lay-verify="required"
+                                 autocomplete="off" class="layui-input layui-disabled" disabled>
+                      </div>
+                  </div>
+              </form>
+              <div class="layui-form-item">
+                  <div class="layui-input-block btn-ok">
+                      <a href="javascript:;" class="btn" id="qrxg" >确认修改</a>
+                  </div>
+              </div>
+          </section>
+          <!--选择框end-->
+
+
+       </div>
+       <!--选择框end-->
+    </div>
+    <!--学期管理内容end-->
+    <script src="plugins/jQuery/jquery-3.3.1.js"></script>
+    <script src="plugins/layui-v2.4.3/layui/layui.js"></script>
+    <script src="js/xqgl.js"></script>
+    <script>
+        //获取浏览地址id
+        (function ($) {
+            $.getUrlParam = function (name) {
+                var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+                var r = window.location.search.substr(1).match(reg);
+                if (r != null) return unescape(r[2]); return null;
+            }
+        })(jQuery);
+        var id=$.getUrlParam('id');
+
+        // 查询到id，并把表格页面的值带到修改页面
+        $(function(){
+            $.ajax({
+                type: 'GET',
+                url: "http://192.168.0.146:8088/term/detail",
+                async: false,
+                data:{
+                    id:id
+                },
+                dataType:'json',
+                xhrFields: {withCredentials: true},
+                success: function (data) {
+                    $("#title").val(data.data.term);
+                    $("#getTime").val(data.data.starttime);
+                    $("#endTime").val(data.data.endtime);
+
+                },
+                error: function () {
+                    layui.use('layer', function(){
+                        var layer = layui.layer;
+                        layer.msg('未查到数据');
+                    });
+                }
+            });
+        });
+
+        //修改
+        $("#qrxg").click(function () {
+            var Name = document.getElementById("title").value;
+            $.ajax({
+                type: 'post',
+                url: "http://192.168.0.146:8088/term/updateterm",
+                async: false,
+                data: {
+                    id:id,
+                    term:Name
+                },
+                dataType: 'json',
+                xhrFields: {withCredentials: true},
+                success: function (data) {
+                    window.location.href = "http://192.168.0.162:8083/xqgl.html";
+                },
+                error: function () {
+                    layui.use('layer', function () {
+                        var layer = layui.layer;
+                        layer.msg('修改失败!', {time: 2000});
+                    });
+                }
+            })
+        })
+
+    </script>
+</body>
+</html>

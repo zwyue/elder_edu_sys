@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>老年大学系统——排课管理</title>
+    <link rel="stylesheet" href="plugins/layui-v2.4.3/layui/css/layui.css"/>
+    <link rel="stylesheet" href="css/common_style.css" />
+    <link rel="stylesheet" href="font/iconfont.css"/>
+    <link rel="stylesheet" href="css/pkgl.css"/>
+	<link rel="stylesheet" href="font/iconfont-zdpk.css"/>
+</head>
+<body id="bzrgl">
+  <!--排课管理-自动排课--->
+  <div class="layui-body pkglContent">
+		<span class="layui-breadcrumb pkgl_nav">
+		  <a href="pkgl_ksdgl.html"><cite>排课管理</cite></a><span lay-separator="">></span>
+          <a href="pkgl_ksdgl.html"><cite>自动排课</cite></a><span lay-separator="">></span>
+          <!--<a href="javascript:;"><cite>改课</cite></a>-->
+		</span>
+    <!--内容部分-->
+	   <div class="content content_zdpk">
+		   <div class="content-head">
+			  <a class="title" href="javascript:;" >自动排课</a>
+			  <!--<a href="javascript:history.go(-1);" class="fanHui">返回</a>-->
+		  </div>
+		   <div class="bjwtyjy_content">
+			  <form class="layui-form" action="">
+				  <div class="layui-form-item">
+					  <div class="layui-inline">
+						  <label class="layui-form-label">排课时间：</label>
+						  <div class="layui-input-inline">
+							  <select name="" lay-verify="required">
+								  <option value="周一">周一</option>
+							  </select>
+						  </div>
+					  </div>
+					  <div class="layui-inline">
+						  <div class="layui-input-inline">
+							  <select name="" lay-verify="required">
+								  <option value="所有">所有</option>
+							  </select>
+						  </div>
+					  </div>
+				  </div>
+				  <div class="layui-form-item">
+					  <div class="layui-inline">
+						  <label class="layui-form-label">排课教室：</label>
+						  <div class="layui-input-inline">
+							  <select name="" lay-verify="required">
+								  <option value="请选择类别">请选择类别</option>
+							  </select>
+						  </div>
+					  </div>
+					  <div class="layui-inline">
+						  <div class="layui-input-inline">
+							  <select name="" lay-verify="required">
+								  <option value="请选择教室">请选择教室</option>
+							  </select>
+						  </div>
+					  </div>
+				  </div>
+				  <div class="layui-form-item">
+					  <div class="layui-inline">
+						  <label class="layui-form-label">排课班级：</label>
+						  <div class="layui-input-inline">
+							  <select name="" lay-verify="required">
+								  <option value="请选择类别">请选择类别</option>
+							  </select>
+						  </div>
+					  </div>
+					  <div class="layui-inline">
+						  <div class="layui-input-inline">
+							  <select name="" lay-verify="required">
+								  <option value="请选择教室">请选择专业</option>
+							  </select>
+						  </div>
+					  </div>
+					  <div class="layui-inline">
+						  <div class="layui-input-inline">
+							  <select name="" lay-verify="required">
+								  <option value="请选择教室">请选择班级</option>
+							  </select>
+						  </div>
+					  </div>
+				  </div>
+				  <div class="layui-form-item btn_anniu">
+					  <div class="layui-input-block">
+						  <button class="layui-btn" lay-submit lay-filter="formDemo">自动排课</button>
+
+					  </div>
+				  </div>
+			  </form>
+		  </div>
+
+	   </div>
+	   <div class="right_content">
+		   <div class="right_icon"><i class="iconfont icon-xiaoxi"></i> </div>
+		   <div class="right_text">
+			   <p>该教室已被占用，请更换教室！！！</p>
+		   </div>
+	   </div>
+    <!--内容部分end-->
+  </div>
+  <!--排课管理-自动排课end-->
+
+  <script src="plugins/jQuery/jquery-3.3.1.js"></script>
+  <script src="plugins/layui-v2.4.3/layui/layui.js"></script>
+  <script>
+      //Demo
+      layui.use('form', function(){
+          var form = layui.form;
+
+          //监听提交
+          form.on('submit(formDemo)', function(data){
+              layer.msg(JSON.stringify(data.field));
+              return false;
+          });
+      });
+  </script>
+
+</body>
+</html>

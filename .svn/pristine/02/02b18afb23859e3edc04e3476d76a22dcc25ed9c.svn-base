@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">	
+		<title>老年大学系统——教室类别管理</title>
+		<link rel="stylesheet" href="plugins/layui-v2.4.3/layui/css/layui.css"/>
+		<link rel="stylesheet" href="css/common_style.css" />
+		<link rel="stylesheet" href="css/yhgl_xsgl.css" />
+        <link rel="stylesheet" href="css/all.css" />
+		<style>
+			.fanHui{
+				padding: 3px 18px; background: #3d9def;color: #FFFFFF;border-radius: 10px;
+				font-size: 1rem;letter-spacing: 0.1rem; position: absolute; right: 20px; margin-top: 4px;
+			}
+			.fanHui:hover{
+				color: #ffffff;
+			}
+			.layui-input{
+				width: 150%!important;border-radius: 10px;border:1px solid #ccc;
+			}
+		</style>
+	</head>
+	<body>
+		<!--用户管理内容-->
+		<div class="layui-body yhglContent">
+			<span class="layui-breadcrumb yhgl_nav"  style="display: inline-block;">
+			  <a href="javascript:;"><cite>教室管理</cite></a><span lay-separator="">＞</span>
+			  <a href="jslb_jslbgl.html">教室类别</a><span lay-separator="">＞</span>
+			  <a href="javascript:;">教室修改</a>
+			</span>			
+			<a href="javascript:history.go(-1);" class="fanHui fr backBtn">返回</a>
+			<!--表格-->
+			<div class="biaoGe">
+				<section style="margin-bottom: 1rem;">
+					<span class="xslb_bt fl">教室修改</span>
+					
+				</section>
+				<div class="layui-form-item">
+				    <div class="layui-inline">
+				      <label class="layui-form-label">类别名称：</label>
+				      <div class="layui-input-inline">
+				        <input type="text" class="layui-input" id="name" style="">
+				      </div>
+				    </div>
+				</div>
+				<a href="javascript:;" class="bcBtn saveBtn" onclick="btnXg()">修改</a>
+			</div>
+			<!--表格end-->
+		</div>
+		<!--用户管理内容 end-->
+
+		<script src="plugins/jQuery/jquery-3.3.1.js"></script>
+		<script src="plugins/layui-v2.4.3/layui/layui.js"></script>
+		<script>
+            //获取浏览地址id
+            (function ($) {
+                $.getUrlParam = function (name) {
+                    var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+                    var r = window.location.search.substr(1).match(reg);
+                    if (r != null) return unescape(r[2]);
+                    return null;
+                }
+            })(jQuery);
+            var id = $.getUrlParam('id');
+
+            // 查询到id，并把表格页面的值带到修改页面
+            $(function () {
+                $.ajax({
+                    type: 'GET',
+                    url: "api/classroom/querytype",
+                    async: false,
+                    data: {
+                        id: id
+                    },
+                    dataType: 'json',
+                    success: function (data) {
+                        $("#name").val(data.data.catename);
+                    },
+                    error: function (error) {
+                        layui.use('layer', function () {
+                            var layer = layui.layer;
+                            layer.msg(error.responseText);
+                        });
+                    }
+                });
+            });
+
+            //修改
+            function btnXg() {
+                var className = document.getElementById("name").value;
+                $.ajax({
+                    type: 'post',
+                    url: "api/classroom/updateClassRoomType",
+                    async: false,
+                    data: {
+                        id: id,
+                        catename: className,
+                    },
+                    dataType: 'json',
+                    xhrFields: {withCredentials: true},
+                    success: function (data) {
+                        layui.use('layer', function(){
+                            var layer = layui.layer;
+                            layer.msg('修改成功');
+                        });
+                        setTimeout(function () {
+                            window.location.href = "jslb_jslbgl.html";
+                        },2000)
+
+                    },
+                    error: function (error) {
+                        layui.use('layer', function () {
+                            var layer = layui.layer;
+                            layer.msg(error.responseText);
+                        });
+                    }
+                });
+            }
+		</script>
+	</body>
+</html>

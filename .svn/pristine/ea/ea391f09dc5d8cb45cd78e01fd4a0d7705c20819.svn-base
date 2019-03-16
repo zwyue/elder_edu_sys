@@ -1,0 +1,74 @@
+		layui.use('form', function(){
+			//预先加载form表单模块
+		    var form = layui.form;										
+	    });
+	    //获取浏览地址id
+    	$.getUrlParam = function (name){
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+            var r = window.location.search.substr(1).match(reg);
+            if (r != null) return unescape(r[2]); return null;
+        }
+    	var id=$.getUrlParam('id');
+        $(function(){
+        	//查询到id，并把表格页面的值带到修改页面
+            $.ajax({
+                type: 'GET',
+                url: "api/teacher/detail?id="+id,
+                async: false,
+                data:{
+                    id:id
+                },
+                dataType:'json',
+//              xhrFields: {withCredentials: true},
+                success: function (data) {
+                	//将后台返回的数据回填到表单里
+                    $("#name").val(data.data.tname);
+                    $("#idCard").val(data.data.sfzh);
+                    $("#sex").val(data.data.sex);
+                    $("#nation").val(data.data.nation);
+                    $("#phone").val(data.data.phone);
+                    $("#birthday").val(data.data.birthdate);
+                    $("#nation").val(data.data.nation);
+                    $("#address").val(data.data.sfzaddress);
+                    $("#workUnit").val(data.data.workunit);
+                    $("#classCategory").append('<option value="' + data.data.cateId + '">' + data.data.cateName + '</option>');
+ 					$("#classMajor").append('<option  value="' + data.data.majorid + '">' + data.data.majorname + '</option>');
+ 					$("#classes").append('<option  value="' + data.data.classid + '">' + data.data.classname + '</option>');
+                },
+                error: function(){
+                    layui.use('layer', function(){
+                        var layer = layui.layer;
+                        layer.msg('未查到数据');
+                    });
+                }
+            });   
+    });
+            
+     //一键离职
+     $('#quitBtn').click(function(){
+     	("id："+id);
+     	$.ajax({
+            type: "get",
+            async: false,
+            url: "api/teacher/delete",
+            data:{
+            	id:id
+            },
+            success: function(data){
+            	layui.use('layer', function(){
+					layer.confirm('确认要删除吗？', function(index){
+                    //发异步删除数据
+                    layer.msg('已删除!', {
+                            icon: 1,
+                            time: 1000
+                        });
+//	                    ajaxPLists();
+					window.location = 'yhgl_lsgl.html';
+                });
+				});
+            },
+            error: function(){
+                ('删除失败');
+            }
+        });
+     });     

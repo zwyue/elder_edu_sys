@@ -1,0 +1,31 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<html>
+<link href="https://cdn.bootcss.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.bootcss.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<style>
+    div{
+        width: 200px;
+        height: 100px;
+        text-align: center;
+        margin: 100px auto;
+    }
+    a{
+        color: #fff;
+        text-decoration: none;
+    }
+</style>
+<body>
+<div class="bg-primary">
+    <div><a href="/index/logout">退出登录</a></div>
+    <div><a  href="/user/list">查看用户信息</a></div>
+    <ul class="bg-primary">档案管理
+        <li><a href="/memorabilia/list">大事记</a></li>
+        <li><a href="/memorabilia/toSave">添加大事记</a></li>
+        <li><a href="/award/list">获奖情况</a></li>
+        <li><a href="/resource/toSave">建设资源添加</a></li>
+        <li><a href="/resource/list">建设资源列表</a></li>
+    </ul>
+</div>
+</body>
+</html>

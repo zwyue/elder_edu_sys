@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">-->
+		<title>老年大学系统——用户管理</title>
+		<link rel="stylesheet" href="plugins/layui-v2.4.3/layui/css/layui.css"/>
+        <link rel="stylesheet" href="css/common_style.css" />
+		<link rel="stylesheet" href="css/yhgl_lsgl_jsxz.css" />
+		
+	</head>
+	<body id="yhgl">
+
+		<!--用户管理内容-->
+		<div class="layui-body yhglContent">
+			<section class="smallNav">
+				<span class="layui-breadcrumb yhgl_nav fl">
+				  <a href="javascript:;"><cite>用户管理</cite></a><span lay-separator="">></span>
+				  <a href="javascript:;">老师管理</a>
+				</span>						
+				<span class="fanHui">
+					<a href="javascript:history.go(-1);">返回</a>
+				</span>					
+			</section>
+			
+			<!--编辑内容-->
+			<div class="lsglContent">
+				<section class="lsglBt">
+					<span class="fl">教师新增</span>	
+					<!--<span class="fanHui">
+						<a href="javascript;">读取身份证信息</a>
+					</span>	-->
+				</section>
+				<section class="getInfo">											
+					<span class="getInfoBtn" onclick="new Device().startFun()">读取身份证信息</span>						
+				</section>
+				<div class="layui-form-item">
+				    <div class="layui-inline">
+				      <label class="layui-form-label">教师姓名：</label>
+				      <div class="layui-input-inline">
+				        <input type="text"  class="layui-input inputTop "placeholder="通过身份证获取" id="personName"/>
+				      </div>
+				    </div>
+				    <div class="layui-inline">
+				      <label class="layui-form-label">身份证号：</label>
+				      <div class="layui-input-inline">
+				        <input type="text" class="layui-input inputTop" placeholder="通过身份证获取" id="certNumber"/>
+				      </div>
+				    </div>			    
+				  </div>
+				  <div class="layui-form-item">
+				    <div class="layui-inline">
+				      <label class="layui-form-label">性 &nbsp;&nbsp;&nbsp; 别：</label>
+				      <div class="layui-input-inline">
+				        <input type="text" placeholder="通过身份证获取"  class="layui-input inputTop"  id="gender"/>
+				      </div>
+				    </div>
+				    <div class="layui-inline">
+				      <label class="layui-form-label">民 &nbsp;&nbsp;&nbsp; 族：</label>
+				      <div class="layui-input-inline">
+				        <input type="text" class="layui-input inputTop" placeholder="通过身份证获取" id="nation"/>
+				      </div>
+				    </div>			    
+				  </div>
+				  <div class="layui-form-item">
+				    <div class="layui-inline">
+				      <label class="layui-form-label">联系方式：</label>
+				      <div class="layui-input-inline">
+				        <input type="tel" lay-verify="required|phone" autocomplete="off" class="layui-input inputTop" id="phone"/>
+				      </div>
+				    </div>
+				    <div class="layui-inline">
+				      <label class="layui-form-label">出生日期：</label>
+				      <div class="layui-input-inline">
+				        <input type="text" class="layui-input inputTop" placeholder="通过身份证获取"  id="birthday"/>
+				      </div>
+				    </div>			    
+				  </div>
+				  <div class="layui-form-item">
+				    <div class="layui-inline">
+				      <label class="layui-form-label">家庭住址：</label>
+				      <div class="layui-input-inline">
+				        <input type="text" class="layui-input inputTop" id="address"/>
+				      </div>
+				    </div>
+				    <div class="layui-inline">
+				      <label class="layui-form-label">工作单位：</label>
+				      <div class="layui-input-inline">
+				        <input type="text" class="layui-input inputTop" id="workUnit"/>
+				      </div>
+				    </div>			    
+				  </div>
+			</div>
+			<!--编辑内容end-->
+					
+			<!--编辑内容-->
+			<div class="lsglContent">
+				<section class="lsglBt">
+					<span class="fl">负责班级</span>					
+				</section>
+				<form class="layui-form">
+					<div class="layui-form-item">
+			          <label class="layui-form-label"> 班级类别：</label>
+			          <!--<div class="layui-input-inline">
+						<select name="typeId" id="classCategory">
+							<option value="-1">请选择</option>
+						</select>
+					  </div>-->
+			          <div class="layui-input-block">
+			            <select name="city" lay-verify="required" id="classCategory">
+			            	<option value="">请选择</option>
+			            </select>			           
+			          </div>
+			        </div>
+					<div class="layui-form-item">
+			          <label class="layui-form-label">班级专业：</label>
+			          <div class="layui-input-block">
+			            <select name="city" lay-verify="required" id="classMajor">
+			              <option value="">请选择</option>
+			            </select>			          
+			          </div>
+			        </div>
+					<div class="layui-form-item">
+			          <label class="layui-form-label">具体班级：</label>
+			          <div class="layui-input-block">
+			            <select name="city" lay-verify="required" id="classes">
+			              <option value="">请选择</option>
+			            </select>
+			          </div>
+			        </div>
+				
+				</form>
+				
+			</div>
+			<!--编辑内容end-->
+			<a href="javascript:;" class="lzBtn" id="addBtn">保存</a>					
+		</div>
+		<!--用户管理内容 end-->
+    </div>
+		
+		<script src="plugins/jQuery/jquery-3.3.1.js"></script>
+		<script src="plugins/layui-v2.4.3/layui/layui.js"></script>
+		<!--身份证读取-->
+		<script src="js/baseISSObject.js"></script>
+		<script src="js/baseISSOnline.js"></script>
+		<script src="js/commonId.js"></script>		
+		<!--身份证读取end-->
+		<script>
+		layui.use('form', function(){ //预先加载form表单模块
+		    var form = layui.form;							
+			//获得班级类别下拉列表内容
+			$.ajax({
+				type: "get",
+				url: "http://192.168.0.146:8088/classes/classcatelist",
+				dataType: "json",
+				//同步
+				async: false,
+				//解决跨域问题
+           		xhrFields: {withCredentials: true},  
+				success: function(data){
+					var i = 0;
+					$.each(data.data, function(i, result){
+						var index = data.data[i].id;
+						var text = data.data[i].category;
+						$("#classCategory").append('<option value="' + index + '">' + text + '</option>');
+					});
+					form.render(); //更新全部					
+				},
+				error: function(){
+					layui.use('layer', function(){
+					  var layer = layui.layer;					  
+					  layer.msg('请求班级类别分类错误');
+					});   
+				}
+			});
+			
+			//获得班级专业下拉列表内容
+			$.ajax({
+				type: "get",
+				url: "http://192.168.0.146:8088/classes/professions",
+				dataType: "json",
+				//同步
+				async: false,
+				//解决跨域问题
+           		xhrFields: {withCredentials: true},  
+				success: function(data){
+					var i = 0;
+					$.each(data.data, function(i, result){
+						var index = data.data[i].id;
+						var text = data.data[i].majorname;
+						$("#classMajor").append('<option value="' + index + '">' + text + '</option>');
+					});
+					form.render(); //更新全部					
+				},
+				error: function(){
+					layui.use('layer', function(){
+					  var layer = layui.layer;					  
+					  layer.msg('请求班级专业分类错误');
+					});   
+				}
+			});
+			
+			//获得班级专业下拉列表内容
+			$.ajax({
+				type: "get",
+				url: "http://192.168.0.146:8088/classes/queryclsbycateidandprfid",
+				dataType: "json",
+				//同步
+				async: false,
+				//解决跨域问题
+           		xhrFields: {withCredentials: true},  
+				success: function(data){
+					var i = 0;
+					$.each(data.data, function(i, result){
+						var index = data.data[i].id;
+						var text = data.data[i].majorname;
+						$("#classes").append('<option value="' + index + '">' + text + '</option>');
+					});
+					form.render(); //更新全部
+					
+				},
+				error: function(){
+					layui.use('layer', function(){
+					  var layer = layui.layer;					  
+					  layer.msg('请求具体班级分类错误');
+					});   
+				}
+			});
+	  });
+		
+		//保存新增教师
+		$('#addBtn').click(function(){
+			var tname      = $('#personName').val();
+			var sex        = $('#gender').val();
+			var sfzh       = $('#certNumber').val();
+			var nation     = $('#nation').val();
+			var address    = $('#address').val();
+			var phone      = $('#phone').val();
+			var workUnit   = $('#workUnit').val();
+			var birthdate  = $('#birthday').val();			
+			var classMajorId = $('#classMajor option:selected').val();
+			var classMajor = $('#classMajor option:selected').text();
+			var classesId    = $('#classes option:selected').val();
+			var classes    = $('#classes option:selected').text();
+			$.ajax({
+				type: "post",
+				async: false,
+				url: "http://192.168.0.146:8088/teacher/enter",
+				xhrFields: {withCredentials: true}, 
+				data:{
+		        	tname:tname, 
+		        	sex:sex,
+		        	sfzh:sfzh,
+		        	nation:nation,
+	        		sfzaddress:address,
+		        	phone:phone,
+		        	workunit:workUnit,
+		        	birthdate:birthdate,
+		        	//专业ID
+		        	majorid:classMajorId,
+		        	//专业名称
+		        	majorname:classMajor,
+		        	//班级ID
+		        	classid:classesId,
+		        	//班级名称
+		        	classname:classes,
+		        },
+				success: function(data){			
+					if(data.code==1){
+						layui.use('layer', function(){
+						var layer = layui.layer;
+						layer.msg('新增成功');
+						});
+						setTimeout(function(){
+							window.history.go(-1);
+						},800)	
+					}else{
+						layui.use('layer', function(){
+						var layer = layui.layer;
+						layer.msg('该教师已存在！');
+						});
+					}										
+				},
+				error: function(){
+					layui.use('layer', function(){
+							var layer = layui.layer;
+							layer.msg('请求失败');
+					});
+				}
+			});
+		});
+      </script>
+	</body>
+</html>

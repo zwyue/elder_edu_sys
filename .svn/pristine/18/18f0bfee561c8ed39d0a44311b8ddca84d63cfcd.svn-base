@@ -1,0 +1,102 @@
+  body{
+      font-size: 16px;
+  }
+  .header h3{
+      padding-left:1rem;
+  }
+  .search{
+      background-color: #FFFFFF;
+      height:80px;
+      width: 96%;
+      margin-left:2%;
+      border-radius: 0.3rem;
+  }
+  .search .name{
+      display: inline-block;
+      width: 35%;
+      font-size: 18px;
+      color: #333333;
+      padding-top: 1.5rem;
+      padding-left: 5rem;
+  }
+  .search .card{
+      display: inline-block;
+      width:40%;
+  }
+  .search .btn{
+      display: inline-block;
+      width: 13%;
+  }
+  .search .btn button{
+      margin-left: 35%;
+      width: 40%;
+      height:2rem;
+      border-radius: 0.3rem;
+      background-color: #ff9227;
+      border:none;
+      color: #FFFFFF;
+      cursor:pointer;
+  }
+  .search input{
+      border-radius: 0.4rem;
+      border:#999999 solid 1px;
+      height:2rem;
+      font-size: 18px;
+  }
+  .search .card input{
+      border-radius: 0.4rem;
+      border:#999999 solid 1px;
+      height:2rem;
+      width: 45%;
+      font-size: 18px;
+  }
+  /*表格上面部分*/
+  .student_list{
+      padding: 1rem 0 1rem 0;
+  }
+  .stu_left{
+      display: inline-block;
+  }
+  .stu_left h3 span{
+      border: #ff9227 solid 1px;
+      background-color: #ff9227;
+  }
+  .add_stu{
+      display: inline-block;
+      float: right;
+  }
+  .add_stu button{
+      border-radius: 0.3rem;
+      border: #ff9227 solid 1px;
+      background-color:#FFFFFF;
+      padding:0.3rem 0.5rem 0.3rem 0.5rem;
+      cursor:pointer;
+  }
+
+  /*表格部分*/
+  .table_name{
+      width: 96%;
+      margin-left:2%;
+      margin-top: 2rem;
+      background-color: #FFFFFF;
+  }
+  .table_name .table_bg .bg2 tr{
+      background-color: #FFFFFF!important;
+      font-weight: bold;
+  }
+  .table_name .table_bg .bg2 tr th{
+      color:#333333;
+      font-size: 18px;
+  }
+  .table_name .table_bg .bg2 {
+      /*border: none;*/
+      /*border: #666666 solid 1px!important;*/
+  }
+  /*背景*/
+  .search_bg{
+      text-align: center;
+      padding-top: 10%;
+  }
+  .search_bg h2{
+      color: #666666;
+  }

@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>老年大学系统——排课管理</title>
+    <link rel="stylesheet" href="plugins/layui-v2.4.3/layui/css/layui.css"/>
+    <link rel="stylesheet" href="css/common_style.css" />
+    <link rel="stylesheet" href="font/iconfont.css"/>
+    <link rel="stylesheet" href="css/pkgl.css"/>
+</head>
+<body id="bzrgl">
+  <!--排课管理-手动排课--->
+  <div class="layui-body pkglContent">
+		<span class="layui-breadcrumb pkgl_nav">
+		  <a href="pkgl_ksdgl.html"><cite>排课管理</cite></a><span lay-separator="">></span>
+          <a href="pkgl_ksdgl.html"><cite>手动排课</cite></a><span lay-separator="">></span>
+          <a href="javascript:;"><cite>改课</cite></a>
+		</span>
+    <!--内容部分-->
+	   <div class="content">
+		  <div class="content-head">
+			  <a class="title" href="javascript:;" >改课</a>
+			  <a href="javascript:history.go(-1);" class="fanHui">返回</a>
+		  </div>
+		  <div class="bjwtyjy_content">
+				  <form class="layui-form" action="">
+				  <div class="layui-form-item" >
+					  <div class="layui-inline">
+						  <label class="layui-form-label">排课时间：</label>
+						  <div class="layui-input-inline  layui-form" lay-filter="weekTime">
+							  <select name="" lay-verify="required" id="week">
+							  		<!--<option value="">请选择</option>-->
+							  </select>
+						  </div>
+					  </div>
+					  <div class="layui-inline layui-form" lay-filter="time">
+						  <div class="layui-input-inline">
+							  <select name="" lay-verify="required" id="time">
+								  <!--<option value="">请选择时间段</option>-->
+							  </select>
+						  </div>
+					  </div>
+				  </div>
+				  <div class="layui-form-item">
+					  <div class="layui-inline">
+						  <label class="layui-form-label">排课教室：</label>
+						  <div class="layui-input-inline layui-form" lay-filter="classroomType">
+							  <select name="classroomType" lay-verify="required" id="classroomType">
+								  <!--<option value="">请选择类别</option>-->
+							  </select>
+						  </div>
+					  </div>
+					  <div class="layui-inline">
+						  <div class="layui-input-inline layui-form" lay-filter="classroom">
+							  <select name="" lay-verify="required" id="classroom">
+								  <!--<option value="">请选择教室</option>-->
+							  </select>
+						  </div>
+					  </div>
+				  </div>
+			  </form>		  
+				  <div class="layui-form-item btn_anniu">
+					  <div>
+						  <a href="javascript:;" class="fr"  id="gkXgBtn">确认修改</a>						 
+					  </div>
+					  <div>
+						   <a href="javascript:;" class="fl" id="gkDelBtn">删除</a>						 
+					  </div>					  
+				  </div>
+			  </form>
+		  </div>
+	  </div>
+    <!--内容部分end-->
+  </div>
+  <!--排课管理-手动排课end-->
+
+  <script src="plugins/jQuery/jquery-3.3.1.js"></script>
+  <script src="plugins/layui-v2.4.3/layui/layui.js"></script>
+  <script>
+  	//获取浏览地址id
+	$.getUrlParam = function (name){
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+        var r = window.location.search.substr(1).match(reg);
+        if (r != null) return unescape(r[2]); return null;
+    }  
+   	//拿到上一个页面的id
+	var classesId=$.getUrlParam('id'); 
+  	/*查看*/
+  	//定义全局变量接收查询接口返回的数据
+  	var returnPlanRecord,returnClassCate,returnTimeSlot;
+  		//定义星期数据
+  	var weekArr = [
+  		{value:'1',name:'周一'},
+  		{value:'2',name:'周二'},
+  		{value:'3',name:'周三'},
+  		{value:'4',name:'周四'},
+  		{value:'5',name:'周五'},
+//		{value:'6',name:'周六'},
+//		{value:'7',name:'周天'},
+  	];
+	
+  	 
+	
+	layui.use('form',function(){ 
+		var form = layui.form;
+
+  	//根据带过来的id查询
+  	$.ajax({
+  		type:'get',
+  		asasync:false,  		
+  		url:'api/schedule-class/detail?id='+classesId,
+  		dataType:'json',
+  		success:function(data){
+  			//所有信息
+  			returnPlanRecord = data.data.planRecord;
+  			//教室类别
+  			returnClassCate  = data.data.classCate;
+  			//时间段
+  			returnTimeSlot   = data.data.timeSlot;
+  			//将后台拿到的week的id和页面上所有的周几的value做比较，如果返回的和页面上的某一个相等，则 将该值回显到下拉框里
+  			//将周几遍历到下拉框里
+		  	$.each(weekArr, function(){
+		        $('<option value="'+this.value+'">'+this.name+'</option>').appendTo('#week');                   	
+		    });
+		    //将后台传回的week和前台假数据的value
+	        var weekOption=document.getElementById("week").options;
+	        for(var i=0;i<weekOption.length;i++){
+	        	var weekId = weekOption[i].value;
+	        	if(weekId == returnPlanRecord.week){
+	        		console.log(weekId)
+	        		$('#week').find("option[value = '"+weekId+"']").attr('selected','selected');
+	        	}
+	        }
+	        //更新 lay-filter="weekTime"所在容器内的全部 select 状态
+	        form.render('select','weekTime');
+	        //找到渲染后的dd
+//		    var dlChild = $('#week').siblings("div.layui-form-select").find('dl').children();
+//		    //遍历dd,给每个dd添加onclick事件
+//		    for (var i = 1; i < dlChild.length; i++){
+//		        $(dlChild[i]).attr('onclick', 'queryTime(' + i + ')');
+//		    }
+
+  			//将后台返回的时间段回填到表单里
+  			var i=0;
+  			$.each(returnTimeSlot,function(i,result){
+  				var index = returnTimeSlot[i].id;
+  				var textTimeSlot  = returnTimeSlot[i].time;
+  				$('#time').append('<option value="'+index+'">'+textTimeSlot+'</option>');
+  				//如果回填的数据和后台
+  				 if (index == returnPlanRecord.courseid){
+                    $("#time").val(index);
+                }
+  				 //更新 lay-filter="time" 所在容器内的全部 select 状态
+                form.render('select','time');
+  			});
+  			//将后台返回的教室类别回填到表单里
+  			var j=0;
+  			$.each(returnClassCate,function(j,result){
+  				var index = returnClassCate[j].id;
+  				var textTimeSlot  = returnClassCate[j].catename;
+  				$('#classroomType').append('<option value="'+index+'">'+textTimeSlot+'</option>');
+  				//如果查询到的数据和后台返回的详情教室类别id相等就显示
+  				 if (textTimeSlot == returnPlanRecord.classCateId){
+                    $("#classroomType").val(index);
+                }
+  				 //更新 lay-filter="time" 所在容器内的全部 select 状态
+                form.render('select','classroomType');
+  			});
+  			//回填教室名称
+  			 $("#classroom").append('<option value="' + returnPlanRecord.classRoomId + '">' + returnPlanRecord.classroom + '</option>');
+             form.render('select','classroom');			
+  		},
+  		error:function(){
+  			layui.use('layer', function(){
+                var layer = layui.layer;
+                layer.msg('查询课程信息失败');
+            });
+  		}
+  	})
+});
+/*查看end*/
+
+/*修改*/
+$('#gkXgBtn').click(function(){
+	console.log('修改的id:'+classesId);
+		var weekId   = $('#week option:selected').val();   //weekId  
+  		var timeId   = $('#time option:selected').val();   //时间段id
+		var classroomId =  $('#classroom option:selected').val();  
+		var classroomText =  $('#classroom option:selected').text();       //教室名称
+	$.ajax({
+		type:'get',
+  		asasync:false,  		
+  		url:'api/schedule-class/update?id='+classesId,
+  		dataType:'json',
+  		data:{
+  			week:weekId,   					 //weekid
+			courseid:timeId,                 //时间段id
+			roomid:classroomId,              //教室id
+			classroom:classroomText,         //教室名称			
+  		},
+  		success:function(data){
+  			//判断教室是否被占用
+			if(data.code == 1){
+  				layui.use('layer', function(){
+	                var layer = layui.layer;
+	                layer.msg('修改成功');
+	            });
+	            setTimeout(function(){
+	            	window.location = 'pkgl_sdpk.html';
+//	            	window.location.reload();  //刷新本页面
+	            },800);		            
+			}else{
+				layui.use('layer', function(){
+	                var layer = layui.layer;
+	                layer.msg(data.msg);
+	            });
+			}
+  		},
+  		error:function(){
+  			layui.use('layer', function(){
+                var layer = layui.layer;
+                layer.msg('修改失败');
+            });
+  		}	
+	})
+})
+/*修改end*/
+
+/*删除*/
+$('#gkDelBtn').click(function(){
+	$.ajax({
+		type:'get',
+  		asasync:false,  		
+  		url:'api/schedule-class/delete?planId='+classesId,
+  		dataType:'json',
+  		success:function(data){
+  			//判断教室是否被占用
+			if(data.code == 1){
+  				layui.use('layer', function(){
+	                var layer = layui.layer;
+	                layer.msg('删除成功');
+	            });
+	            setTimeout(function(){
+	            	window.location = 'pkgl_sdpk.html';
+//	            	window.location.reload();  //刷新本页面
+	            },800);		            
+			}else{
+				layui.use('layer', function(){
+	                var layer = layui.layer;
+	                layer.msg(data.msg);
+	            });
+			}
+  		},
+  		error:function(){
+  			layui.use('layer', function(){
+                var layer = layui.layer;
+                layer.msg('删除失败');
+            });
+  		}	
+	})
+})
+/*删除 end*/
+
+	 </script>
+	  <!--<script>
+   layui.use('form',function(){
+		var form = layui.form;
+  		//定义星期数据
+	  	var weekArr = [
+	  		{value:'1',name:'周一'},
+	  		{value:'2',name:'周二'},
+	  		{value:'3',name:'周三'},
+	  		{value:'4',name:'周四'},
+	  		{value:'5',name:'周五'},
+	  		{value:'6',name:'周六'},
+	  		{value:'7',name:'周天'},
+	  	];
+	  	$.each(weekArr, function(){
+	        $('<option value="'+this.value+'">'+this.name+'</option>').appendTo('#week');                   	
+	    });
+	    //更新 lay-filter="weekTime"所在容器内的全部 select 状态
+            form.render('select','weekTime');	
+		//找到渲染后的dd
+	    var dlChild = $('#week').siblings("div.layui-form-select").find('dl').children();
+	    //遍历dd,给每个dd添加onclick事件
+	    for (var i = 1; i < dlChild.length; i++){
+	        $(dlChild[i]).attr('onclick', 'queryTime(' + i + ')');
+	    }
+	});
+    
+    //根据选择的星期查询那一天的时间段
+    	$.ajax({
+    		type:'post',
+    		async:false,
+    		url:'api/schedule-class/pre/list', 		
+    		dataType:'json',
+    		success:function(data){
+    			layui.use('form',function(){
+	  				var form = layui.form;
+	  				var i = 0;
+	  				$.each(data.data.list, function (i, result) {
+	                    $("#time").append('<option value="' + result.id + '">' + result.time + '</option>');
+	                });
+		            //更新 lay-filter="weekTime"所在容器内的全部 select 状态
+		            form.render('select','weekTime');		            
+	  			})
+    		},
+    		error:function(){
+    			layui.use('layer', function(){
+	                var layer = layui.layer;
+	                layer.msg('查询时间段失败');
+	            });
+    		}
+    	})
+
+  	
+  	//查询教室类别并回显
+  	$.ajax({
+  		type:'get',
+  		async:false,
+  		url:'api/classroom/typelist',
+  		dataType:'json',
+  		success:function(data){
+  			layui.use('form',function(){
+  				var form = layui.form;
+  				var i = 0;
+  				$.each(data.data.list, function (i, result) {
+                    $("#classroomType").append('<option onclick="queryClass(' + result.id + ')" value="' + result.id + '">' + result.catename + '</option>');
+                });
+	            //更新 lay-filter="classroomType"所在容器内的全部 select 状态
+	            form.render('select','classroomType');
+	            //找到渲染后的dd
+                var dlChild = $('#classroomType').siblings("div.layui-form-select").find('dl').children();
+                //遍历dd,给每个dd添加onclick事件
+                for (var i = 1; i < dlChild.length; i++){
+                    $(dlChild[i]).attr('onclick', 'queryClass(' + i + ')');
+                }
+  			})         	          
+  		},
+  		error:function(){
+  			layui.use('layer', function(){
+                var layer = layui.layer;
+                layer.msg('查询班级类别失败');
+            });
+  		}
+  	})
+  	//根据教室类别查班级
+  	function queryClass(id){
+  		$.ajax({
+	  		type:'post',
+	  		async:false,
+	  		url:'api/classroom/list',
+	  		dataType:'json',
+	  		data:{
+	  			cateid:id   //带到后台的教室类别id
+	  		},
+	  		success:function(data){
+	  			layui.use('form',function(){
+	  				var form = layui.form;
+	  				var i = 0;
+	  				$.each(data.data.list, function (i, result) {
+	                    $("#classroom").append('<option value="' + result.id + '">' + result.classroom + '</option>');
+	                });
+		            //更新 lay-filter="classroomType"所在容器内的全部 select 状态
+		            form.render('select','classroomType');
+	  			})
+	  		},
+	  		error:function(){
+	  			layui.use('layer', function(){
+	                var layer = layui.layer;
+	                layer.msg('查询班级失败');
+	            });
+	  		}
+	  		
+	  	})
+  	};
+  	
+  	
+  	
+  </script>-->
+
+</body>
+</html>

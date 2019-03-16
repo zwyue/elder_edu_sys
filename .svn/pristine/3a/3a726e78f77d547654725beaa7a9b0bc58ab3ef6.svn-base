@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">	
+		<title>老年大学系统——用户管理</title>
+		<link rel="stylesheet" href="plugins/layui-v2.4.3/layui/css/layui.css"/>
+		<link rel="stylesheet" href="css/common_style.css" />
+		<link rel="stylesheet" href="css/jsgl_jsbdqx.css">
+
+	</head>
+	<body>
+	<!--用户管理内容-->
+	<div class="layui-body yhglContent">
+		<span class="layui-breadcrumb yhgl_nav">
+		  <a href="javascript:;"><cite>角色管理</cite></a><span lay-separator="">></span>
+		  <a href="javascript:;">角色绑定权限</a>
+		</span>			
+
+		<!--表格-->
+		<div class="jsBiaoGe">
+			<section >
+				<span class="jslb_bt fl">角色列表</span>
+				<a href="jsgl_jsxz.html" class="tjjs fr" id="tjjs" >
+					<i class="layui-icon layui-icon-add-1"></i>添加角色
+				</a>
+			</section>
+			<!---数据表格-->
+			<table  class="layui-table" lay-skin="line" >
+			  <thead>
+			    <tr style="background: #e2e2e2;color: #000000;">
+			      <th>序号</th>
+			      <th>角色管理</th>
+			      <th>操作</th>
+			    </tr> 
+			  </thead>
+			  <tbody> </tbody>
+			</table> 
+			
+			<!--<p class="showPage">每页显示
+		    	<select>
+				  <option value ="volvo">8</option>
+				  <option value="opel">10</option>
+				  <option value="audi">12</option>
+				</select>
+		        列</p>-->
+			<!--数据表格 end-->
+			
+			<!--分页-->
+		      <div class="page">
+		        <div id="text1"></div>
+		    </div>
+		    <!--分页end-->
+		</div>
+		<!--表格end-->
+						
+		</div>
+		<!--用户管理内容 end-->
+	</div>
+
+		<script src="plugins/jQuery/jquery-3.3.1.js"></script>
+		<script src="plugins/layui-v2.4.3/layui/layui.js"></script>
+		<!--<script src="js/common.js"></script>-->
+		<script>
+		$(function(){
+            ajaxPLists();
+        });
+        function ajaxPLists(){ 
+        	//分页
+            var pageNum = 0, pageSize;  //初始化页数为第一页
+            layui.use('laypage', function (){
+                var laypage = layui.laypage;
+                var totalRecord = 0;    //初始化总记录数                
+                //每页显示条数
+                getNewsData();
+//              //每页显示列数限制
+//				if(totalRecord>0 && totalRecord<6){
+//          		var pageSize = 5;  //限定每页显示5页 
+//          		$("#showPage").html(pageSize);
+//	            }else{
+//	            	var pageSize = 10;  
+//	            	$("#showPage").html(pageSize);
+//	            };
+                
+                function getNewsData(){
+                    $.ajax({
+                        type: "get",
+                        async: false,
+                        url: "api/role/role-list",
+//                      xhrFields: {withCredentials: true}, 
+                        data: {
+                            pageNum: pageNum,
+                            pageSize: pageSize
+                        },
+                        success: function (data){
+                            totalRecord = data.data.total;//数据总条数
+                            var html ="";             
+                            $.each(data.data.list, function (i, item){
+                            	//年龄和专业需要调整
+//                              var addTime = new Date(item.crttime).Format("yyyy-MM-dd");
+                                html += '<tr>';
+                                html += '<td>' + (i+1) + '</td>' +'<td>' + item.rolename + '</td>' +'<td style="display:none">' + item.id + '</td>';
+                                html += '<td class="td-manage">' +
+                                    '<a title="删除" class="layui-btn layui-btn-xs layui-btn-danger" onclick="delRole('+item.id+')" lay-event="del" >删除</a>' +
+                                    '<a title="编辑" href="jsgl_jsxg.html?id='+item.id+'"  class="layui-btn layui-btn-xs" lay-event="edit" >修改</a>' +
+                                    '<a title="查看" href="jsgl_jsck.html?id='+item.id+'" class="layui-btn layui-btn-xs layui-btn-primary">查看</a>' +
+                                    '</td>';
+                                html += '</tr>';
+                            })
+                            $('tbody').html(html);
+                            //打印总条数
+                           // console.log('总条数：'+totalRecord);
+                        },
+                        error: function (){
+                            console.log('请求列表错误');
+                        }
+                    });
+                };
+                //执行一个laypage实例
+                laypage.render({
+                    elem: 'text1' //注意，这里的 test1 是 ID，不用加 #号
+                    , count: totalRecord //数据总数，从服务端得到
+                    , curr: pageNum
+                    , limit: pageSize
+                    , jump: function (obj, first){
+                        //obj包含了当前分页的所有参数，比如：
+                        pageNum = obj.curr;//得到当前页，以便向服务端请求对应页的数据。
+                        pageSize = obj.limit;//得到每页显示的条数
+                        //首次不执行，清除上一页数据
+                        if (!first) {
+                            //do something
+                            $('tbody').empty();
+                            getNewsData();
+                        }
+                    }
+                });
+            });
+        };
+
+		//删除数据
+        function delRole(id){
+            $.ajax({
+                type: "get",
+                async: false,
+//              xhrFields: {withCredentials: true}, 
+                url: "api/role/delete?roleId="+id,
+                success: function(data){
+                	layui.use('layer', function(){
+						layer.confirm('确认要删除吗？', function(index){
+                        //发异步删除数据
+                        layer.msg('已删除!', {
+                                icon: 1,
+                                time: 1000
+                            });
+                        ajaxPLists();
+                   		});
+					});
+                },
+                error: function(){
+                    console.log('删除失败');
+                }
+            });
+        };
+		</script>
+	</body>
+</html>

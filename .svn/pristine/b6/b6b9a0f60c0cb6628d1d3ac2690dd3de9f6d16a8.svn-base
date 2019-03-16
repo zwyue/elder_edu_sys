@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">	
+		<title>老年大学系统——档案管理</title>
+		<link rel="stylesheet" href="plugins/layui-v2.4.3/layui/css/layui.css"/>
+		<link rel="stylesheet" href="css/common_style.css" />
+		<link rel="stylesheet" href="css/yhgl_xsgl.css" />
+
+	</head>
+	<body>
+		
+		<!--大事记内容-->
+		<div class="layui-body yhglContent">
+			<span class="layui-breadcrumb yhgl_nav">
+			  <a href="javascript:;"><cite>档案管理</cite></a><span lay-separator="">＞</span>
+			  <a href="javascript:;">大事记</a>
+			</span>			
+			<!--查询-->
+			<div class="layui-form chaXun">
+			  <div class="layui-form-item">
+			    <div class="layui-inline">
+			      <label class="layui-form-label">名称：</label>
+			      <div class="layui-input-inline">
+			        <input type="text" class="layui-input" id="filterName">
+			      </div>
+			    </div>			   
+			    <a href="javascript:;" onclick="getTitle()" class="btn_chaXun fr" id="chaXun">查询</a>
+			  </div>			  
+			</div>
+			<!--查询 end-->
+			
+			<!--表格-->
+			<div class="biaoGe">
+				<section >
+					<span class="xslb_bt fl">档案列表</span>
+					<a href="dagl_dsjxz.html" class="xzxs fr" id="xzxs" >
+						<i class="layui-icon layui-icon-add-1"></i>新增档案
+					</a>
+				</section>
+				<!---数据表格-->
+				<table class="layui-table" lay-skin="line" id="tb">
+			      <thead>
+			        <tr>
+			          <th>序号</th>
+			          <th>大事记名称</th>
+			          <th>大事记时间</th>
+			          <th>操作</th>
+			        </tr> 
+			      </thead>
+			    <tbody id="listDsj"> </tbody>
+			    </table>
+			    <!--<p class="showPage">每页显示
+			    	<select>
+					  <option value ="volvo">5</option>
+					  <option value ="saab">10</option>
+					  <option value="opel">15</option>
+					</select>
+			        列</p>-->
+				<!--数据表格 end-->
+				
+				<!--分页-->
+				<div class="page">
+					<p>共50页</p>
+					<div id="demo5"></div>					
+				</div>
+				<!--分页 end-->
+			</div>
+			<!--表格end-->
+		</div>
+		<!--大事记内容 end-->
+
+		<script src="plugins/jQuery/jquery-3.3.1.js"></script>
+		<script src="plugins/layui-v2.4.3/layui/layui.js"></script>
+		<script src="plugins/layui-v2.4.3/layui/lay/modules/laypage.js"></script>
+		<script src="js/dagl_dsj.js"></script>
+
+
+		<script>
+			// 大事记表格
+            $(function(){
+            // var page=0;
+
+            //分页
+            var pageNum = 0;//初始化页数为第一页
+            var pageSize = 3;
+            layui.use('laypage', function() {
+                var laypage = layui.laypage;
+                var totalRecord = 0;//初始化总记录数
+                //每页显示条数7条
+                getNewsData();
+
+                function getNewsData(){
+                    $.ajax({
+                        type: "get",
+                        async: false,
+                        url: "http://192.168.0.166:8080/memorabilia/list",
+                        data: {
+                            page: pageNum,
+							size: pageSize
+						},
+//                      success: function (data) {
+//                          // console.log();
+//                          totalRecord = data.data.list.length;//数据总条数
+//                          // fillDataToPage(data.data.list)
+//                      },
+					success: function (data) {
+							totalRecord = data.data.total;//数据总条数
+                           console.log(data.data.total);
+                        var html;
+                        var len = data.data.list.length;
+                        for(var i = 1;i<len+1;i++){
+                            $('table tr:eq('+i+')td:first').text(i);
+                        }
+                        console.log(data.data.list);
+                        $.each(data.data.list,function(i,item){
+                            html+='<tr>';
+                            html+='<td>'+(i+1)+'</td>';
+                            html+='<td>'+item.title+'</td>'+'<td>'+item.crttime+'</td>';
+                            html+='<td><a onclick="sc_delect('+item.id+')" href="JavaScript:;" class="bg bgActive del">删除</a>' +
+								'<a href="http://192.168.0.162:8083/dagl_dsjxg.html?id='+item.id+'" class="bg change">修改</a>' +
+								'<a href="http://192.168.0.166:8080/memorabilia/export?id='+item.id+'" class="bg look">导出</a></td>';
+                            html+='</tr>';
+                        })
+                        $("#listDsj").append(html);
+                    },
+                        error: function (XMLHttpRequest, textStatus, errorThrown) {
+                            alert(XMLHttpRequest.status);
+                            alert(XMLHttpRequest.readyState);
+                            alert(textStatus);
+                        }
+                    });
+                }
+                              
+                //执行一个laypage实例
+                laypage.render({
+                    elem: 'demo5' //注意，这里的 test1 是 ID，不用加 #号
+                    , count: totalRecord //数据总数，从服务端得到
+                    , curr: pageNum
+                    , limit: pageSize
+                    , jump: function (obj, first) {
+                        //obj包含了当前分页的所有参数，比如：
+                        pageNum = obj.curr;//得到当前页，以便向服务端请求对应页的数据。
+                        pageSize = obj.limit;//得到每页显示的条数
+
+                        //首次不执行
+                        if (!first) {
+                            //do something
+                            $('#listDsj').empty();
+                            getNewsData();
+                        }
+                    }
+                });
+            })
+                
+                
+                
+                
+//              $.ajax({
+//                  type: 'GET',
+//                  url: "http://192.168.0.166:8080/memorabilia/list",
+//                  async: false,
+//                  data:{
+//                      // page:0,size:3
+//					},
+//                  dataType:'json',
+//                  xhrFields: {withCredentials: true},
+//                  success: function (data) {
+//                      // console.log(data.data.list);
+//                      var html;
+//                      var len = data.data.list.length;
+//                      for(var i = 1;i<len+1;i++){
+//                          $('table tr:eq('+i+')td:first').text(i);
+//                      }
+//                      console.log(data.data.list);
+//                      $.each(data.data.list,function(i,item){
+//                          html+='<tr>';
+//                          html+='<td>'+(i+1)+'</td>';
+//                          html+='<td>'+item.title+'</td>'+'<td>'+item.crttime+'</td>';
+//                          html+='<td><a onclick="sc_delect('+item.id+')" href="JavaScript:;" class="bg bgActive del">删除</a>' +
+//								'<a href="http://192.168.0.162:8083/dagl_dsjxg.html?id='+item.id+'" class="bg change">修改</a>' +
+//								'<a href="http://192.168.0.166:8080/memorabilia/export?id='+item.id+'" class="bg look">导出</a></td>';
+//                          html+='</tr>';
+//                      })
+//                      $("#listDsj").append(html);
+//                  },
+//                  error: function () {
+//                      layui.use('layer', function(){
+//                          var layer = layui.layer;
+//                          layer.msg('获取数据失败！');
+//                      });
+//                  }
+//              });
+            });
+
+            //删除
+            function sc_delect(id) {
+                $.ajax({
+                    type: 'GET',
+                    url: "http://192.168.0.166:8080/memorabilia/delete",
+                    async: false,
+                    data: {
+                        id: id
+                    },
+                    dataType: 'json',
+                    xhrFields: {withCredentials: true},
+                    success: function (data) {
+                        console.log(id);
+                        if (confirm('确定要删除吗')) {
+                            $(this).parents('tr').remove();
+                        }
+
+                    },
+                    error: function () {
+                        layui.use('layer', function(){
+                            var layer = layui.layer;
+                            layer.msg('删除失败！');
+                        });
+                    }
+                });
+            }
+
+            //查询
+            function getTitle() {
+                var title=document.getElementById("filterName").value;
+                $.ajax({
+                    type: 'GET',
+                    url: "http://192.168.0.166:8080/memorabilia/getTitle",
+                    async: false,
+                    data: {
+                        title: title
+                    },
+                    dataType: 'json',
+                    xhrFields: {withCredentials: true},
+                    success: function (data) {
+
+                        var chaXun;
+                        var len = data.data.list.length;
+                        for(var i = 1;i<len+1;i++){
+                            $('table tr:eq('+i+')td:first').text(i);
+                        }
+                        $.each(data.data.list,function(i,item){
+                            chaXun+='<tr>';
+                            chaXun+='<td>'+(i+1)+'</td>';
+                            chaXun+='<td>'+item.title+'</td>'+'<td>'+item.crttime+'</td>';
+                            chaXun+='<td><a onclick="sc_delect('+item.id+')" href="JavaScript:;" class="bg bgActive del">删除</a>' +
+                                '<a href="dagl_dsjxg.html" class="bg change">修改</a>' +
+                                '<a href="http://192.168.0.166:8080/memorabilia/export?id='+item.id+'" class="bg look">导出</a></td>';
+                            chaXun+='</tr>';
+
+                        })
+                        $("#listDsj").replaceWith(chaXun);
+
+                    },
+                    error: function () {
+                        layui.use('layer', function(){
+                            var layer = layui.layer;
+                            layer.msg('查询失败！');
+                        });
+                    }
+                });
+            }
+
+           
+		</script>
+
+
+	</body>
+</html>

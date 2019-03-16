@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>老年大学系统——学委会管理</title>
+    <link rel="stylesheet" href="plugins/layui-v2.4.3/layui/css/layui.css"/>
+    <link rel="stylesheet" href="css/common_style.css" />
+    <link rel="stylesheet" href="css/xwhgl.css" />
+    <link rel="stylesheet" href="css/all.css" />
+
+</head>
+<body>
+
+   <div class="layui-body yhglContent">
+			<span class="layui-breadcrumb yhgl_nav">
+			  <a href="javascript:;"><cite>学委会管理</cite></a><span lay-separator="">＞</span>
+			  <a href="javascript:;">学委会管理</a><span lay-separator="">＞</span>
+              <a href="javascript:;">新增学委会成员</a>
+			</span>
+    <!--查询-->
+    <div class="layui-form chaXun">
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <label class="layui-form-label">姓名：</label>
+                <div class="layui-input-inline">
+                    <input type="text" class="layui-input" id="name">
+                </div>
+            </div>
+            <!--<div class="layui-inline">-->
+                <!--<label class="layui-form-label">身份证：</label>-->
+                <!--<div class="layui-input-inline">-->
+                    <!--<input type="text" class="layui-input" id="idCard">-->
+                <!--</div>-->
+            <!--</div>-->
+            <a href="javascript:;" class="btn_chaXun fr searchBtn" id="chaXun" onclick="chaxun()">查 询</a>
+        </div>
+    </div>
+    <!--查询 end-->
+
+    <!--表格-->
+    <div class="biaoGe">
+        <section>
+            <span class="xslb_bt fl" style="width:20%;">未加入学委会成员列表</span>
+            <span class="fanHui fr">
+                <a href="javascript:history.go(-1);" class="backBtn">返回</a>
+            </span>
+        </section>
+        <!---数据表格-->
+        <table class="layui-table" lay-skin="line" id="tb">
+            <thead>
+            <tr>
+                <th>序号</th>
+                <th>姓名</th>
+                <th>班级</th>
+                <th>联系方式</th>
+                <th>家属联系方式</th>
+                <th>加入时间</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+            <tbody id="xwhgl_xz"></tbody>
+        </table>
+        <!--<p class="showPage">每页显示-->
+            <!--<select>-->
+                <!--<option value ="volvo">5</option>-->
+                <!--<option value ="saab">10</option>-->
+                <!--<option value="opel">15</option>-->
+            <!--</select>-->
+            <!--列</p>-->
+        <!--数据表格 end-->
+
+        <!--分页-->
+        <div class="page">
+            <!--<p>共50页</p>-->
+            <div id="demo5"></div>
+        </div>
+        <!--分页 end-->
+    </div>
+    <!--表格end-->
+</div>
+<!--学委会管理内容 end-->
+
+<script src="plugins/jQuery/jquery-3.3.1.js"></script>
+<script src="plugins/layui-v2.4.3/layui/layui.js"></script>
+<!--<script src="js/xwhgl.js"></script>-->
+   <script>
+       $(function () {
+           DatatoLoad();
+       });
+       function DatatoLoad() {
+           //分页
+           var pageNum = 0;    //初始化页数为第一页
+           var pageSize = 10;   //列表数量为7条
+           layui.use('laypage', function () {
+               var laypage = layui.laypage;
+               var totalSize = 0; //初始化数据总数
+               getDatasSize();
+
+               function getDatasSize() {
+                   $.ajax({
+                       type: 'get',
+                       async: false,
+                       url: "api/studymeet/slist",
+                       data: {
+                           page: pageNum,
+                           size: pageSize
+                       },
+                       dataType: "json",
+                       xhrFields: {withCredentials: true},
+                       success: function (data) {
+                           totalSize = data.data.total; //获得数据总条数
+                           var html = '';
+                           var len = data.data.list.length;
+                           for (var i = 1; i < len + 1; i++) {
+                               $('table tr:eq(' + i + ')td:first').text(i);
+                           }
+                           $.each(data.data.list, function (i, result) {
+                               html += "<tr>";
+                               html += "<td>" + (i + 1) + "</td>" + "<td>" + result.stuname + "</td>"+ "<td>" + result.classname + "</td>" +
+                                   "<td>" + result.phone + "</td>" + "<td>" + result.emergency + "</td>" +"<td>" + result.crttime + "</td>"+
+                                   "<td>" +
+                                   "<a href='JavaScript:;' onclick='add(" + result.id + ")' class='bg bgActive Add'>添加</a>" +
+                                   "</td>"
+                               html += "</tr>";
+                           })
+                           $("#xwhgl_xz").html(html);
+                       },
+                       error: function () {
+                           ("error");
+                       },
+                   })
+               }
+
+               //执行一个laypage
+               laypage.render({
+                   elem: 'demo5',    //分页容器，此处是id
+                   count: totalSize, //数据总数，从服务端得到
+                   curr: pageNum,
+                   limit: pageSize,
+                   jump: function (obj, first) {
+                       pageNum = obj.curr;     //得到当前页，以便向服务端请求对应页的数据。
+                       pageSize = obj.limit;   //得到每页显示的条数
+
+                       //首次不执行
+                       if (!first) {
+                           $("#xwhgl_xz").empty();
+                           getDatasSize();
+                       }
+                   }
+               })
+           })
+       }
+
+       //新增学生
+       function add(id) {
+           $.ajax({
+               type: 'POST',
+               url: "api/studymeet/save",
+               async: false,
+               data: {
+                   sid: id
+               },
+               dataType: "json",
+               xhrFields: {withCredentials: true},
+               success: function (data) {
+                   layui.use('layer', function(){
+                       var layer = layui.layer;
+                       layer.msg('新增成功');
+                   });
+                   setTimeout(function () {
+                       window.location.href = "xwhgl.html";
+                   },2000)
+               },
+               error: function () {
+                   layui.use('layer', function () {
+                       var layer = layui.layer;
+                       layer.msg('新增失败！');
+                   });
+               }
+           })
+       }
+
+       //查询
+       function chaxun() {
+           //验证真实姓名
+           var name = $('#name').val();
+           //分页
+               var pageNum = 0;    //初始化页数为第一页
+               var pageSize = 10;   //列表数量为7条
+               layui.use('laypage', function () {
+                   var laypage = layui.laypage;
+                   var totalSize = 0; //初始化数据总数
+                   getQuery();
+
+                   function getQuery() {
+                       $.ajax({
+                           type: 'GET',
+                           url: "api/studymeet/getName",
+                           async: false,
+                           data: {
+                               name: name,
+                               page: pageNum,
+                               size: pageSize
+                           },
+                           dataType: "json",
+                           xhrFields: {withCredentials: true},
+                           success: function (data) {
+                               if (data.data.list.length == 0) {
+                                   layui.use('layer', function () {
+                                       var layer = layui.layer;
+                                       layer.alert('该学生未查到相关信息', {area: ['200px']});
+                                   });
+                                   $("#xwhgl_xz").html('');
+                                   return false;
+                               }
+                               else {
+                                   totalSize = data.data.total;
+                                   var chaXun;
+                                   var len = data.data.list.length;
+                                   for (var i = 1; i < len + 1; i++) {
+                                       $('table tr:eq(' + i + ')td:first').text(i);
+                                   }
+                                   $.each(data.data.list, function (i, result) {
+                                       chaXun += "<tr>";
+                                       chaXun += "<td>" + (i + 1) + "</td>" + "<td>" + result.stuname + "</td>" + "<td>" + result.classname + "</td>" +
+                                           "<td>" + result.phone + "</td>" + "<td>" + result.emergency + "</td>" + "<td>" + result.crttime + "</td>" +
+                                           "<td>" +
+                                           "<a href='JavaScript:;' onclick='add(" + result.id + ")' class='bg bgActive Add'>添加</a>" +
+                                           "</td>"
+                                       chaXun += "</tr>";
+                                   })
+                                   $("#xwhgl_xz").html(chaXun);
+                               }
+                           },
+                           error: function () {
+                               layui.use('layer', function () {
+                                   var layer = layui.layer;
+                                   layer.msg('查询失败！');
+                               });
+                           }
+                       })
+                       //执行一个laypage
+                       laypage.render({
+                           elem: 'demo5',    //分页容器，此处是id
+                           count: totalSize, //数据总数，从服务端得到
+                           curr: pageNum,
+                           limit: pageSize,
+                           jump: function (obj, first) {
+                               pageNum = obj.curr;     //得到当前页，以便向服务端请求对应页的数据。
+                               pageSize = obj.limit;   //得到每页显示的条数
+
+                               //首次不执行
+                               if (!first) {
+                                   $("#xwhrz_xz").empty();
+                                   getQuery();
+                               }
+                           }
+                       })
+                   }
+               })
+       }
+   </script>
+</body>
+</html>

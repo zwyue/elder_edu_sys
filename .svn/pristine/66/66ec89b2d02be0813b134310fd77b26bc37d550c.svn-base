@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">-->
+    <title>老年大学系统——班级管理</title>
+    <link rel="stylesheet" href="plugins/layui-v2.4.3/layui/css/layui.css"/>
+    <link rel="stylesheet" href="css/common_style.css" />
+    <link rel="stylesheet" href="css/bjgl_xz_xg.css"/>
+</head>
+<body>
+
+<!--班级管理新增内容-->
+<div class="layui-body yhglContent">
+    <section class="smallNav">
+		<span class="layui-breadcrumb bjgl_nav">
+			<a href="javascript:;"><cite>班级管理</cite></a><span lay-separator="">></span>
+            <a href="javascript:;">修改</a>
+        </span>
+    </section>
+
+    <!--编辑内容-->
+    <div class="lsglContent">
+        <section class="lsglBt">
+           <div class="fl bjxz_bl">班级修改</div>
+           <div class="fanHui">
+			   <a href="javascript:history.go(-1);">返回</a>
+		   </div>
+        </section>
+        <form class="layui-form">
+		<div class="formLeft fl">
+			<div class="layui-form-item">
+                <div class="layui-inline">
+                    <label class="layui-form-label">班级名称：</label>
+                    <div class="layui-input-inline">
+                        <input type="text" name="classname" lay-verify="required" class="layui-input inputTop" />
+                    </div>
+                </div>
+              </div>
+              <div class="layui-form-item">
+                <div class="layui-inline">
+                    <label class="layui-form-label">班级专业：</label>
+			        <div class="layui-input-inline layui-form"  lay-filter="classCategory">
+			            <select name="classCategory" lay-verify="required"  id="classCategory" >
+			            </select>
+			          </div>
+			        <div class="layui-input-inline layui-form" lay-filter="majorname">
+			            <select name="classMajor" lay-verify="required" id="majorname">
+			            </select>			          
+			        </div>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <div class="layui-inline">
+                    <label class="layui-form-label">授课老师：</label>
+                    <div class="layui-input-inline">
+                        <input type="text" name="tname" lay-verify="required" placeholder="弹窗选择老师" autocomplete="off" class="layui-input inputTop"/>
+                    </div>
+                </div>
+            </div>
+		</div>
+        	
+        <div class="formRight fr">
+			<div class="layui-form-item">
+                <div class="layui-inline ">
+                    <label class="layui-form-label">班主任姓名：</label>
+                    <div class="layui-input-inline layui-form" lay-filter="headTeacher">
+                         <select name="teacher" lay-verify="required" class="layui-form-select selectTop" id="headTeacher">
+                         </select>
+                    </div>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <div class="layui-inline">
+                    <label class="layui-form-label">班级计划人数：</label>
+                    <div class="layui-input-inline">
+                        <input type="text" id="test" name="plansize" class="layui-input inputTop" />
+                    </div>
+                </div>
+            </div>
+		</div>
+		<form>
+		<div style="clear: both;"></div>
+       
+    </div>
+     <!--编辑内容end-->
+    
+    <a href="javascript:;" class="bcBtn" id="changeBtn">保存</a>
+</div>
+<!--班级管理内容end-->
+	
+</body>
+<script src="plugins/jQuery/jquery-3.3.1.js"></script>
+<script src="plugins/layui-v2.4.3/layui/layui.js"></script>
+<script src="js/bjgl_ck.js"></script>
+<script>
+	//获取浏览地址id
+	 $.getUrlParam = function (name){
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+        var r = window.location.search.substr(1).match(reg);
+        if (r != null) return unescape(r[2]); return null;
+    }
+	 
+	var id=$.getUrlParam('id');
+	//修改
+    $("#changeBtn").click(function(){
+    	var className = $("input[name='classname']").val();                //班级名称
+		var headTeacherId = $('#headTeacher option:selected').val();       //班主任id
+		var headTeacherName = $('#headTeacher option:selected').text();    //班主任姓名
+		var classCategoryId = $('#classCategory option:selected').val();   
+		var classCategoryName = $('#classCategory option:selected').text(); //班级类别
+		var classMajorId   =$('#majorname option:selected').val();
+		var classMajorName   =$('#majorname option:selected').text();    //班级专业
+		var plansize  = $('input[name=plansize]').val();    //班级人数
+		var teacherId  = $('input[name=tname]').id;    
+		var teacherName  = $('input[name=tname]').val();    //授课老师
+	
+        $.ajax({
+            type: 'post',
+            async: false,
+            url: "api/classes/update?id="+id,                
+			data:{
+				classname:className,
+				headmaster:headTeacherId,
+				headmastername:headTeacherName,
+				cateid:classCategoryId,
+				catename:classCategoryName,
+				majorid:classMajorId,
+				majorname:classMajorName,
+				plansize:plansize,
+				tid:teacherId,
+				tname:teacherName
+			},
+            success: function (data){
+                if(data.code==1){
+					layui.use('layer', function(){
+					var layer = layui.layer;
+					layer.msg('修改成功');
+					});
+					setTimeout(function(){
+						window.location="bjgl.html";
+					},800)	
+				}else{
+					layui.use('layer', function(){
+					var layer = layui.layer;
+					layer.msg('已修改但修改失败！');
+					});
+				}		
+            },
+            error: function(){
+                layui.use('layer', function(){
+                    var layer = layui.layer;
+                    layer.msg('修改失败!', {time: 2000});
+                });
+            }
+        })
+    })
+</script>
+
+</html>

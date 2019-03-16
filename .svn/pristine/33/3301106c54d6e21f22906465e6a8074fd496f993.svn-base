@@ -1,0 +1,72 @@
+package com.zrtjoa.entity;
+
+import java.util.Date;
+
+/**
+ * @Author: yangli
+ * @Description: 学期表
+ * @Date: Created in 9:33 2018/11/13
+ * @Modified by:
+ */
+public class Term {
+    //主键id
+    private int id;
+    //学期名称
+    private String xqmc;
+    //开始时间
+    private Date kssj;
+    //结束时间
+    private Date jssj;
+    //是否可用（0：可用 ；1）
+    private String sfky;
+    //创建时间
+    private Date cjsj;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getXqmc() {
+        return xqmc;
+    }
+
+    public void setXqmc(String xqmc) {
+        this.xqmc = xqmc;
+    }
+
+    public Date getKssj() {
+        return kssj;
+    }
+
+    public void setKssj(Date kssj) {
+        this.kssj = kssj;
+    }
+
+    public Date getJssj() {
+        return jssj;
+    }
+
+    public void setJssj(Date jssj) {
+        this.jssj = jssj;
+    }
+
+    public String getSfky() {
+        return sfky;
+    }
+
+    public void setSfky(String sfky) {
+        this.sfky = sfky;
+    }
+
+    public Date getCjsj() {
+        return cjsj;
+    }
+
+    public void setCjsj(Date cjsj) {
+        this.cjsj = cjsj;
+    }
+}

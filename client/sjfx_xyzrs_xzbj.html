@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>老年大学系统——教学管理</title>
+    <link rel="stylesheet" href="plugins/layui-v2.4.3/layui/css/layui.css"/>
+    <link rel="stylesheet" href="css/jxgl.css" />
+    <style>
+    	form{
+    		width: 90%;
+    	}
+        .layui-form-select dl{
+            max-height: 199px!important;
+        }
+        .main{
+        	padding: 50px 0 0 30px;box-sizing: border-box;
+        }
+		.layui-form-select dl {
+		    max-height: 180px!important;
+		}
+		
+    </style>
+</head>
+<body>
+<!--弹出层内容-->
+    <div class="main">
+        <!--三级菜单联动-->			
+			<form  lay-filter="test">
+				<div class="layui-form-item layui-form"  lay-filter="classCategory">
+		          <label class="layui-form-label"> 类别：</label>
+		          <div class="layui-input-block">
+		            <select name="classCategory" lay-verify="required"  id="classCategory" >
+		            	<option value="">请选择</option>
+		            </select>
+		          </div>
+		        </div>
+				<div class="layui-form-item layui-form" lay-filter="classMajor">
+		          <label class="layui-form-label">专业：</label>
+		          <div class="layui-input-block">
+		            <select name="classMajor" lay-verify="required" id="classMajor">
+		              <option value="">请选择</option>
+		            </select>			          
+		          </div>
+		        </div>
+				<div class="layui-form-item layui-form" lay-filter="classes">
+		          <label class="layui-form-label">班级：</label>
+		          <div class="layui-input-block">
+		            <select name="classes" lay-verify="required" id="classes">
+		              <option value="">请选择</option>
+		            </select>
+		          </div>
+		       </div>				
+			</form>				
+			<!--三级菜单联动end-->	
+    </div>
+</div>
+<!--弹出层内容end-->
+<script type="text/javascript" src="plugins/jQuery/jquery-3.3.1.js"></script>
+<script type="text/javascript" src="plugins/layui-v2.4.3/layui/layui.js"></script>
+<script type="text/javascript" src="js/yhgl_lsgl_select.js"></script>
+<script>
+	//将老师传给老师新增页面
+	var callbackdata = function(){
+		var classCategoryId = $("#classCategory option:selected").val();
+		var classCategoryName = $("#classCategory option:selected").text();
+		var classMajorId  =$("#classMajor option:selected").val();
+        var classMajorName=$("#classMajor option:selected").text();
+		var classesId     =$("#classes option:selected").val();
+        var classesName   =$("#classes option:selected").text();
+        var data = {
+        	classCategoryId:classCategoryId,
+        	classCategoryName:classCategoryName,
+        	classMajorId:classMajorId,
+        	classMajorName:classMajorName,
+        	classesId:classesId,
+            classesName: classesName
+        };
+        return data;
+    }
+</script>
+<!--<script>
+    $(function(){
+		//加载一级分类
+		loadFirst();
+		//加载一级分类的方法
+		function loadFirst(){
+			$.ajax({
+				async: false, //同步
+				url: "api/classes/categories",
+				type: "POST",
+				dataType: "json",
+				success: function(data){
+                    layui.use(['layer', 'form'], function () {
+                        var form = layui.form;
+                        //接收返回的data
+                        listData = data.data;
+                        var i = 0;
+                        $.each(listData, function (i, result) {
+                            $("#classCategory").append('<option onclick="loadSecond(' + result.id + ')" value="' + result.id + '">' + result.category + '</option>');
+                        });
+                        //更新 lay-filter="classCategory" 所在容器内的全部 select 状态
+                        form.render('select', 'classCategory');
+                        //找到渲染后的dd
+                        var dlChild = $('#classCategory').siblings("div.layui-form-select").find('dl').children();
+                        //遍历dd,给每个dd添加onclick事件
+                        for (var i = 1; i < dlChild.length; i++) {
+                            $(dlChild[i]).attr('onclick', 'loadSecond(' + i + ')');
+                        }
+                    });
+				},
+				error: function(){
+					layui.use('layer', function(){
+					  var layer = layui.layer;					  
+					  layer.msg('请求一级分类错误');
+					});   
+				}				
+			});
+		};
+	}); 
+         
+    //加载二级分类的方法
+	function loadSecond(id){			
+			$.ajax({
+				async: false,
+				url:"api/classes/professions",
+				data:{
+					cateIds: id //后台需要的：传给后台的
+				},
+				type: "POST",
+				dataType: "json",
+				//解决跨域问题
+//         		xhrFields: {withCredentials: true},  
+				success: function(data){	
+					//清空二级分类下的option
+					$("#classMajor").empty();
+					layui.use(['layer', 'form'], function(){
+                        var form = layui.form;                           
+						//接收返回的data
+						secondData =data.data;						
+						for(var i = 0;i<secondData.length;i++){
+							$("#classMajor").append('<option onclick="loadThree('+ secondData[i].majornumber+')" value="' + secondData[i].majornumber + '">' + secondData[i].majorname + '</option>');						
+						}	
+						//更新 lay-filter="classMajor" 所在容器内的全部 select 状态
+						form.render('select','classMajor');
+						//找到渲染后二级分类的dd（是个数组）
+				        var dlChildSecond = $('#classMajor').siblings("div.layui-form-select").find('dl').children();
+				        //找到渲染后的所有option（是个数组）
+				        var optionSecond = $('#classMajor option');
+				        //遍历dd,给每个dd添加onclick事件
+				        for(var i = 0;i<dlChildSecond.length;i++){
+							//拿到option的val值
+							var a = $(optionSecond[i]).val();
+							//将option的value值赋给loadThree()函数
+							$(dlChildSecond[i]).attr('onclick','loadThree('+a+')');
+				        }
+					});
+				},
+				error: function(){
+					layui.use('layer', function(){
+					  var layer = layui.layer;					  
+					  layer.msg('请求二级分类错误');
+					});   
+				}	
+			});
+	};
+	
+	//加载三级分类的方法
+	function loadThree(majornumber){
+		$.ajax({
+			async: false,
+			url: "api/teacher/query-prfs-teacher",
+			data: {
+				professionId: majornumber  //后台需要的：传给后台的
+			},
+			type: "POST",
+			dataType: "json",
+       		success:function(data){
+       			//清空三级分类下的option
+				$("#classes").empty();
+				layui.use(['layer', 'form'],function(){
+                    var form = layui.form;                           
+					//接收返回的data
+					threeData =data.data;						
+					for(var i = 0;i<threeData.length;i++){
+						$("#classes").append('<option value="' + threeData[i].id + '">' + threeData[i].tname + '</option>');						
+					}	
+					form.render('select','classes');
+				});
+       		},
+			error: function(){
+				layui.use('layer', function(){
+				  var layer = layui.layer;					  
+				  layer.msg('请求三级分类错误');
+				});   
+			}	
+		});
+	};	
+	
+	//将老师传给老师新增页面
+	var callbackdata = function(){
+		var teacherId=$("#classes option:selected").val();
+        var teacherName=$("#classes option:selected").text();
+        var data = {
+        	teacherId:teacherId,
+            teacherName: teacherName
+        };
+        return data;
+    }
+</script>-->
+
+</body>
+</html>

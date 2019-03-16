@@ -1,0 +1,162 @@
+package com.zrtjoa.entity;
+
+import java.util.Date;
+
+/**
+ * @Author: yangli
+ * @Description: 学生信息表
+ * @Date: Created in 14:50 2018/11/12
+ * @Modified by:
+ */
+public class Student {
+    //主键id
+    private int id;
+    //学生证号（账号）
+    private String stunumber;
+    //密码
+    private String password;
+    //姓名
+    private String name;
+    //性别
+    private String sex;
+    //身份证号
+    private String sfzh;
+    //手机号码
+    private String phone;
+    //个人照片
+    private String picture;
+    //电子邮箱
+    private String email;
+    //地址
+    private String address;
+    //学校名
+    private String schoolname;
+    //专业id
+    private int zyid;
+    //专业名称
+    private String zyname;
+    //状态（0：启用；1：禁用）
+    private String status;
+    //创建时间
+    private Date cjsj;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getStunumber() {
+        return stunumber;
+    }
+
+    public void setStunumber(String stunumber) {
+        this.stunumber = stunumber;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getSex() {
+        return sex;
+    }
+
+    public void setSex(String sex) {
+        this.sex = sex;
+    }
+
+    public String getSfzh() {
+        return sfzh;
+    }
+
+    public void setSfzh(String sfzh) {
+        this.sfzh = sfzh;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public String getPicture() {
+        return picture;
+    }
+
+    public void setPicture(String picture) {
+        this.picture = picture;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public String getSchoolname() {
+        return schoolname;
+    }
+
+    public void setSchoolname(String schoolname) {
+        this.schoolname = schoolname;
+    }
+
+    public int getZyid() {
+        return zyid;
+    }
+
+    public void setZyid(int zyid) {
+        this.zyid = zyid;
+    }
+
+    public String getZyname() {
+        return zyname;
+    }
+
+    public void setZyname(String zyname) {
+        this.zyname = zyname;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public Date getCjsj() {
+        return cjsj;
+    }
+
+    public void setCjsj(Date cjsj) {
+        this.cjsj = cjsj;
+    }
+}

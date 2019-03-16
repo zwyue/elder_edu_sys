@@ -1,0 +1,123 @@
+  // 学期管理js部分
+      //左侧导航
+       layui.use('element', function(){
+           var element = layui.element;
+       });
+
+       //分页
+       layui.use(['laypage', 'layer'], function(){
+          var laypage = layui.laypage,layer = layui.layer;
+          laypage.render({
+            elem: 'demo5'
+            ,count: 500
+            ,curr: location.hash.replace('#!fenye=', '') //获取hash值为fenye的当前页
+            ,hash: 'fenye' //自定义hash值
+          });
+       });
+
+      //表格增删改查
+       var tableList = [
+          { id: '1', xqname: '2018第一学期', kstime: '2018-11-11',jstime:'2018-11-12',},
+          { id: '2', xqname: '2018第一学期', kstime: '2018-11-11',jstime:'2018-11-12',},
+          { id: '3', xqname: '2018第一学期', kstime: '2018-11-11',jstime:'2018-11-12',},
+          { id: '4', xqname: '2018第一学期', kstime: '2018-11-11',jstime:'2018-11-12',},
+          { id: '5', xqname: '2018第一学期', kstime: '2018-11-11',jstime:'2018-11-12',},
+          { id: '6', xqname: '2018第一学期', kstime: '2018-11-11',jstime:'2018-11-12',},
+          { id: '7', xqname: '2018第一学期', kstime: '2018-11-11',jstime:'2018-11-12',},
+          { id: '7', xqname: '2018第一学期', kstime: '2018-11-11',jstime:'2018-11-12',},
+          { id: '7', xqname: '2018第一学期', kstime: '2018-11-11',jstime:'2018-11-12',}
+       ];
+       $.each(tableList, function(){
+          $('<tr id="'+this.id+'">' +
+             '<td>'+this.id+'</td>' +
+             '<td>'+this.xqname+'</td>' +
+             '<td>'+this.kstime+'</td>' +
+             '<td>'+this.jstime+'</td>' +
+             '<td><a href="JavaScript:;" class="bg bgActive del">删除</a><a href="yhgl_xsgl_xsxg.html" class="bg change">修改</a><a href="yhgl_xsgl_xsck.html" class="bg look">查看</a></td>'+
+             '</tr>').appendTo('#list');
+       });
+
+       //删除
+       $('.del').click(function(){
+          if (confirm('确定要删除吗')){
+              $(this).parents('tr').remove();
+          }
+       });
+  // 学期管理js部分end
+
+  // 学期管理--新增 js部分
+       //时间下拉框部分
+        var changeDD = 1;//->一个全局变量
+        function YYYYMMDDstart() {
+           MonHead = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+          //先给年下拉框赋内容
+            var y = new Date().getFullYear();
+            for (var i = (y - 47); i < (y + 21); i++) //以今年为准，前30年，后30年
+               document.reg_testdate.YYYY.options.add(new Option(" " + i + " 年", i));
+          //赋月份的下拉框
+            for (var i = 1; i < 13; i++)
+               document.reg_testdate.MM.options.add(new Option(" " + i + " 月", i));
+               document.reg_testdate.YYYY.value = y;
+               document.reg_testdate.MM.value = new Date().getMonth() + 1;
+               var n = MonHead[new Date().getMonth()];
+            if (new Date().getMonth() == 1 && IsPinYear(YYYYvalue)) n++;
+               writeDay(n); //赋日期下拉框
+          //->赋值给日，为当天日期
+        }
+           if (document.attachEvent)
+             window.attachEvent("onload", YYYYMMDDstart);
+           else
+            window.addEventListener('load', YYYYMMDDstart, false);
+
+        //年发生变化时日期发生变化(主要是判断闰平年)
+        function YYYYDD(str) {
+           var MMvalue = document.reg_testdate.MM.options[document.reg_testdate.MM.selectedIndex].value;
+           if (MMvalue == "") {
+              optionsClear(e);
+              return;
+           }
+           var n = MonHead[MMvalue - 1];
+           if (MMvalue == 2 && IsPinYear(str)) n++;
+              writeDay(n)
+        }
+
+        function MMDD(str) //月发生变化时日期联动
+        {
+           var YYYYvalue = document.reg_testdate.YYYY.options[document.reg_testdate.YYYY.selectedIndex].value;
+           if (YYYYvalue == "") {
+               var e = document.reg_testdate.DD;
+               optionsClear(e);
+               return;
+           }
+           var n = MonHead[str - 1];
+           if (str == 2 && IsPinYear(YYYYvalue)) n++;
+           writeDay(n)
+        }
+
+        function writeDay(n) //据条件写日期的下拉框
+        {
+            var e = document.reg_testdate.DD;
+            optionsClear(e);
+            for (var i = 1; i < (n + 1); i++) {
+                e.options.add(new Option(" " + i + " 日", i));
+                if(i == changeDD){
+                   e.options[i].selected = true; //->保持选中状态
+                }
+            }
+            console.log(i);
+            console.log(changeDD);
+        }
+
+        function IsPinYear(year) //判断是否闰平年
+        {
+             return (0 == year % 4 && (year % 100 != 0 || year % 400 == 0));
+        }
+
+        function optionsClear(e) {
+             e.options.length = 1;
+        }
+        //->随时监听日的改变
+        function DDD(str){
+             changeDD = str;
+        }
+  // 学期管理--新增 js部分end

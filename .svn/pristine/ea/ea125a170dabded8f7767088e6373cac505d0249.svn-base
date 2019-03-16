@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>老年大学系统—数据统计</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="plugins/layui-v2.4.3/layui/css/layui.css" />
+    <link rel="stylesheet" href="css/common_style.css" />
+    <link rel="stylesheet" href="font/iconfont(3).css" />
+    <link rel="stylesheet" href="css/sjtj_xsl.css" />
+</head>
+<body>
+
+    <!-- 内容主体区域 -->
+    <div class="layui-body body_contain">
+        <blockquote class="body_header">
+           <span class="">
+               <a href="javascript:;" class="txt_xsl2">数据统计</a>&nbsp;<span lay-separator="">></span>
+               <a href="javascript:;" class="txt_xsl3">奖励统计</a>
+           </span>
+            <button type="button" id="btn" name="btn"><i class="iconfont icon-daochu"></i>导出</button>
+        </blockquote>
+        <div class="select"><!--下拉框区域-->
+            <form class="layui-form select_auto" >
+                <div class="layui-form-item">
+                    <div class="layui-input-inline">
+                        <div class="layui-unselect layui-form-select downpanel">
+                            <div class="layui-select-title">
+                                <span class="layui-input layui-unselect" id="treeclass">学校</span>
+                                <input type="hidden" name="selectID" value="0">
+                                <i class="layui-edge"></i>
+                            </div>
+                            <dl class="layui-anim layui-anim-upbit">
+                                <dd>
+                                    <ul id="classtree"></ul>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <!--折线图区域-->
+        <div class="body_zxt" id="main" style="width:98%;height:40rem;">
+        </div>
+        <!--折线图区域end-->
+    </div>
+    <!-- 内容主体区域end -->
+
+<!--<div class="layui-footer">-->
+
+<!--</div>-->
+<!--</div>-->
+<script src="./plugins/jQuery/jquery-3.3.1.min.js"></script>
+<script src="./plugins/layui-v2.4.3/layui/layui.js"></script>
+<script src="js/echarts.js"></script>
+<script src="js/sjtj_jltj.js"></script>
+<!--<script>
+	$.ajax({
+		async: false, //同步
+		url: "api/statistics/student/base/rewardstatistics",
+		type: "post",
+		dataType: "json", 
+		success: function(data){
+			console.log(data.data.statisticInfo);
+			layui.use('layer', function(){
+			  var layer = layui.layer;					  
+			  layer.msg('成功');
+			});   					
+		},
+		error:function(){
+			layui.use('layer', function(){
+			   var layer = layui.layer;					  
+			   layer.msg('失败');
+			}); 
+		}
+	});
+</script>-->
+</body>
+</html>

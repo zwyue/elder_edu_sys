@@ -1,0 +1,197 @@
+.pkglContent{
+	background: #f3f3f3; padding: 0.5rem 1rem;box-sizing: border-box;
+	position: absolute; bottom: 0!important;
+}
+.smallNav{
+	width: 100%;height: 40px;
+}
+.pkgl_nav{
+	display: block; visibility:visible;padding-left:10px;box-sizing: border-box;width: 50%;height: 40px;line-height: 40px;
+}
+.pkgl_nav a{
+	font-size: 1rem;
+}
+/*课时段管理内容*/
+.ksdglContent{
+	height:auto;padding:10px 10px 20px 10px;box-sizing: border-box;background: #FFFFFF;
+}
+.ksdglContent section{
+	width: 100%;height: 40px;
+}
+.ksdgl_bt{
+	 display:inline-block;width: 200px;height: 35px;border-left: 5px solid #3d9def;padding-left: 10px;
+	  line-height:35px;font-size: 1.2rem;font-weight: 500;letter-spacing: 0.1rem;
+}
+.tj,.fanHui{
+	padding:5px 15px;text-align: center; line-height:150%;background: #3d9def;box-shadow: 0px 5px 5px #b0cdfc;
+	 border-radius: 20px; font-size: 1rem; float: right; position: relative;color: #FFFFFF;
+}
+.layui-table th{
+	color: #000000;
+}
+.layui-table td, .layui-table th{
+	text-align: center;
+}
+.bg{
+	padding:3px 10px;line-height:150%;border: 1px solid #BFBFBF;border-radius: 10px;
+	box-sizing: border-box;margin-right: 0.2rem;
+}
+.bgActive{
+	background:#3d9def;color:#FFFFFF;border: none;
+}
+.bgActive:hover{
+	color: #FFFFFF;
+}
+.showPage{
+	color: #666666;
+}
+.showPage select{
+	border: 1px solid #3d9def;
+}
+/*课时段管理内容 end*/
+/*课时段管理新增页面内容*/
+.layui-input-block input{width: 80%!important;}
+	.contain_text{
+   		margin-bottom: 15px;
+    }
+   .contain-left{
+      display: inline-block;float: left;
+     /* width: 88%;*/margin-left: 1rem; margin-top: 0.8rem;
+   }
+   .contain-left .bmbj_bj{
+      display:block;
+      border-left: 5px solid #3d9def;
+      width:10rem;
+      height: 2.2rem;
+      padding-left: 0.5rem;
+      line-height: 2.4rem;
+      font-size: 1.2rem;
+      letter-spacing: 0.1rem;
+   }
+  .contain-right{
+      display: inline-block;float: right;margin-right: 1rem;
+      margin-top: 0.8rem;
+   }
+  .contain-right button{
+      width: 100%;
+      background-color: #3d9def;
+      color: #ffffff;
+      border: none;
+      padding:0.4rem 0.9rem 0.4rem 0.9rem;
+      border-radius: 0.3rem;
+      margin-right:1%;
+      cursor:pointer;
+  }
+.content_ksdgl{
+    height:90%;background-color:#f3f3f3; margin: 0 auto; border-radius:0.5rem;
+}
+.content_ksdgl .content_ksdgl_head{
+   background-color:#3d9def ; height:3rem; border-radius: 0.5rem;
+}
+.content_ksdgl .content_ksdgl_head a{
+   color: #ffffff; font-size: 18px; position: relative; top:0.6rem; left:0.7rem;
+}
+.content_ksdgl .content_ksdgl_head .icon{
+   color: #ffffff; font-size: 18px; float: right; margin-right: 2rem;
+}
+
+.content_ksdgl_form{
+	margin-top: 20px;height:90%;background: #FFFFFF;font-size: 1rem;padding: 20px;box-sizing: border-box;
+}
+.layui-form-label{
+	width: 130px!important;
+}
+
+/*.layui-inline input{*/
+	/*border: 1px solid #CCCCCC;border-radius: 10px;width:150%!important;*/
+/*}*/
+/*按钮*/
+.bcBtn{
+    display: block;
+    width: 100px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    color: #FFFFFF;
+    margin: 0 auto;
+    background: #3d9def;
+    font-size: 1.1rem;
+    letter-spacing: 0.1rem;
+    border-radius: 10px;
+}
+.bcBtn:hover{
+	color: #FFFFFF;
+}
+/*课时段管理新增页面内容*/
+/*分页*/
+.page {
+    margin: 0.5rem 0 0.5rem 40%;
+    width: 80%;height: 50px;
+}
+.page p{
+	color: #999;float: left;line-height: 50px;margin-right: 1rem;
+}
+.layui-laypage .layui-laypage-curr .layui-laypage-em{
+	background: #3d9def;
+}
+/*分页end*/
+
+/*手动排课*/
+.content{
+	height:95%;  background-color:#ffffff; margin: 0 auto; border-radius:0.5rem;
+}
+.content-head{
+	height:10%;  font-size: 1.2rem;
+}
+.content-head .title{
+	border-left: 5px solid #3d9def; position: absolute; top: 67px; left:2%; padding-left:5px;
+}
+.content-head .fanHui{
+	float: right; position: absolute; right: 2%; top: 67px; padding: 3px 18px; background: #3d9def; color: #FFFFFF; border-radius: 10px;
+	font-size: 1rem; letter-spacing: 0.1rem; box-shadow: 3px 3px 5px #3d9def; margin-right: 1%;
+}
+
+.content label{
+	font-size: 1.2rem; font-weight: 400;
+}
+
+.content .layui-btn{
+	background-color:#3d9def ; padding: 0.1rem 1.5rem 0 1.5rem; border-radius: 0.5rem;
+}
+.content .btn_anniu{
+	text-align: center; margin-left: 0!important;
+}
+.btn_anniu .layui-input-block{
+	margin-left: 0!important; margin-top:25%;
+}
+.content .layui-btn-primary{
+	color: #ffffff;
+}
+/*手动排课end*/
+
+/*改课*/
+.layui-form-select .layui-input{
+	border-radius: 0.5rem;
+}
+.bjwtyjy_content{
+	margin-top: 3%;
+}
+
+/*自动排课*/
+.content_zdpk{
+	height: auto;padding: 10px 10px 20px 10px;box-sizing: border-box;
+    background: #FFFFFF;/*width: 100%; margin-left:0; display: inline-block;*/
+}
+.right_content{
+	display: inline-block; width: 16%; height:20rem; position:fixed; top:3rem; margin-left:0.8rem;
+	background-color: #ffffff; border-radius: 0.5rem;
+}
+.right_content .right_icon{
+	color:#3d9def ; text-align: center; margin-top:3rem;
+}
+.right_content .right_text{
+	color:#3d9def; font-size: 14px; margin-top: 1rem; text-align: center;
+}
+.right_content .right_icon .iconfont{
+	font-size:7rem;
+}

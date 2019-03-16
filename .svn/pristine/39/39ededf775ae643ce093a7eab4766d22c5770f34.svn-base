@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>老年大学系统—报名管理</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="plugins/layui-v2.4.3/layui/css/layui.css" />
+    <link rel="stylesheet" href="css/common_style.css" />
+    <link rel="stylesheet" href="css/bmgl_xzbj_xsxx.css" />
+   	<link rel="stylesheet" href="plugins/formSelect-v4.css"/>
+    <style>
+        /*弹窗样式*/
+        body .layui-layer-title{
+            background-color: #3d9def;
+            border-radius: 0.3rem;
+            color: #FFFFFF;
+            font-size: 18px;
+        }
+        body .layui-layer{
+            border-radius: 0.5rem;
+        }
+        body .tc_btn button{
+            border-radius: 0.3rem;
+        }
+        .layui-table th{
+            text-align: center;
+        }
+        .layui-layer-close{
+            position: unset!important;
+        }
+    </style>
+</head>
+<body>
+    <!--下拉选择框 内容主体区域 -->
+    <div class="layui-body body_contain" id="bmbjContent">
+       <blockquote class="body_header">
+          <span class="">
+            <a href="javascript:;" class="txt_xsl2">报名管理</a>&nbsp;<span lay-separator="">></span>
+            <a href="javascript:;" class="txt_xsl3">选择班级</a>
+          </span>
+       </blockquote>
+       <section class="contain-bg">
+           <div class="contain_text">
+               <div class="contain-left">
+                  <span class="bmbj_bj">报名班级</span>
+               </div>
+               <div class="clear"></div>
+           </div>
+           <div class="clear"></div>
+           <div class="selectContent">
+           		<!--三级联动-->
+				<label class="layui-form-label"> 选择班级：</label>
+				<div class="layui-form">					
+				    <select name="city" xm-select="select15" class="classes">				    	
+				        <option value="">请选择, 此处是可多选</option>
+				    </select>
+				</div>
+				<div class="clear"></div>				
+				<!--三级联动 end-->
+			</div>
+       </section>
+        <div class="btn">
+            <input type="button" value="下一步" id="nextBtn">
+        </div>
+    </div>
+    <!--下拉选择框 内容主体区域end -->
+
+	<!--学生报名 内容主体区域 -->
+    <div class="layui-body body_contain" id="xsbmContent" style="display: none;">
+        <blockquote class="body_header">
+              <span class="">
+                <a href="javascript:;" class="txt_xsl2">报名管理</a>&nbsp;<span lay-separator="">></span>
+                <a href="javascript:;" class="txt_xsl3">学生信息</a>
+              </span>
+              <span class="fanHui">
+				<a href="javascript:;">返回</a>
+			  </span>
+        </blockquote>
+        <section class="contain-bg">
+            <div class="contain_text">
+                <div class="contain-left">
+                    <span class="bmbj_bj">学生报名</span>
+                </div>
+                <div class="contain-right">
+                    <button type="button" id="btn" class="ydbtn" onclick="ydbutton()" name="btn"><i class="iconfont icon-daochu"></i>异动档案</button>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <section class="getInfo">											
+				<span class="getInfoBtn" onclick="new Device().startFun()" id="getInfoBtn">读取身份证信息</span>						
+			</section>
+            <div class="xsxx_classify">
+                <form class="layui-form z-from" action="">
+                   <div class="xsxx_left">
+                       <div class="layui-form-item">
+                          <label class="layui-form-label">学生姓名：</label>
+                          <div class="layui-input-block">
+                             <input type="text" name="title" required  lay-verify="required" placeholder="识别身份证获取"  autocomplete="off" class="layui-input" id="personName">
+                          </div>
+                       </div>
+                       <div class="layui-form-item">
+                          <label class="layui-form-label">身份证号：</label>
+                          <div class="layui-input-block">
+                              <input type="text" name="identity" lay-verify="required|identity"placeholder="识别身份证获取" autocomplete="off" class="layui-input" id="certNumber">
+                          </div>
+                       </div>
+                       <div class="layui-form-item">
+                           <label class="layui-form-label">联系方式：</label>
+                           <div class="layui-input-block">
+                               <input type="text" name="phone" required  lay-verify="required|phone" autocomplete="off" class="layui-input" id="phone">
+                           </div>
+                       </div>
+                       <div class="layui-form-item">
+                           <label class="layui-form-label">现地址：</label>
+                           <div class="layui-input-block">
+                               <input type="text" required  lay-verify="required"  autocomplete="off" class="layui-input" id="currentAddress">
+                           </div>
+                       </div>
+                       <div class="layui-form-item layui-form" lay-filter="studentCard">
+				          <label class="layui-form-label">学生证：</label>
+				          <div class="layui-input-block">
+				            <select name="classes" lay-verify="required" id="studentCard">
+				              <option value="">请选择</option>
+				              <option value="0">是</option>
+				              <option value="1">否</option>
+				            </select>
+				          </div>
+				       </div>	
+				       <div class="layui-form-item">
+                           <label class="layui-form-label">入学时间:</label>
+                            <div class="layui-input-block">
+					    	    <input type="text" class="layui-input" id="entertime" placeholder="请选择入学时间">
+						    </div>
+                       </div> 
+                   </div>
+                   <div class="xsxx_right">
+                       <div class="layui-form-item">
+                           <label class="layui-form-label">性别:</label>
+                           <div class="layui-input-block">
+                               <input type="text" required  lay-verify="required" placeholder="识别身份证获取" autocomplete="off" class="layui-input" id="gender">
+                           </div>
+                       </div>
+                       <div class="layui-form-item">
+                           <label class="layui-form-label">民族:</label>
+                           <div class="layui-input-block">
+                               <input type="text" required  lay-verify="required" placeholder="识别身份证获取" autocomplete="off" class="layui-input" id="nation">
+                           </div>
+                       </div>
+                       <div class="layui-form-item">
+                           <label class="layui-form-label">家庭联系:</label>
+                           <div class="layui-input-block">
+                               <input type="text" name="phone" required  lay-verify="required|phone" autocomplete="off" class="layui-input" id="emergency">
+                           </div>
+                       </div>
+                       <div class="layui-form-item">
+                           <label class="layui-form-label">报名费用:</label>
+                           <div class="layui-input-block">
+                               <input type="text" name="title" required  lay-verify="required"  autocomplete="off" class="layui-input" id="fee">
+                           </div>
+                       </div>
+                       <div class="layui-form-item">
+                           <label class="layui-form-label">汽车牌号:</label>
+                           <div class="layui-input-block">
+                               <input type="text" name="title" required  lay-verify="required" autocomplete="off" class="layui-input" id="carNumber">
+                           </div>
+                       </div>
+                       <div class="layui-form-item">
+                           <label class="layui-form-label">毕业时间:</label>
+                            <div class="layui-input-block">
+					    	    <input type="text" class="layui-input" id="graduatetime" placeholder="毕业时间大于开学时间">
+						    </div>
+                       </div> 
+                   </div>
+                </form>
+            </div>
+        </section>
+        <div class="btn">
+            <input type="button" value="报名" id="enroll">
+        </div>
+    </div>
+    <!--学生报名 内容主体区域end -->
+    <!--弹出层内容-->
+    <div id="popSearchRoleTest" style="display:none;">
+        <div style="width: 80%; text-align:center;  margin:0 auto; padding-top:5%;">
+            <form class="layui-form">
+                <div class="table_style">
+                    <table class="layui-table">
+                        <thead>
+                        <tr>
+                            <th>序号</th>
+                            <th>异动类型</th>
+                            <th>异动时间</th>
+                        </tr>
+                        </thead>
+                        <tbody id="ydContent">
+                        <!--<tr>
+                            <td>1</td>
+                            <td>退学</td>
+                            <td>2018-11-11</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>退学</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>休学</td>
+                            <td></td>
+                        </tr>-->
+                        </tbody>
+                    </table>
+                </div>
+                <div class="layui-form-item">
+                    <div class="tc_btn">
+                        <button type="button" class="layui-layer-close layui-btn layui-btn-normal">关闭</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!--弹出层内容end-->
+
+    <script src="./plugins/jQuery/jquery-3.3.1.min.js"></script>
+    <script src="./plugins/layui-v2.4.3/layui/layui.js"></script>
+    <!--身份证读取-->
+	<script type="text/javascript" src="js/baseISSObject.js"></script>
+	<script type="text/javascript" src="js/baseISSOnline.js"></script>
+	<script type="text/javascript" src="js/commonId.js"></script>		
+	<!--身份证读取end-->
+   <script src="./js/bmgl_tc.js"></script>
+   <script src="plugins/formSelect-v4.js"></script>
+	<script>
+	 	var formSelects = layui.formSelects;  //加载模块
+	 	
+	 	var  listData ,childData,lastChildData;  //定义全局变量接收一级数据和二级数据
+	 	//多选查询
+	 	$.ajax({
+				async: false, //同步
+				url: "api/classes/queryclscatetoacquirecls",
+				type: "get",
+				dataType: "json", 
+				success: function(data){
+					var  arr =[] ; //定义一个空数组来接收返回的数据					
+					listData = data.data;            //拿到一级数据
+					for(var i = 0;i<listData.length;i++){
+						var obj = {};  //定义一个空对象来接收返回的数据
+						//拿到一级的name和value
+						obj.name  = listData[i].name;
+						obj.value = listData[i].value;	
+						obj.children = [];   //定义一级数据的children
+						arr.push(obj);       //将一级数据回填到数组里
+						
+						childData = listData[i].children;  //遍历二级数据						
+						//遍历拿到二级数据
+						for(var j=0;j<childData.length;j++){
+							//拿到二级的name和value
+							var objChild = {};
+							objChild.name = childData[j].name;
+							objChild.value = childData[j].value;
+							objChild.children = [];       //定义二级数据的children
+							obj.children.push(objChild);  //将二级数据回填到一级数组的children里
+							
+							lastChildData = childData[j].children; //遍历三级数据
+							//遍历拿到三级数据
+							for(var num=0;num<lastChildData.length;num++){
+								//拿到三级的name和value
+								var objLastChild = {};
+								objLastChild.name = lastChildData[num].name;
+								objLastChild.value = lastChildData[num].value;
+								objLastChild.children = [];       //定义三级数据的children
+								objChild.children.push(objLastChild);  //将二级数据回填到一级数组的children里
+							}							
+						}						
+					}
+					layui.formSelects.data('select15', 'local', {
+						arr,
+						linkage: true   //可多选
+					})
+				},
+				error: function(){
+					layui.use('layer', function(){
+					  var layer = layui.layer;					  
+					  layer.msg('请求一级分类错误');
+					});   
+				}				
+			});
+
+		//保存函数
+		var classIds,classNames;          
+		var classId = [],className = [];  //定义全局变量接收选中班级的id和name
+		$('#nextBtn').click(function(){		
+			//获取.xm-select-title的第一个孩子，再找第一个孩子的第一个孩子.xm-select-label，再找那个孩子下的所有span元素，获取span元素的value;
+			//遍历拿到各自的id
+			$('.xm-select-title').children(":first").children(":first").find("span").each(function(i){ 
+	            classId[i] =  $(this).attr('value'); 
+	        });
+			//遍历拿到各自的名称
+			$('.xm-select-title').children(":first").children(":first").find('font').each(function(i){ 
+	            className[i] =  $(this).text();
+	        });
+	        //将遍历得到的value值赋给classIds
+	         classIds = classId;
+	         classNames = className;
+			$.ajax({
+				async: false, //同步
+				url: "api/teacher/charge-cls",
+				type: "post",
+				data:{
+					classIds:"'" + classIds + "',",
+					classNames:classNames +','
+				},
+				dataType: "json", 
+				success: function(data){
+					layui.use('layer', function(){
+					  var layer = layui.layer;					  
+					  layer.msg('选择班级成功');
+					});   
+//      			//成功后跳转到老师列表
+					setTimeout(function(){
+							//点击下一步						
+							$('#bmbjContent').hide();
+							$('#xsbmContent').show();					
+						$('.fanHui').click(function(){
+							$('#bmbjContent').show();
+							$('#xsbmContent').hide();
+						})
+					},800)					
+				},
+				error:function(){
+					layui.use('layer', function(){
+					   var layer = layui.layer;					  
+					   layer.msg('选择班级失败');
+					}); 
+				}
+			})
+		});
+
+		layui.use(['layer', 'form','laydate'], function(){
+            var form = layui.form;  
+            var laydate = layui.laydate; 
+			          
+		  //入学时间
+		  laydate.render({
+		    elem: '#entertime'
+		  });
+		  //毕业时间
+		  laydate.render({
+		    elem: '#graduatetime'
+		  });
+		//报名方法
+		$('#enroll').click(function(){ 
+			var classid=classIds.join(",");
+			var classname=classNames.join(",");
+			var stuname       = $('#personName').val();         //学生姓名
+			var sex           = $('#gender').val();             //性别
+			var sfzh          = $('#certNumber').val();         //身份证号
+			var nation        = $('#nation').val();             //民族
+			var address       = $('#currentAddress').val();     //现住址
+			var phone         = $('#phone').val();              //联系方式
+			var carnumber     = $('#carNumber').val();          //汽车车牌号
+			var emergency     = $('#emergency').val();	        //家庭联系方式
+			var fee           = $('#fee').val();                //学费
+			var entertime     = $('#entertime').val();          //入学时间
+			var graduatetime  = $('#graduatetime').val();       //毕业时间
+			var studentCard=$('#studentCard option:selected').val();           //学生证val
+			if(entertime<graduatetime){
+				$.ajax({
+					type: "post",
+					async: false,
+					url: "api/student/enter",
+					data:{
+			        	stuname:stuname, 
+			        	sex:sex,
+			        	sfzh:sfzh,
+			        	nation:nation,
+		        		address:address,
+			        	phone:phone,
+			        	carnumber:carnumber,
+			        	emergency:emergency,
+			        	iscard:studentCard,  //0是需要学生证，1是不需要学生证
+			        	fee:fee,
+			        	entertime:entertime,
+			        	graduatetime:graduatetime,
+						classid: classid,
+						classname:classname
+			       },
+					success: function(data){			
+						if(data.code==1){
+							layui.use('layer', function(){
+							var layer = layui.layer;
+							layer.msg('报名成功');
+							});
+							setTimeout(function(){
+								window.location="bmgl_xzbj.html";
+							},800)	
+						}else{
+							layui.use('layer', function(){ 
+							var layer = layui.layer;
+							layer.msg('报名失败：'+data.msg);
+							});
+						}										
+					},
+					error: function(){
+						layui.use('layer', function(){
+							var layer = layui.layer;
+							layer.msg('请求失败');
+						});
+					}
+				});
+			}else{
+                layui.use('layer', function () {
+                    var layer = layui.layer;
+                    layer.msg('入学时间应小于毕业时间!');
+                });
+            }
+			
+		});
+	});
+
+	</script>
+</body>
+</html>

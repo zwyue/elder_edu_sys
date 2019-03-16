@@ -1,0 +1,152 @@
+package com.zrtjoa.controller;
+
+import com.zrtjoa.constant.SysConstant;
+import com.zrtjoa.entity.Power;
+import com.zrtjoa.entity.Role;
+import com.zrtjoa.entity.Teacher;
+import com.zrtjoa.service.AuthorityService;
+import com.zrtjoa.service.RoleService;
+import com.zrtjoa.service.TeacherService;
+import org.apache.commons.codec.digest.Md5Crypt;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.util.StringUtils;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+
+import javax.servlet.http.HttpSession;
+import java.util.*;
+
+import static com.zrtjoa.constant.SysConstant.Admin.SALT;
+import static com.zrtjoa.constant.SysConstant.*;
+
+/**
+ * IndexController class
+ *
+ * @author zwy
+ * @date 2018/11/22 10:22
+ */
+@Controller
+@RequestMapping("index")
+public class IndexController {
+
+    public static final Logger logger = LoggerFactory.getLogger(IndexController.class);
+
+    @Autowired
+    private RoleService roleService ;
+
+    @Autowired
+    private AuthorityService authorityService ;
+
+    @Autowired
+    private TeacherService teacherService ;
+
+    @RequestMapping(value = "login",method = RequestMethod.GET)
+    public String toLogin(){
+        logger.info("======进入登陆页面======");
+        return "login";
+    }
+
+    @RequestMapping(value = "logout",method = RequestMethod.GET)
+    public String logout(HttpSession httpSession){
+        httpSession.invalidate();
+        return "redirect:/index/login";
+    }
+
+    @RequestMapping(value = "login",method = RequestMethod.POST)
+    public String login(Teacher teacher, Model model, HttpSession httpSession){
+
+        logger.info("=======用户登陆=======");
+
+        if (teacher==null|| StringUtils.isEmpty(teacher.getTnumber())||StringUtils.isEmpty(teacher.getPassword())){
+
+            logger.error("=======用户名或密码为空=======");
+            logger.error("=======教师编号:{}=======",teacher.getTnumber());
+            logger.error("=======密码:{}=======", StringUtils.isEmpty(teacher.getPassword())?teacher.getPassword():Md5Crypt.md5Crypt(teacher.getPassword().getBytes(),SALT));
+
+            model.addAttribute("msg","用户名或密码不能为空");
+            return "login" ;
+        }
+        String tnumber =teacher.getTnumber();
+
+//        if(SysConstant.Admin.NAME.equals(tnumber)
+//                &&SysConstant.Admin.PASS.equals(teacher.getPassword())){
+//
+//            logger.info("======管理员穿透======",tnumber);
+//
+//
+//            logger.info("======获取角色=======");
+//            String roleId = "1,2,3" ;
+//
+//            String permitId1 = "2,5,8";
+//            String permitId2 = "4,9,6";
+//            String permitId3 = "2,8";
+//            List<String> set = new ArrayList<>();
+//            set.addAll(Arrays.asList(permitId1));
+//            set.addAll(Arrays.asList(permitId2));
+//            set.addAll(Arrays.asList(permitId3));
+//
+//
+//            List<Role> roles = roleService.queryRoleByUserId(1L);
+//            Set<Power> authorities = new HashSet<Power>();
+//            roles.forEach(role->{
+//                Set<Power> authorityList = authorityService.queryAuthorityByRoleId(role.getId());
+//                //合并list
+//                authorities.addAll(authorityList);
+//            });
+//
+//            httpSession.setAttribute(CACHE_ROLE,roles);
+//            httpSession.setAttribute(CACHE_USER,teacher);
+//            httpSession.setAttribute(CACHE_PERMISSION,authorities);
+//            return "redirect:../index.jsp";
+//        }
+
+        //查询数据库是否存在该账号
+        Teacher dbTeacher = teacherService.queryTeacherByNumber(tnumber);
+
+        if (dbTeacher==null){
+            model.addAttribute("msg","用户不存在");
+            return "login" ;
+        }
+
+        if(TeacherStatus.FORBIDDEN.equals(dbTeacher.getStatus())){
+            model.addAttribute("msg","账户被停用");
+            return "login" ;
+        }
+
+        if(teacher.getPassword().equals(dbTeacher.getPassword())){
+            logger.info("........{}登陆成功........",dbTeacher.getTname());
+            httpSession.setAttribute(CACHE_USER,dbTeacher);
+            return "redirect:../index.jsp";
+        }
+
+        logger.error("=======密码错误=======");
+        logger.error("=======用户名:{}=======",teacher.getTnumber());
+        logger.error("=======密码:{}=======", teacher.getPassword());
+
+        model.addAttribute("msg","用户名或密码错误");
+        return "login";
+    }
+
+    public static void main(String[] args) {
+        String permitId1 = "2,5,8";
+        String permitId2 = "4,9,6";
+        String permitId3 = "2,8";
+        List<String> list = new ArrayList<>() ;
+        list.add(permitId1);
+        list.add(permitId2);
+        list.add(permitId3);
+
+//        final String perms = permitId1 +"," + permitId2 + ","+ permitId3 ;
+
+//        list.forEach(l->perms);
+        List<String> set = new ArrayList<>();
+//        set.addAll(Arrays.asList(perms.split(",")));
+        Set<Integer> integerSet = new HashSet<>();
+        set.forEach(s -> integerSet.add(Integer.parseInt(s)));
+        System.out.println("11111111");
+    }
+}

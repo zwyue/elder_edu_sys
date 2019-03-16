@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>老年大学系统——班主任管理</title>
+    <link rel="stylesheet" href="plugins/layui-v2.4.3/layui/css/layui.css"/>
+    <link rel="stylesheet" href="css/common_style.css" />
+    <link rel="stylesheet" href="font/iconfont.css"/>
+    <link rel="stylesheet" href="css/bzrgl.css" />
+</head>
+<body id="bzrgl">
+    <!--特殊学员记录-内容-查看-->
+    <div class="layui-body bzrglContent">
+		<span class="layui-breadcrumb bzrgl_nav">
+		   <a href="javascript:;"><cite>班主任管理</cite></a><span lay-separator="">></span>
+           <a href="javascript:;"><cite>特殊学员记录</cite></a><span lay-separator="">></span>
+           <a href="javascript:;"><cite>查看信息</cite></a>
+		</span>
+        <!--内容部分-->
+        <div class="content_ck">
+           <div class="content-ck-head">
+              <a class="title" href="javascript:;" >查看详情</a>
+              <a class="icon" href="javascript:history.go(-1);"><i style="font-size: 28px;" class="layui-icon layui-icon-close-fill"></i> </a>
+           </div>
+           <div class="">
+              <div class="layui-text">
+                <p>基本信息</p>
+            </div>
+              <div class="content_tsxyjl">
+                <form class="layui-form" action="">
+                    <table class="layui-table table_width">
+                        <colgroup data-filtered="filtered">
+                            <col width="200" data-filtered="filtered">
+                            <col data-filtered="filtered">
+                        </colgroup>
+                        <tbody>
+                        <tr>
+                            <td style="width:15%;">姓名</td>
+                            <td style="width:35%;" id="stuName"></td>
+                            <td style="width:15%;">性别</td>
+                            <td id="stuSex"></td>
+                        </tr>
+                        <tr>
+                            <td>异动原因</td>
+                            <td id="stuResult"></td>
+                            <td>主要原因</td>
+                            <td id="mainResult"></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </form>
+            </div>
+           </div>
+           <div class="content—yj">
+                <div class="layui-text">
+                    <p>班主任填写意见</p>
+                </div>
+                <div class="content_tsxyjl">
+                    <form class="layui-form" action="">
+                        <table class="layui-table table_width">
+                            <colgroup data-filtered="filtered">
+                                <col width="200" data-filtered="filtered">
+                                <col data-filtered="filtered">
+                            </colgroup>
+                            <tbody>
+                            <tr>
+                                <td style="width:15%;">填写时间</td>
+                                <td style="width:35%;" id="time"></td>
+                                <td style="width:15%;">填写地点</td>
+                                <td id="area"></td>
+                            </tr>
+                            <tr>
+                                <td>辅导老师</td>
+                                <td id="fdTeacher"></td>
+                                <td>针对问题</td>
+                                <td id="question"></td>
+                            </tr>
+                            <tr>
+                                <td>情况</td>
+                                <td colspan="3" id="fdMassage">退班</td>
+                            </tr>
+                            </tbody>
+                        </table>
+
+                    </form>
+                </div>
+                <div class="layui-form-item btn_anniu">
+                   <div class="layui-input-block" style="position: relative;top:-7rem;">
+                       <a href="javascript:history.go(-1);" class="fanHui layui-btn">关闭</a>
+                       <!--<button type="reset" class="layui-btn layui-btn-primary">重置</button>-->
+                   </div>
+                </div>
+           </div>
+        </div>
+        <!--内容部分end-->
+    </div>
+    <!--特殊学员记录内容 查看end-->
+
+    <script src="plugins/jQuery/jquery-3.3.1.js"></script>
+    <script src="plugins/layui-v2.4.3/layui/layui.js"></script>
+    <script>
+        //获取浏览地址id
+        (function ($) {
+            $.getUrlParam = function (name) {
+                var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+                var r = window.location.search.substr(1).match(reg);
+                if (r != null) return unescape(r[2]);
+                return null;
+            }
+        })(jQuery);
+        var id = $.getUrlParam('id');
+        // 查询到id，并把表格页面的值带到修改页面
+        $(function () {
+            $.ajax({
+                type: 'GET',
+                url: "api/specialmanager/query",
+                async: false,
+                data: {
+                    id: id
+                },
+                dataType: 'json',
+                xhrFields: {withCredentials: true},
+                success: function (data) {
+                    $("#stuName").text(data.data.sname);
+                    $("#mainResult").text(data.data.content);
+                    $("#time").text(data.data.times);
+                    $("#area").text(data.data.address);
+                    $("#question").text(data.data.question);
+                    $("#fdMassage").text(data.data.options);
+                    if(data.data.sex==0){
+                        $("#stuSex").text('男');
+                    }
+                    else if(data.data.sex==1){
+                        $("#stuSex").text('女');
+                    }
+                    if(data.data.types==0){
+                        $("#stuResult").text('退班');
+                    }
+                    else if(data.data.types==1){
+                        $("#stuResult").text('转班');
+                    }
+                    else if(data.data.types==2){
+                        $("#stuResult").text('休学');
+                    }
+                    else if(data.data.types==3){
+                        $("#stuResult").text('开除');
+                    }
+                },
+                error: function () {
+                    layui.use('layer', function () {
+                        var layer = layui.layer;
+                        layer.msg('未查到数据', {area: ['150px', '50px']});
+                    });
+                }
+            });
+        });
+        $(function () {
+            var username = $("#user", parent.parent.document).text();
+            var teacher = username.substr(3);
+            $("#fdTeacher").text(teacher);
+        })
+    </script>
+
+</body>
+</html>

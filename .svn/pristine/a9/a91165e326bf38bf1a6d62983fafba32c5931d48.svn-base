@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">	
+		<title>老年大学系统——教室管理</title>
+		<link rel="stylesheet" href="plugins/layui-v2.4.3/layui/css/layui.css"/>
+		<link rel="stylesheet" href="css/common_style.css" />
+		<link rel="stylesheet" href="css/jslb.css"/>
+	</head>
+	<body>
+		<!--用户管理内容-->
+		<div class="layui-body jslbContent">
+			<span class="layui-breadcrumb jslb_nav">
+			  <a href="javascript:;"><cite>教室管理</cite></a><span lay-separator="">＞</span>
+			  <a href="jslb_jslb.html">教室列表</a><span lay-separator="">＞</span>
+			  <a href="jslb_jslb.html">修改</a>
+			</span>
+
+
+			<div class="jslbCont">
+				<section>
+					<span class="jslbgl_bt fl">教室修改</span>
+					<a href="javascript:history.go(-1);" class="fanHui fr" data-method="setTop">返回</a>
+				</section>
+				<!--表格-->
+				<div class="layui-form">
+					<div class="layui-form-item">
+						<div class="layui-inline">
+							<label class="layui-form-label">教室名称：</label>
+							<div class="layui-input-inline">
+								<input type="text" id="className" class="layui-input" id="className" style="width: 150%!important;">
+							</div>
+						</div>
+						<div class="layui-inline">
+							<label class="layui-form-label">教室用途：</label>
+							<div class="layui-input-inline">
+								<input type="text" id="classUse" class="layui-input" id="purpose" style="width: 150%!important;">
+							</div>
+						</div>
+					</div>
+
+					<div class="layui-form-item">
+						<div class="layui-inline">
+							<label class="layui-form-label">教室类别：</label>
+							<div class="layui-input-inline" style="width:285px;">
+								<select name="" id="classType">
+									<option value="请选择">请选择</option>
+								</select>
+							</div>
+						</div>
+						<div class="layui-inline">
+							<label class="layui-form-label">教室地址：</label>
+							<div class="layui-input-inline" style="width:285px;">
+								<input type="text" id="classAddress" name="address" class="layui-input">
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--表格 end-->
+				<a href="javascript:;" onclick="btnXg()" class="bcBtn">确认修改</a>
+			</div>
+		</div>
+		
+		<!--用户管理内容 end-->
+
+		<script src="plugins/jQuery/jquery-3.3.1.js"></script>
+		<script src="plugins/layui-v2.4.3/layui/layui.js"></script>
+		<script>
+            //获取浏览地址id
+            (function ($) {
+                $.getUrlParam = function (name) {
+                    var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+                    var r = window.location.search.substr(1).match(reg);
+                    if (r != null) return unescape(r[2]);
+                    return null;
+                }
+            })(jQuery);
+            var id = $.getUrlParam('id');
+
+            //select下拉框
+            layui.use(['form', 'layedit', 'laydate'], function () {
+                var form = layui.form
+                    , layer = layui.layer
+                    , layedit = layui.layedit
+                    , laydate = layui.laydate;
+
+                // 查询到id，并把表格页面的值带到修改页面
+                $(function () {
+                    $.ajax({
+                        type: 'GET',
+                        url: "api/classroom/query",
+                        async: false,
+                        data: {
+                            id: id
+                        },
+                        dataType: 'json',
+                        xhrFields: {withCredentials: true},
+                        success: function (data) {
+                            $("#className").val(data.data.classroom.classroom);
+                            $("#classUse").val(data.data.classroom.purpose);
+                            $("#classAddress").val(data.data.classroom.address);
+                            //下拉框回显(查询回显接口里应包含下拉列表select类的接口,使其下拉列表类id与选中id相等)
+                            var i = 0;
+                            $.each(data.data.typelist, function(i,result){
+                                var index = data.data.typelist[i].id;
+                                (index);
+                                var text = data.data.typelist[i].catename;
+                                $("#classType").append('<option value="'+index+'">'+text+'</option>');
+                                if (index == data.data.classroom.cateid){
+                                    $("#classType").val(index);
+                                }
+                                form.render();
+                            });
+                        },
+                        error: function () {
+                            layui.use('layer', function () {
+                                var layer = layui.layer;
+                                layer.msg('未查到数据');
+                            });
+                        }
+                    });
+                });
+            })
+            //修改
+            function btnXg() {
+                var className = document.getElementById("className").value;
+                var classUse = document.getElementById("classUse").value;
+                var classType = document.getElementById("classType").value;
+                var classTypetext = $("#classType option:selected").text();
+                var classAddress = document.getElementById("classAddress").value;
+                $.ajax({
+                    type: 'post',
+                    url: "api/classroom/updateClassroom",
+                    async: false,
+                    data: {
+                        id: id,
+                        classroom: className,
+                        purpose: classUse,
+                        cateid: classType,
+                        catename: classTypetext,
+                        address: classAddress,
+                    },
+                    dataType: 'json',
+                    xhrFields: {withCredentials: true},
+                    success: function (data) {
+                        layui.use('layer', function(){
+                            var layer = layui.layer;
+                            layer.msg('修改成功');
+                        });
+                        setTimeout(function () {
+                            window.location.href = "jslb_jslb.html";
+                        },2000)
+
+                    },
+                    error: function () {
+                        layui.use('layer', function () {
+                            var layer = layui.layer;
+                            layer.msg('修改失败！');
+                        });
+                    }
+                });
+            }
+
+		</script>
+	</body>
+</html>

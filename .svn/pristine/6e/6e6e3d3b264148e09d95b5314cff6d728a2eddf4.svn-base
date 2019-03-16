@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="plugins/layui-v2.4.3/layui/css/layui.css" />
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/usermanag-no.css">
+</head>
+<body>
+    <div class="z-container">
+         <div class="layui-header header">
+             <h3>用户管理>学生管理</h3>
+         </div>
+        <div class="search">
+           <form name="form1" method="post">
+              <div class="name">
+                <label>姓名：</label>
+                <input type="text" id="name" name="stuName"  onblur="checkna()"/>
+              </div>
+              <div class="card">
+                <label>身份证：</label>
+                <input type="text" id="card" name="stuCard" onblur="chickCard()" />
+                  <span style="color: #cccccc;" class="tips" id="divname">请输入身份证号</span>
+              </div>
+              <div class="btn">
+                <button type="button" id="btn">查询</button>
+              </div>
+           </form>
+        </div>
+        <!---->
+        <div class="table_name">
+            <div class="student_list">
+                <div class="stu_left">
+                    <h3><span>&nbsp;</span>&nbsp;学生列表</h3>
+                </div>
+                <div class="add_stu">
+                    <button type="button" id="addstu">+新增学生</button>
+                </div>
+            </div>
+            <!--表格部分-->
+            <table class="layui-table table_bg" lay-skin="line">
+                <colgroup>
+                    <col width="150">
+                </colgroup>
+                <thead class="bg2">
+                <tr>
+                    <th>序号</th>
+                    <th>姓名</th>
+                    <th>类别</th>
+                    <th>专业</th>
+                    <th>班级</th>
+                    <th>联系方式</th>
+                    <th>家属联系方式</th>
+                    <th>班主任</th>
+                    <th>操作</th>
+                </tr>
+                </thead>
+            </table>
+            <div class="search_bg">
+                <img src="images/user-bg.png">
+                <h2>暂无查询结果...</h2>
+            </div>
+        </div>
+    </div>
+
+
+
+<script type="text/javascript" src="plugins/jQuery/jquery-3.3.1.min.js"></script>
+<script>
+    //身份证
+    function chickCard(){
+        var card = $("#card").val();
+        // 身份证号码为15位或者18位，15位时全为数字，18位前17位为数字，最后一位是校验位，可能为数字或字符X
+        var reg = /^[1-9]{1}[0-9]{14}$|^[1-9]{1}[0-9]{16}([0-9]|[xX])$/;
+        if(reg.test(card) === false){
+
+            $("#divname").html("身份证输入不合法")
+            // $("#card").val("");
+        }
+       else{
+            $("#divname").html("身份证输入正确")
+        }
+    }
+</script>
+</body>
+</html>

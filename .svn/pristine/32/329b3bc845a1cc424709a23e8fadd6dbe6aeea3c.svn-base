@@ -1,0 +1,87 @@
+/*头部*/
+.jslbContent{
+	background: #f3f3f3; padding: 0.5rem 1rem;box-sizing: border-box;
+	position: absolute; bottom: 0!important;
+}
+.jslb_nav{
+	display: block; visibility:visible;padding-left:10px;box-sizing: border-box;width: 50%;height: 40px;line-height: 40px;
+}
+.jslb_nav a{
+	font-size: 1rem;
+}
+/*头部 end*/
+
+/*表格*/
+.jslbCont{
+	height:auto;padding:10px 10px 20px 10px;box-sizing: border-box;background: #FFFFFF;
+}
+.biaoGe section{
+	width: 100%;height: 40px;
+}
+.jslbgl_bt{
+	 display:inline-block;width: 150px;height: 35px;border-left: 5px solid #3d9def;padding-left: 10px;
+	 line-height:35px;font-size: 1.2rem;font-weight: 500;letter-spacing: 0.1rem;
+}
+.fanHui{
+    padding: 5px 18px;background-color: #3d9def;text-align: center;line-height: 150%; color: #FFFFFF;
+    border-radius: 20px;font-size: 1rem;float: right;position: relative;margin-right: 1rem;letter-spacing: 0.3rem;
+}
+.fanHui:hover{
+	color: #FFFFFF;
+}
+/*时间控件*/
+.layui-form{
+	margin: 1rem 0;padding-left: 2rem;box-sizing: border-box;
+}
+.layui-form label{
+	font-size: 1.1rem;width: 125px!important;
+}
+#test5{
+	border:1px solid #CCCCCC;
+}
+/*时间控件end*/
+/*表格*/
+.biaogeCont{
+	padding-left: 2rem;box-sizing: border-box;
+}
+.bg {
+    padding: 3px 10px;
+    line-height: 150%;
+    border: 1px solid #BFBFBF;
+    border-radius: 10px;
+    box-sizing: border-box;
+    margin-right: 0.2rem;
+}
+.bgActive {
+    background: #3d9def;
+    color: #FFFFFF;
+    border: none;
+}
+.layui-table th,.layui-table td{
+	text-align: center;
+}
+.page{
+	margin: 0.5rem 0 0.5rem 40%;
+	width: 80%;
+	height: 50px;
+}
+.layui-inline{
+	width: 48%;
+}
+.layui-inline .layui-input{
+	/*width: 150%!important;*/border:1px solid #CCCCCC;border-radius:10px;
+}
+.layui-laypage .layui-laypage-curr .layui-laypage-em {
+	background: #3d9def;
+}
+/*表格 end*/
+
+/*教室列表新增、修改 按钮*/
+.bcBtn{
+	display: block;width: 180px; height: 50px; text-align: center;line-height: 50px;color: #FFFFFF;
+    margin: 100px auto 20px auto;background: #3d9def;font-size: 1.3rem;letter-spacing: 0.1rem; border-radius: 10px;
+}
+.bcBtn:hover{
+	color: #FFFFFF;
+}
+/*教室列表新增、修改按钮end*/

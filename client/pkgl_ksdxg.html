@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>绑定角色弹窗</title>
+		<link rel="stylesheet" href="plugins/layui-v2.4.3/layui/css/layui.css"/>
+        <link rel="stylesheet" href="css/common_style.css" />
+    	<style>
+    		body{
+    			 padding:50px 50px 0 50px;box-sizing: border-box;
+    		}
+    		#roles{
+    			width: 80%;
+    		}
+    		.btns{
+    			margin-top:200px;
+    		}
+    		.layui-form-select dl{
+    			max-height:180px!important;
+    		}
+    		/*layui时间控件*/
+			.layui-laydate-content>.layui-laydate-list {
+	            padding-bottom: 0px;
+	            overflow: hidden;
+	        }
+	        .layui-laydate-content>.layui-laydate-list>li{
+	       	    width:50%
+	        }	 
+			.merge-box .scrollbox .merge-list{
+			    padding-bottom: 5px;
+			}
+
+    </style>
+	</head>
+	<body>
+		<div class="layui-form-item layui-form" lay-filter="roles">
+		 <div class="layui-form-item">
+	          <label class="layui-form-label">课时名称：</label>
+	          <div class="layui-input-block">
+	           		<input type="text" class="layui-input" placeholder="请输入课时段名称" id="courseName">
+	          </div>
+          </div>
+          <div class="layui-form-item">
+				<label class="layui-form-label">课时段开始:</label>
+				<div class="layui-input-block">
+					<input type="text" class="layui-input" id="startTime" autocomplete="off" placeholder="请选择具体时间">
+				</div>
+			</div>
+			<div class="layui-form-item">
+				<label class="layui-form-label">课时段结束:</label>
+				<div class="layui-input-block">
+					<input type="text" class="layui-input" id="endTime" autocomplete="off" placeholder="结束时间应大于开始时间">
+				</div>
+			</div>
+        </div> 
+		<script type="text/javascript" src="plugins/jQuery/jquery-3.3.1.min.js"></script>
+		<script type="text/javascript" src="plugins/layui-v2.4.3/layui/layui.js"></script>
+		<script>				
+		layui.use(['layer', 'form', 'laydate'], function(){
+				var form = layui.form;
+				var laydate = layui.laydate; 
+				laydate.render({
+					elem: '#startTime',
+					type: 'time',
+					format: 'HH:mm',
+					btns: ['clear', 'confirm'],
+					ready: formatminutes
+				});
+				
+				laydate.render({
+					elem: '#endTime',
+					type: 'time',
+					format: 'HH:mm',
+					btns: ['clear', 'confirm'],
+					ready: formatminutes
+				});
+
+				function formatminutes(date) {
+					var aa = $(".laydate-time-list li ol")[1];
+					var showtime = $($(".laydate-time-list li ol")[1]).find("li");
+					for(var i = 0; i < showtime.length; i++) {
+						var t00 = showtime[i].innerText;
+						if(t00 != "00" && t00 != "05" && t00 != "10" && t00 != "15"&& t00 != "20" && t00 != "25"&& t00 != "30" && t00 != "35"&& t00 != "40" && t00 != "45"&& t00 != "50"&& t00 != "55") {
+							showtime[i].remove()
+						}
+					}
+					$($(".laydate-time-list li ol")[2]).find("li").remove(); //清空秒
+				}
+
+			});
+		//将父页面的值回填到子页面
+		function childData(courseId,beginTime,finshTime){
+			$('#courseName').val(courseId);
+			$('#startTime').val(beginTime);
+			$('#endTime').val(finshTime);			
+		};
+		
+		//将这些值传给另一个页面
+		var callbackdata = function (){
+		    var courseName = $('#courseName').val();  //课程名称
+			var startTime  = $('#startTime').val();
+			var endTime    = $('#endTime').val();
+			var time = startTime + '-' + endTime;
+		    var data = {
+		        courseName: courseName,
+		        startTime  :startTime,
+		        endTime:endTime,
+		        time:time
+		    };
+		    return data;
+		};
+		
+		</script>
+	</body>
+</html>

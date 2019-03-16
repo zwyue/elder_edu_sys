@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">-->
+		<title>老年大学系统——用户管理</title>
+		<link rel="stylesheet" href="plugins/layui-v2.4.3/layui/css/layui.css"/>
+		<link rel="stylesheet" href="css/common_style.css" />
+		<link rel="stylesheet" href="css/yhgl_lsgl_jsxz.css" />
+		<link rel="stylesheet" href="plugins/form/formSelects-v4.css"/>
+	</head>
+	<body>
+		
+		<!--用户管理内容-->
+		<div class="layui-body yhglContent">
+			<section class="smallNav">
+				<span class="layui-breadcrumb yhgl_nav">
+				  <a href="javascript:;"><cite>用户管理</cite></a><span lay-separator="">></span>
+				  <a href="javascript:;">学生查看</a>
+				</span>			
+				<span class="fanHui">
+					<a href="javascript:history.go(-1);">返回</a>
+				</span>								
+			</section>
+						
+			<!--编辑内容-->
+			<div class="lsglContent">
+				<section class="lsglBt">
+					<span class="fl">学生查看</span>					
+				</section>
+				<div class="layui-form-item">
+				    <div class="layui-inline">
+				      <label class="layui-form-label">学生姓名：</label>
+				      <div class="layui-input-inline">
+				        <input type="text"  class="layui-input inputTop" id="stunumber"/>
+				      </div>
+				    </div>
+			    	<div class="layui-inline">
+				      <label class="layui-form-label">性  &nbsp;&nbsp;&nbsp; 别：</label>
+				      <div class="layui-input-inline">
+				        <input type="text" class="layui-input inputTop" id="sex"/>
+				      </div>
+				    </div>	    
+				  </div>
+				  <div class="layui-form-item">
+				    <div class="layui-inline">
+				      <label class="layui-form-label">身份证号：</label>
+				      <div class="layui-input-inline">
+				        <input type="text" class="layui-input inputTop" id="sfzh"/>
+				      </div>
+				    </div>	
+				    <div class="layui-inline">
+				      <label class="layui-form-label">民  &nbsp;&nbsp;&nbsp; 族：</label>
+				      <div class="layui-input-inline">
+				        <input type="text" class="layui-input inputTop" id="nation"/>
+				      </div>
+				    </div>			    
+				  </div>
+				  <div class="layui-form-item">
+				    <div class="layui-inline">
+				      <label class="layui-form-label">年 &nbsp;&nbsp;&nbsp; 龄：</label>
+				      <div class="layui-input-inline">
+				        <input type="text" class="layui-input inputTop" id="age"/>
+				      </div>
+				    </div>	
+				    <div class="layui-inline">
+				      <label class="layui-form-label">联系方式：</label>
+				      <div class="layui-input-inline">
+				        <input type="tel" lay-verify="required|phone" autocomplete="off" class="layui-input inputTop" id="phone"/>
+				      </div>
+				    </div>		    
+				  </div>
+				  <div class="layui-form-item">
+				    <div class="layui-inline">
+				      <label class="layui-form-label">&nbsp;现地址：</label>
+				      <div class="layui-input-inline">
+				        <input type="text" class="layui-input inputTop" id="address"/>
+				      </div>
+				    </div>
+				    <div class="layui-inline">
+				      <label class="layui-form-label">家庭联系方式：</label>
+				      <div class="layui-input-inline">
+				        <input type="text" class="layui-input inputTop" id="emergency"/>
+				      </div>
+				    </div>			    
+				  </div>
+				  <div class="layui-form-item">				    
+				    <div class="layui-inline">
+				      <label class="layui-form-label">身份证地址：</label>
+				      <div class="layui-input-inline">
+				        <input type="text" class="layui-input inputTop" id="sfzaddress"/>
+				      </div>
+				    </div>	
+				    <div class="layui-inline">
+				      <label class="layui-form-label">车牌号：</label>
+				      <div class="layui-input-inline">
+				        <input type="text" class="layui-input inputTop" id="carnumber"/>
+				      </div>
+				    </div>
+				  </div>
+				  <div class="layui-form-item">				    
+				    <div class="layui-inline">
+				      <label class="layui-form-label">入学年限：</label>
+				      <div class="layui-input-inline">
+				        <input type="text" class="layui-input inputTop" id="entertime"/>
+				      </div>
+				    </div>	
+				    <div class="layui-inline">
+				      <label class="layui-form-label">毕业年限：</label>
+				      <div class="layui-input-inline">
+				        <input type="text" class="layui-input inputTop" id="graduatetime"/>
+				      </div>
+				    </div>
+				  </div>
+			</div>
+			<!--编辑内容end-->
+					
+			<!--编辑内容-->
+			<div class="lsglContent">
+				<section class="lsglBt">
+					<span class="fl">报名班级</span>					
+				</section>
+				<!--三级联动-->
+				<label class="layui-form-label" style="float: left;font-size: 16px;"> 选择班级：</label>
+				<div class="layui-form" style="float: left;width: 90%;">					
+				    <select name="city" xm-select="select15" class="classes">				    	
+				        <option value="">请选择, 此处是可多选</option>
+				    </select>
+				</div>
+				<div class="clear"></div>				
+				<!--三级联动 end-->
+				
+			<!--编辑内容end-->
+			<a href="javascript:;" class="xgBtn">修改</a>
+		</div>
+		<!--用户管理内容 end-->		
+	</div>
+		<script src="plugins/jQuery/jquery-3.3.1.js"></script>
+		<script src="plugins/layui-v2.4.3/layui/layui.js"></script>
+		<script type="text/javascript" src="plugins/form/formSelects-v4.js"></script>
+		<script>
+		layui.use('form', function(){
+			//预先加载form表单模块
+		    var form = layui.form;										
+	    });
+	    //获取浏览地址id
+    	$.getUrlParam = function (name){
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+            var r = window.location.search.substr(1).match(reg);
+            if (r != null) return unescape(r[2]); return null;
+        }
+    	var id=$.getUrlParam('id');
+        $(function(){
+        	//查询到id，并把表格页面的值带到修改页面
+            $.ajax({
+                type: 'GET',
+                url: "api/student/detail?id="+id,
+                async: false,
+                data:{
+                    id:id
+                },
+                dataType:'json',
+                success: function (data) {
+                	//将后台返回的数据回填到表单里
+                    $("#stunumber").val(data.data.stunumber);
+                    $("#sex").val(data.data.sex);
+                    $("#sfzh").val(data.data.sfzh);
+                    $("#nation").val(data.data.nation);
+                    $("#age").val(data.data.age);
+                    $("#phone").val(data.data.phone);
+                    $("#address").val(data.data.address);
+                    $("#emergency").val(data.data.emergency);
+                    $("#sfzaddress").val(data.data.sfzaddress);
+                    $("#carnumber").val(data.data.carnumber);
+                    $("#entertime").val(data.data.entertime);
+                    $("#graduatetime").val(data.data.graduatetime);
+                },
+                error: function(){
+                    layui.use('layer', function(){
+                        var layer = layui.layer;
+                        layer.msg('未查到数据');
+                    });
+                }
+            });   
+    });
+	</script>
+	</body>
+</html>

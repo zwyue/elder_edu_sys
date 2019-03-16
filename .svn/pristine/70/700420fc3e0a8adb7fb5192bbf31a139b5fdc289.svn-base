@@ -1,0 +1,92 @@
+package com.zrtjoa.entity;
+
+import java.util.Date;
+
+/**
+ * @Author: yangli
+ * @Description: 教室记录表
+ * @Date: Created in 10:16 2018/11/13
+ * @Modified by:
+ */
+public class Record {
+    //主键id
+    private int id;
+    //教室ID
+    private int jsid;
+    //教室名称
+    private String jsmc;
+    //班级ID
+    private int bjid;
+    //班级名称
+    private String bjmc;
+    //使用开始时间
+    private Date kssj;
+    //使用结束时间
+    private Date jssj;
+    //创建时间
+    private Date cjsj;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public int getJsid() {
+        return jsid;
+    }
+
+    public void setJsid(int jsid) {
+        this.jsid = jsid;
+    }
+
+    public String getJsmc() {
+        return jsmc;
+    }
+
+    public void setJsmc(String jsmc) {
+        this.jsmc = jsmc;
+    }
+
+    public int getBjid() {
+        return bjid;
+    }
+
+    public void setBjid(int bjid) {
+        this.bjid = bjid;
+    }
+
+    public String getBjmc() {
+        return bjmc;
+    }
+
+    public void setBjmc(String bjmc) {
+        this.bjmc = bjmc;
+    }
+
+    public Date getKssj() {
+        return kssj;
+    }
+
+    public void setKssj(Date kssj) {
+        this.kssj = kssj;
+    }
+
+    public Date getJssj() {
+        return jssj;
+    }
+
+    public void setJssj(Date jssj) {
+        this.jssj = jssj;
+    }
+
+    public Date getCjsj() {
+        return cjsj;
+    }
+
+    public void setCjsj(Date cjsj) {
+        this.cjsj = cjsj;
+    }
+}

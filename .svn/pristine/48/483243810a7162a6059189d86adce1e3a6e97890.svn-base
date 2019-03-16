@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">-->
+    <title>老年大学系统——班级管理</title>
+    <link rel="stylesheet" href="plugins/layui-v2.4.3/layui/css/layui.css"/>
+    <link rel="stylesheet" href="css/common_style.css" />
+    <link rel="stylesheet" href="css/bjgl_xz_xg.css"/>
+</head>
+<body>
+
+    <!--班级管理新增内容-->
+    <div class="layui-body yhglContent">
+        <section class="smallNav">
+			<span class="layui-breadcrumb bjgl_nav">
+				<a href="javascript:;"><cite>班级管理</cite></a>
+                <a href="javascript:;">新增</a>
+            </span>
+        </section>
+
+        <!--编辑内容-->
+        <div class="lsglContent">
+            <section class="lsglBt">
+               <div class="fl bjxz_bl">班级新增</div>
+               <div class="fanHui">
+				   <a href="javascript:history.go(-1);">返回</a>
+			   </div>
+            </section>
+			<div class="formLeft fl">
+				<div class="layui-form-item">
+	                <div class="layui-inline">
+	                    <label class="layui-form-label">班级名称：</label>
+	                    <div class="layui-input-inline">
+	                        <input type="text" name="classname" lay-verify="required" class="layui-input inputTop" />
+	                    </div>
+	                </div>
+	              </div>
+	              <div class="layui-form-item">
+	                <div class="layui-inline">
+	                    <label class="layui-form-label">班级专业：</label>
+				        <div class="layui-input-inline layui-form"  lay-filter="classCategory">
+				            <select name="classCategory" lay-verify="required"  id="classCategory" >
+				            	<option value="">请选择</option>
+				            </select>
+				          </div>
+				        <div class="layui-input-inline layui-form" lay-filter="majorname">
+				            <select name="classMajor" lay-verify="required" id="majorname">
+				              <option value="">请选择</option>
+				            </select>			          
+				        </div>
+	                </div>
+	            </div>
+	            <div class="layui-form-item">
+	                <div class="layui-inline">
+	                    <label class="layui-form-label">授课老师：</label>
+	                    <div class="layui-input-inline">
+	                        <input type="text" name="tname" lay-verify="required" placeholder="弹窗选择老师" autocomplete="off" class="layui-input inputTop"/>
+	                    </div>
+	                </div>
+	            </div>
+			</div>
+            	
+            <div class="formRight fr">
+				<div class="layui-form-item">
+	                <div class="layui-inline" >
+	                    <label class="layui-form-label">班主任姓名：</label>
+	                    <div class="layui-input-inline layui-form" lay-filter="headTeacher">
+	                         <select name="teacher" lay-verify="required" class="layui-form-select selectTop" id="headTeacher">
+	                             <option value="">请选择</option>
+	                         </select>
+	                    </div>
+	                </div>
+	            </div>
+	            <div class="layui-form-item">
+	                <div class="layui-inline">
+	                    <label class="layui-form-label">班级计划人数：</label>
+	                    <div class="layui-input-inline">
+	                        <input type="text" name="plansize" class="layui-input inputTop" />
+	                    </div>
+	                </div>
+	            </div>
+			</div>
+			<div style="clear: both;"></div>
+           
+        </div>
+    
+    <a href="javascript:;" class="bcBtn" id="addClass">保存</a>
+</div>
+<!--班级管理内容end-->
+
+<script type="text/javascript" src="plugins/jQuery/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="plugins/layui-v2.4.3/layui/layui.js"></script>
+<script type="text/javascript" src="js/bjgl_ckls.js"></script>
+<script type="text/javascript" src="js/bjgl_xz.js"></script>
+
+</body>
+</html>

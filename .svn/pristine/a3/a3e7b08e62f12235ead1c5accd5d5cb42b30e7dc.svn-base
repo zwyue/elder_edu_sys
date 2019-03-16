@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>老年大学系统——学委会管理</title>
+    <link rel="stylesheet" href="plugins/layui-v2.4.3/layui/css/layui.css"/>
+    <link rel="stylesheet" href="css/common_style.css" />
+    <link rel="stylesheet" href="font/iconfont.css"/>
+    <link rel="stylesheet" href="css/bzrgl.css" />
+</head>
+<body id="bzrgl">
+<!--学委会日志-新增内容-->
+<div class="layui-body bzrglContent">
+		<span class="layui-breadcrumb bzrgl_nav">
+		  <a href="javascript:;"><cite>学委会管理</cite></a><span lay-separator="">></span>
+          <a href="javascript:;"><cite>学委会日志</cite></a><span lay-separator="">></span>
+          <a href="javascript:;"><cite>新增</cite></a>
+		</span>
+    <!--内容部分-->
+    <div class="content">
+        <div class="content-head">
+            <a class="title" href="javascript:;" >学委会日志记录新增</a>
+            <a href="javascript:history.go(-1);" class="fanHui">返回</a>
+        </div>
+        <div class="">
+            <form class="layui-form" action="">
+                <div class="layui-form-item">
+                    <label class="layui-form-label">时间：</label>
+                    <div class="layui-input-block" style="width:30%;">
+                        <input type="text" id="time" name="time" required  lay-verify="required" placeholder="请输入" autocomplete="off" class="layui-input" onblur="checkDate()">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">名称：</label>
+                    <div class="layui-input-block">
+                        <input type="text" id="name" name="title" required  lay-verify="required" placeholder="请输入标题" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item layui-form-text">
+                    <label class="layui-form-label">内容：</label>
+                    <div class="layui-input-block">
+                        <textarea id="textarea" name="desc" placeholder="请输入内容" class="nr_textarea layui-textarea"></textarea>
+                    </div>
+                </div>
+                <div class="layui-form-item btn_anniu">
+                    <div class="layui-input-block">
+                        <a class="layui-btn" id="btnPreserved" lay-filter="formDemo">保存</a>
+                        <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!--内容部分end-->
+</div>
+<!--学委会日志-新增内容end-->
+
+   <script src="plugins/jQuery/jquery-3.3.1.js"></script>
+   <script src="plugins/layui-v2.4.3/layui/layui.js"></script>
+   <!--<script src="js/xwhgl.js"></script>-->
+   <script>
+    //创建时间文本框验证
+    var DATE_FORMAT = /^[0-9]{4}-[0-1]?[0-9]{1}-[0-3]?[0-9]{1}$/;
+    function checkDate(){
+        var getctime = document.getElementById("time").value;
+        if(DATE_FORMAT.test(getctime)){
+            layui.use('layer', function(){
+                var layer = layui.layer;
+                layer.msg('您输入的日期格式正确！',{time:1000});
+            });
+        }
+        else {
+            layui.use('layer', function(){
+                var layer = layui.layer;
+                layer.msg('抱歉，您输入的日期格式有误，正确格式应为:<br>2012-01-01',{time:2000});
+            });
+        }
+    }
+    //新增
+    $("#btnPreserved").click(function () {
+        var xzTime = document.getElementById("time").value;
+        var xzName = document.getElementById("name").value;
+        var xzTextarea = document.getElementById("textarea").value;
+        if (xzName === '' || xzTime === '' || xzTextarea === '') {
+            layui.use('layer', function () {
+                var layer = layui.layer;
+                layer.msg('文本框不能为空！',{time:1000});
+            })
+        }
+        else {
+            $.ajax({
+                type: 'POST',
+                async:false,
+                url:'api/studylog/save',
+                data:{
+                    title:xzName,
+                    starttime:xzTime,
+                    content:xzTextarea
+                },
+                dataType: 'json',
+                xhrFields: {withCredentials: true},
+                success:function (data) {
+                    layui.use('layer', function(){
+                        var layer = layui.layer;
+                        layer.msg('新增成功！');
+                    });
+                    setTimeout(function () {
+                        window.location.href = "xwhrz.html";
+                    },2000)
+                },
+                error:function () {
+                    layui.use('layer', function(){
+                        var layer = layui.layer;
+                        layer.msg('新增失败！');
+                    });
+                }
+            })
+        }
+    })
+</script>
+</body>
+</html>

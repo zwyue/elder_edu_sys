@@ -1,0 +1,42 @@
+package com.zrtjoa.entity;
+
+import java.util.Date;
+
+/**
+ * @Author: yangli
+ * @Description: 大事记
+ * @Date: Created in 14:12 2018/11/16
+ * @Modified by:
+ */
+public class Memorabilia {
+    //主键id
+    private int id;
+    //内容
+    private String content;
+    //填写时间
+    private Date cjsj;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getContent() {
+        return content;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
+    }
+
+    public Date getCjsj() {
+        return cjsj;
+    }
+
+    public void setCjsj(Date cjsj) {
+        this.cjsj = cjsj;
+    }
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>老年大学系统—报名管理</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="plugins/layui-v2.4.3/layui/css/layui.css" />
+    <link rel="stylesheet" href="css/common_style.css" />
+    <link rel="stylesheet" href="css/bmgl_ydda.css" />
+</head>
+<body>
+
+       <!-- 内容主体区域 -->
+       <div class="layui-body body_contain">
+          <blockquote class="body_header">
+              <span class="">
+                <a href="javascript:;" class="txt_xsl2">报名管理</a>&nbsp;<span lay-separator="">></span>
+                <a href="javascript:;" class="txt_xsl3">异动档案</a>
+              </span>
+          </blockquote>
+          <section class="contain-bg">
+              <div class="contain-title">
+                  <h3>异动档案</h3>
+              </div>
+              <div class="table_style">
+                  <table class="layui-table">
+                      <colgroup>
+                          <col width="150">
+                          <col width="200">
+                          <col >
+                      </colgroup>
+                      <thead>
+                      <tr>
+                          <th>序号</th>
+                          <th>异动类型</th>
+                          <th>异动时间</th>
+                      </tr>
+                      </thead>
+                      <tbody>
+                      <tr>
+                          <td>1</td>
+                          <td>退学</td>
+                          <td>2018-11-11</td>
+                      </tr>
+                      <tr>
+                          <td>2</td>
+                          <td>退学</td>
+                          <td></td>
+                      </tr>
+                      <tr>
+                          <td>3</td>
+                          <td>休学</td>
+                          <td></td>
+                      </tr>
+                      </tbody>
+                  </table>
+              </div>
+          </section>
+
+          <div class="btn">
+              <input type="button" value="关闭" id="cancel">
+          </div>
+       </div>
+       <!-- 内容主体区域end -->
+
+<!--<div class="layui-footer">-->
+
+<!--</div>-->
+    <script src="./plugins/jQuery/jquery-3.3.1.min.js"></script>
+    <script src="./plugins/layui-v2.4.3/layui/layui.js"></script>
+
+</body>
+</html>

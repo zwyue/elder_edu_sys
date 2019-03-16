@@ -1,0 +1,70 @@
+package com.zrtjoa.controller.statistics;
+
+import com.zrtjoa.common.ResultUtils;
+import com.zrtjoa.service.statistics.StuNumStatisticsService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import javax.ws.rs.GET;
+import java.util.Map;
+
+/**
+ * copyright    <a href="http://www.qaqavr.com/">中锐</a>
+ * <pre>
+ *     @author      zwy
+ *     @date        2019/1/14 14:17
+ *     email        1092478224@qq.com
+ *     desc         学生人数统计
+ * </pre>
+ */
+@Controller
+@RequestMapping("/statistics/student")
+public class StudentNumberStatistics {
+
+    @Autowired
+    private StuNumStatisticsService stuNumStatisticsService ;
+
+    /**
+     * 学院总人数统计
+     *
+     * @author zwy
+     * @date 2019/1/14 14:20
+     */
+    @RequestMapping("/total")
+    @GET
+    @ResponseBody
+    public Map totalByYear(Integer startTermId ,Integer endTermId ,Integer classId){
+        Map map = stuNumStatisticsService.queryTotalStudentWithYear(startTermId,endTermId,classId);
+        return ResultUtils.success(map);
+    }
+
+    /**
+     * 新增率
+     *
+     * @author zwy
+     * @date 2019/1/14 18:19
+     */
+    @RequestMapping("/newrate")
+    @GET
+    @ResponseBody
+    public Map newStuRatio(Integer startTermId ,Integer endTermId ,Integer classId){
+        Map map = stuNumStatisticsService.queryNewStuRate(startTermId,endTermId,classId);
+        return ResultUtils.success(map) ;
+    }
+
+    /**
+     * 人员流失率
+     *
+     * @author zwy
+     * @date 2019/1/16 16:19
+     */
+    @RequestMapping("/lossrate")
+    @GET
+    @ResponseBody
+    public Map stuLossRatio(Integer startTermId ,Integer endTermId ,Integer classId){
+        Map map = stuNumStatisticsService.queryStuLossRate(startTermId,endTermId,classId);
+        return ResultUtils.success(map) ;
+    }
+}

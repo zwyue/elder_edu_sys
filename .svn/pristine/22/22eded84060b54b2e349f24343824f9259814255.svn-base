@@ -1,0 +1,135 @@
+package com.zrtjoa.entity;
+
+import java.io.Serializable;
+import java.util.Date;
+
+/**
+ * @Author: yangli
+ * @Description: 教室使用记录表
+ * @Date: Created in 17:47 2018/11/26
+ * @Modified by:
+ */
+public class Classrecord implements Serializable {
+    //主键id
+    private Integer id;
+    //班级id
+    private Integer classid;
+    //班级名称
+    private String classname;
+    //教室id
+    private Integer roomid;
+    //教室名称
+    private String roomname;
+    //开始时间
+    private Date starttime;
+    //结束时间
+    private Date endtime;
+    //使用人id
+    private Integer tid;
+    //使用人姓名
+    private String tname;
+    //创建时间
+    private Date crttime;
+    //课程名称
+    private String coursename;
+    //课程id
+    private Integer courseid;
+
+    private static final long serialVersionUID = 1L;
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public Integer getClassid() {
+        return classid;
+    }
+
+    public void setClassid(Integer classid) {
+        this.classid = classid;
+    }
+
+    public String getClassname() {
+        return classname;
+    }
+
+    public void setClassname(String classname) {
+        this.classname = classname == null ? null : classname.trim();
+    }
+
+    public Integer getRoomid() {
+        return roomid;
+    }
+
+    public void setRoomid(Integer roomid) {
+        this.roomid = roomid;
+    }
+
+    public String getRoomname() {
+        return roomname;
+    }
+
+    public void setRoomname(String roomname) {
+        this.roomname = roomname == null ? null : roomname.trim();
+    }
+
+    public Date getStarttime() {
+        return starttime;
+    }
+
+    public void setStarttime(Date starttime) {
+        this.starttime = starttime;
+    }
+
+    public Date getEndtime() {
+        return endtime;
+    }
+
+    public void setEndtime(Date endtime) {
+        this.endtime = endtime;
+    }
+
+    public Integer getTid() {
+        return tid;
+    }
+
+    public void setTid(Integer tid) {
+        this.tid = tid;
+    }
+
+    public String getTname() {
+        return tname;
+    }
+
+    public void setTname(String tname) {
+        this.tname = tname == null ? null : tname.trim();
+    }
+
+    public Date getCrttime() {
+        return crttime;
+    }
+
+    public void setCrttime(Date crttime) {
+        this.crttime = crttime;
+    }
+
+    public String getCoursename() {
+        return coursename;
+    }
+
+    public void setCoursename(String coursename) {
+        this.coursename = coursename == null ? null : coursename.trim();
+    }
+
+    public Integer getCourseid() {
+        return courseid;
+    }
+
+    public void setCourseid(Integer courseid) {
+        this.courseid = courseid;
+    }
+}

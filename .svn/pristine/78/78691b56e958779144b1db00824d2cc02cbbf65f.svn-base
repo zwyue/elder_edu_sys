@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<title>老年大学系统——用户管理</title>
+		<link rel="stylesheet" href="plugins/layui-v2.4.3/layui/css/layui.css"/>
+		<link rel="stylesheet" href="css/common.css" />
+		<link rel="stylesheet" href="css/yhgl.css" />
+		
+	</head>
+	<body id="yhgl">
+		<!--左侧导航-->
+		<!--<div class="leftPage"></div>-->
+		 <!--左侧导航区域-->
+         <div class="layui-side layui-bg-black">
+              <div class="nav_logo">
+                  <img src="images/logo.png">
+                  <h2>OA管理系统</h2>
+                  <h5>天津老年大学</h5>
+                  <img src="images/line.png">
+              </div>
+             <!--<div class="layui-side-scroll">-->
+             <div class="">
+              <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+                <ul class="layui-nav layui-nav-tree"  lay-filter="test">
+                  <li class="layui-nav-item layui-nav-itemed nav_li">
+                      <a class="nav_li_a" href="javascript:;"><i class="iconfont icon-jiaoseguanli"></i>&nbsp;&nbsp;用户管理</a>
+                      <dl class="layui-nav-child">
+                          <dd><a href="javascript:;">列表一</a></dd>
+                          <dd><a href="javascript:;">列表二</a></dd>
+                          <dd><a href="javascript:;">列表三</a></dd>
+                          <dd><a href="javascript:;">超链接</a></dd>
+                      </dl>
+                  </li>
+                  <li class="layui-nav-item nav_li">
+                      <a class="nav_li_a" href="javascript:;"><i class="iconfont icon-shujutongji"></i>&nbsp;&nbsp;数据分析</a>
+                      <dl class="layui-nav-child">
+                          <dd><a href="javascript:;">列表一</a></dd>
+                          <dd><a href="javascript:;">列表二</a></dd>
+                          <dd><a href="javascript:;">超链接</a></dd>
+                      </dl>
+                  </li>
+                  <li class="layui-nav-item nav_li">
+                      <a class="nav_li_a" href="javascript:;"><i class="iconfont icon-jiaoseguanli1"></i>&nbsp;&nbsp;角色管理</a>
+                  </li>
+              </ul>
+            </div>
+         </div>
+         <!--头部导航区域-->
+		<!--左侧导航 end-->
+		
+		<!--头部导航区域-->
+         <div class="header">
+             <div class="header-right">
+                <span>你好，管理员&nbsp;|&nbsp;<img src="images/cancel.png"> </span>
+             </div>
+         </div>
+		<!--头部导航区域 end-->
+		
+		<!--用户管理内容-->
+		<div class="layui-body yhglContent">
+			<span class="layui-breadcrumb yhgl_nav">
+			  <a href="javascript:;"><cite>用户管理</cite></a><span lay-separator="">></span>
+			  <a href="javascript:;">学生管理</a>
+			</span>			
+			<!--查询-->
+			<div class="layui-form chaXun">
+			  <div class="layui-form-item">
+			    <div class="layui-inline">
+			      <label class="layui-form-label">姓名：</label>
+			      <div class="layui-input-inline">
+			        <input type="text" class="layui-input" id="name">
+			      </div>
+			    </div>
+			    <div class="layui-inline">
+			      <label class="layui-form-label">身份证：</label>
+			      <div class="layui-input-inline">
+			        <input type="text" class="layui-input" id="idCard">
+			      </div>
+			    </div>
+			    <a href="javascript:;" class="btn_chaXun fr" id="chaXun">查询</a>
+			  </div>			  
+			</div>
+			<!--查询 end-->
+			
+			<!--表格-->
+			<div class="biaoGe">
+				<section >
+					<span class="xslb_bt fl">学生列表</span>
+					<a href="javascript:;" class="xzxs fr" id="xzxs">
+						<i class="layui-icon layui-icon-add-1"></i>新增学生
+					</a>
+				</section>
+				<!---数据表格-->
+				<table class="layui-table" lay-skin="line">
+			      <!--<colgroup>
+			        <col width="150">
+			        <col width="200">
+			        <col>
+			      </colgroup>-->
+			      <thead>
+			        <tr>
+			          <th>序号</th>
+			          <th>姓名</th>
+			          <th>类别</th>
+			          <th>专业</th>
+			          <th>班级</th>
+			          <th>联系方式</th>
+			          <th>家属联系方式</th>
+			          <th>班主任</th>
+			          <th>操作</th>
+			        </tr> 
+			      </thead>
+			      <tbody>
+			         <tr>
+			          <td>1</td>
+			          <td>王伟生</td>
+			          <td>器乐</td>
+			          <td>二胡</td>
+			          <td>二胡一班</td>
+			          <td>18158878857</td>
+			          <td>13782738278</td>
+			          <td>周海</td>	
+			           <td>
+			           	<span class="bg bgActive">删除</span>
+			           	<span class="bg">修改</span>
+			           	<span class="bg">查看</span>
+			           </td>
+			        </tr>
+			         <tr>
+			          <td>1</td>
+			          <td>王伟生</td>
+			          <td>器乐</td>
+			          <td>二胡</td>
+			          <td>二胡一班</td>
+			          <td>18158878857</td>
+			          <td>13782738278</td>
+			          <td>周海</td>	
+			           <td>
+			           	<span class="bg bgActive">删除</span>
+			           	<span class="bg">修改</span>
+			           	<span class="bg">查看</span>
+			           </td>
+			        </tr>
+			         <tr>
+			          <td>1</td>
+			          <td>王伟生</td>
+			          <td>器乐</td>
+			          <td>二胡</td>
+			          <td>二胡一班</td>
+			          <td>18158878857</td>
+			          <td>13782738278</td>
+			          <td>周海</td>	
+			           <td>
+			           	<span class="bg bgActive">删除</span>
+			           	<span class="bg">修改</span>
+			           	<span class="bg">查看</span>
+			           </td>
+			        </tr>
+			         <tr>
+			          <td>1</td>
+			          <td>王伟生</td>
+			          <td>器乐</td>
+			          <td>二胡</td>
+			          <td>二胡一班</td>
+			          <td>18158878857</td>
+			          <td>13782738278</td>
+			          <td>周海</td>	
+			           <td>
+			           	<span class="bg bgActive">删除</span>
+			           	<span class="bg">修改</span>
+			           	<span class="bg">查看</span>
+			           </td>
+			        </tr>
+			         <tr>
+			          <td>1</td>
+			          <td>王伟生</td>
+			          <td>器乐</td>
+			          <td>二胡</td>
+			          <td>二胡一班</td>
+			          <td>18158878857</td>
+			          <td>13782738278</td>
+			          <td>周海</td>	
+			           <td>
+			           	<span class="bg bgActive">删除</span>
+			           	<span class="bg">修改</span>
+			           	<span class="bg">查看</span>
+			           </td>
+			        </tr>
+			         <tr>
+			          <td>1</td>
+			          <td>王伟生</td>
+			          <td>器乐</td>
+			          <td>二胡</td>
+			          <td>二胡一班</td>
+			          <td>18158878857</td>
+			          <td>13782738278</td>
+			          <td>周海</td>	
+			           <td>
+			           	<span class="bg bgActive">删除</span>
+			           	<span class="bg">修改</span>
+			           	<span class="bg">查看</span>
+			           </td>
+			        </tr>
+			         <tr>
+			          <td>1</td>
+			          <td>王伟生</td>
+			          <td>器乐</td>
+			          <td>二胡</td>
+			          <td>二胡一班</td>
+			          <td>18158878857</td>
+			          <td>13782738278</td>
+			          <td>周海</td>	
+			           <td>
+			           	<span class="bg bgActive">删除</span>
+			           	<span class="bg">修改</span>
+			           	<span class="bg">查看</span>
+			           </td>
+			        </tr>			        
+			      </tbody>
+			    </table>
+			    <p class="showPage">每页显示
+			    	<select>
+					  <option value ="volvo">7</option>
+					  <option value ="saab">8</option>
+					  <option value="opel">9</option>
+					  <option value="audi">10</option>
+					</select>
+			        列</p>
+				<!--数据表格 end-->
+				
+				<!--分页-->
+				<div class="page">
+					<p>共50页</p>
+					<div id="demo5"></div>
+					<!--<div id="demo5" style="float: left;">
+						<div class="layui-box layui-laypage layui-laypage-default" id="layui-laypage-1">
+							<a href="javascript:;" class="layui-laypage-prev layui-disabled" data-page="0">上一页</a>
+							<span class="layui-laypage-curr">
+								<em class="layui-laypage-em"></em><em>1</em>
+							</span>
+							<a href="javascript:;" data-page="2">2</a>
+							<a href="javascript:;" data-page="3">3</a>
+							<a href="javascript:;" data-page="4">4</a>
+							<a href="javascript:;" data-page="5">5</a>
+							<span class="layui-laypage-spr">…</span>
+							<a href="javascript:;" class="layui-laypage-last" title="尾页" data-page="50">50</a>
+							<a href="javascript:;" class="layui-laypage-next" data-page="2">下一页</a>
+						</div>
+					</div>-->
+				</div>
+				<!--分页 end-->
+			</div>
+			<!--表格end-->
+						
+		</div>
+		<!--用户管理内容 end-->		
+		
+		<script src="plugins/jQuery/jquery-3.3.1.js"></script>
+		<script src="plugins/layui-v2.4.3/layui/layui.js"></script>
+		<script>
+			 //左侧导航
+		      layui.use('element', function(){
+		          var element = layui.element;
+		      });
+			$('.leftPage').load('index.html');
+			layui.use(['laypage', 'layer'], function(){
+			  var laypage = layui.laypage,layer = layui.layer;
+			//分页
+			   laypage.render({
+			    elem: 'demo5'
+			    ,count: 500
+			    ,curr: location.hash.replace('#!fenye=', '') //获取hash值为fenye的当前页
+			    ,hash: 'fenye' //自定义hash值
+			  });
+			 })
+			//查询事件
+			$('#chaXun').click(function(){
+				//验证真实姓名
+				var name = $('#name').val();
+			    var regName =/^[\u4e00-\u9fa5]{2,4}$/;
+			    if(!regName.test(name)){  
+			        alert('真实姓名填写有误');
+			         return false;  
+			     } 
+				//验证身份证
+				var idNo = $('#idCard').val();
+				var regIdNo = /(^\d{15}$)|(^\d{18}$)|(^\d{17}(\d|X|x)$)/;  
+				if(!regIdNo.test(idNo)){  
+				    alert('身份证号填写有误');  
+				    return false;  
+				} 
+			});
+			//新增学生
+			$('#xzxs').click(function(){
+				var $targetTbody= $("tbody");
+				//.children()找到子元素，.children（“”）符合条件的子元素,仅沿着 DOM 树向下遍历单一层级			 
+				var $tr = $targetTbody.children("tr:last");
+				//after() 方法在被选元素后插入指定的内容。参数必须，参数可以为函数或具体元素：
+				//after("<p>Hello world!</p>")、after(function(n){return "<p>The </p>";})
+				//.outerHTML找到指定元素并复制				
+				$tr.after($tr[0].outerHTML);
+			})
+		
+		</script>
+	</body>
+</html>

@@ -1,0 +1,123 @@
+  /*选择班级页面*/
+   /*内容主区域*/
+   .body_contain{
+      background-color: #f3f3f3;
+      position: fixed;
+      bottom: 0!important;
+   }
+
+   .body_header{
+      padding:0.7rem 0 0.7rem 0 ;
+      font-size: 18px;
+      padding-left: 1%;
+   }
+   .body_header span a{
+      font-size: 18px;
+   }
+   .body_header .txt_xsl2:hover{
+      color:#000000;
+   }
+   .body_header .txt_xsl3{
+      color:#666666;
+   }
+
+   .contain-bg{
+      background-color: #FFFFFF;
+      width: 98%;
+      height: 80%;
+      margin-left:1%;
+      border-radius: 0.3rem;
+   }
+   .contain-left{
+      display: inline-block;
+      width: 88%;
+      margin-left: 1rem;
+      margin-top: 0.8rem;
+   }
+   .contain-left .bmbj_bj{
+      display:block;
+      border-left: 5px solid #3d9def;
+      width:10rem;
+      height: 2.2rem;
+      padding-left: 0.5rem;
+      line-height: 2.4rem;
+      font-size: 1.2rem;
+      letter-spacing: 0.1rem;
+   }
+  .contain-right{
+      display: inline-block;
+   }
+  .contain-right button{
+      width: 100%;
+      background-color: #3d9def;
+      color: #ffffff;
+      border: none;
+      padding:0.4rem 0.9rem 0.4rem 0.9rem;
+      border-radius: 0.3rem;
+      margin-right:1%;
+      cursor:pointer;
+  }
+  .bj_classify{
+      width:80%;
+      margin-left: 7%;
+      font-size: 16px;
+      font-weight: 200;
+      margin-top: 5%;
+  }
+  .bj_classify .form{
+      margin-top: 5rem;
+  }
+  .bj_classify .form select{
+      padding-top: 0.6rem;
+      margin-top: 0.2rem;
+      width: 100%;
+      border-radius: 0.3rem;
+  }
+  /*内容主区域end*/
+  .btn input{
+      margin-left: 44%;
+      margin-top: 1%;
+      background-color:#3d9def;
+      border: none;
+      border-radius: 0.3rem;
+      padding: 0.6rem 2.5rem 0.6rem 2.5rem;
+      color: #FFFFFF;
+      font-size:1.2rem;
+      font-weight:500;
+      cursor:pointer;
+  }
+  /*选择班级页面end*/
+
+  /*学生信息页面*/
+   /*主内容bj_classify部分*/
+       .xsxx_classify{
+           width: 90%;
+           margin-left: 5%;
+           font-size: 16px;
+           font-weight: 200;
+       }
+       /*.xsxx_classify label{*/
+           /*font-weight: bold;*/
+       /*}*/
+       .z-from input{
+           width: 90%;
+           border-radius: 0.4rem;
+           color: #666666;
+       }
+
+       .z-from .xsxx_left{
+           display: inline-block;
+           width: 49%;
+           margin-top: 6%;
+       }
+       .z-from .xsxx_right{
+           display: inline-block;
+           width: 49%;
+       }
+       input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+           color: #666666;
+          font-size: 14px;
+          /*font-weight: 600;*/
+       }
+   /*主内容bj_classify部分end*/
+  /*学生信息页面end*/

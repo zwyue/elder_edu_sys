@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>老年大学系统—学期管理</title>
+    <link rel="stylesheet" href="plugins/layui-v2.4.3/layui/css/layui.css"/>
+    <link rel="stylesheet" href="css/common_style.css" />
+    <link rel="stylesheet" href="css/xqgl.css" />
+</head>
+<body>
+    <!--学期管理内容-->
+    <div class="layui-body xqglContent">
+		<span class="layui-breadcrumb xqgl_nav">
+			<a href="javascript:;"><cite>学期管理</cite></a><span lay-separator="">></span>
+		</span>
+        <!--表格-->
+        <div class="biaoGe">
+            <section >
+                <span class="xqlb_bt fl">学期列表</span>
+                <a class="xzxq fr" id="xzxq" >
+                    <i class="layui-icon layui-icon-add-1"></i>新增学期
+                </a>
+            </section>
+            <!---数据表格-->
+            <table class="layui-table" lay-skin="line" id="tb">
+                <thead>
+                <tr>
+                    <th>序号</th>
+                    <th>学期名称</th>
+                    <th>开始时间</th>
+                    <th>结束时间</th>
+                    <th>操作</th>
+                </tr>
+                </thead>
+                <tbody id="list_xqgl"></tbody>
+            </table>
+            <!--数据表格 end-->
+
+            <!--分页-->
+            <div class="page">
+                <p></p>
+                <div id="demo5"></div>
+            </div>
+            <!--分页 end-->
+        </div>
+        <!--表格end-->
+    </div>
+    <!--学期管理内容end-->
+    <script src="plugins/jQuery/jquery-3.3.1.js"></script>
+    <script src="plugins/layui-v2.4.3/layui/layui.js"></script>
+    <script src="js/xqgl.js"></script>
+    <script>
+        // 学期管理表格
+        $(function () {
+            DatatoLoad();
+        })
+
+        function DatatoLoad() {
+            //分页
+            var pageNum = 0;//初始化页数为第一页
+            var pageSize = 7;
+            layui.use('laypage', function () {
+                var laypage = layui.laypage;
+                var totalRecord = 0;//初始化总记录数
+                getNewsData();
+
+                function getNewsData() {
+                    var lastdate;
+                    $.ajax({
+                        type: "get",
+                        async: false,
+                        url: "http://192.168.0.146:8088/term/termlist",
+                        dataType: 'json',
+                        xhrFields: {withCredentials: true},
+                        data: {
+                            pageNum: pageNum,
+                            pageSize: pageSize
+                        },
+                        success: function (data) {
+                            totalRecord = data.data.total;//数据总条数
+                            var html;
+                            var i = 0;
+                            var len = data.data.list.length;
+                            for (var i = 1; i < len + 1; i++) {
+                                $('table tr:eq(' + i + ')td:first').text(i);
+                            }
+                            $.each(data.data.list, function (i, result) {
+                                html += '<tr>';
+                                html += '<td>' + (i + 1) + '</td>';
+                                html += '<td>' + result.term + '</td>' + '<td>' + result.starttime + '</td>' + '<td>' + result.endtime + '</td>';
+                                html += '<td><a onclick="sc_delect(' + result.id + ')" href="JavaScript:;" class="bg bgActive del">删除</a>' +
+                                    '<a href="xqgl_xg.html?id=+' + result.id + '" class="bg change">修改</a>' +
+                                    '</td>';
+                                    // <a href="memorabilia/export?id=' + result.id + '" class="bg look">导出</a>
+                                html += '</tr>';
+                            })
+                            $("#list_xqgl").html(html);
+
+                            //获得最后一个结束时间
+                            lastdate=data.data.list[0].endtime;
+                            $("#xzxq").attr("href","xqgl_xz.html?lastdate="+lastdate);
+
+                        },
+                        error: function (XMLHttpRequest, textStatus, errorThrown) {
+                            console.log(XMLHttpRequest.status);
+                            console.log(XMLHttpRequest.readyState);
+                            console.log(textStatus);
+                        }
+                    });
+                }
+
+                //执行一个laypage实例
+                laypage.render({
+                    elem: 'demo5' //注意，这里的 test1 是 ID，不用加 #号
+                    , count: totalRecord //数据总数，从服务端得到
+                    , curr: pageNum
+                    , limit: pageSize
+                    , jump: function (obj, first) {
+                        //obj包含了当前分页的所有参数，比如：
+                        pageNum = obj.curr;//得到当前页，以便向服务端请求对应页的数据。
+                        pageSize = obj.limit;//得到每页显示的条数
+
+                        //首次不执行
+                        if (!first) {
+                            //do something
+                            $('#list_xqgl').empty();
+                            getNewsData();
+                        }
+                    }
+                });
+            })
+        }
+        //删除
+        function sc_delect(ids) {
+            if(ids.constructor===Array ){
+                console.log("is array");
+            }else {
+                var temp = ids ;
+                ids = [];
+                ids.push(temp);
+            }
+            $.ajax({
+                type: 'post',
+                url: "http://192.168.0.146:8088/term/deleteterm",
+                async: false,
+                data: {
+                    idList: ids
+                },
+                dataType: 'json',
+                xhrFields: {withCredentials: true},
+                success: function (data) {
+                    if(data.code==1){
+                        layui.use('layer', function(){
+                            var layer = layui.layer;
+                            layer.msg('删除成功');
+                        });
+                        DatatoLoad();
+                    }else{
+                        layer.msg('删除失败');
+                    }
+                    DatatoLoad();
+                },
+                error: function () {
+                    layui.use('layer', function () {
+                        var layer = layui.layer;
+                        layer.msg('删除失败！');
+                    });
+                }
+            });
+        }
+
+
+    </script>
+
+
+</body>
+</html>

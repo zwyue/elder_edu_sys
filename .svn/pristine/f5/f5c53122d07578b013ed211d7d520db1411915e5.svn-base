@@ -1,0 +1,237 @@
+
+		//进页面时发一个请求给后台查询是否激活学期
+		$.ajax({
+			async: false, //同步
+			url: "api/term/iftermactive",
+			type: "post",
+			dataType: "json", 
+			success: function(data){
+				if(data.code==1){
+					('激活学期成功');
+				}else{
+					layui.use('layer', function(){
+					   var layer = layui.layer;					  
+					   layer.msg(data.msg);
+					});
+				}			 
+			},
+			error:function(){
+				 ('失败');
+			}
+		})
+		
+		//读取身份证事件
+		function read(){
+			new Device().startFun();  //触发读取身份证函数
+			//根据身份证号查询年龄
+			setTimeout(function(){
+				var sfzh= $('#certNumber').val();         //身份证号
+				//根据身份证号计算年龄
+				var date = new Date();                          //获取当前时间
+				var year = date.getFullYear();                  //返回一个表示年份的 4 位数字。
+				var birthday_year = parseInt(sfzh.substr(6,4)); 
+				var userage = year - birthday_year;
+				$("input[name='age']").val(userage);//将计算得到的年龄回填到表单里
+			},2000)
+		};
+		
+
+	 	var formSelects = layui.formSelects;     //加载模块
+	 	
+	 	var  listData ,childData,lastChildData;  //定义全局变量接收一级数据和二级数据
+	 	//多选查询
+	 	$.ajax({
+				async: false, //同步
+				url: "api/classes/queryclscatetoacquirecls",
+				type: "get",
+				dataType: "json", 
+				success: function(data){
+					var  arr =[] ; //定义一个空数组来接收返回的数据					
+					listData = data.data;            //拿到一级数据
+					for(var i = 0;i<listData.length;i++){
+						var obj = {};  //定义一个空对象来接收返回的数据
+						//拿到一级的name和value
+						obj.name  = listData[i].name;
+						obj.value = listData[i].value;	
+						obj.children = [];   //定义一级数据的children
+						arr.push(obj);       //将一级数据回填到数组里
+						
+						childData = listData[i].children;  //遍历二级数据						
+						//遍历拿到二级数据
+						for(var j=0;j<childData.length;j++){
+							//拿到二级的name和value
+							var objChild = {};
+							objChild.name = childData[j].name;
+							objChild.value = childData[j].value;
+							objChild.children = [];       //定义二级数据的children
+							obj.children.push(objChild);  //将二级数据回填到一级数组的children里
+							
+							lastChildData = childData[j].children; //遍历三级数据
+							//遍历拿到三级数据
+							for(var num=0;num<lastChildData.length;num++){
+								//拿到三级的name和value
+								var objLastChild = {};
+								objLastChild.name = lastChildData[num].name;
+								objLastChild.value = lastChildData[num].value;
+								objLastChild.children = [];       //定义三级数据的children
+								objChild.children.push(objLastChild);  //将二级数据回填到一级数组的children里
+							}							
+						}						
+					}
+					layui.formSelects.data('select15', 'local', {
+						arr,
+						linkage: true   //可多选
+					})
+				},
+				error: function(){
+					layui.use('layer', function(){
+					  var layer = layui.layer;					  
+					  layer.msg('请求一级分类错误');
+					});   
+				}				
+			});
+
+		//保存函数
+		var classIds,classNames;          
+		var classId = [],className = [];  //定义全局变量接收选中班级的id和name
+		$('#nextBtn').click(function(){		
+			//获取.xm-select-title的第一个孩子，再找第一个孩子的第一个孩子.xm-select-label，再找那个孩子下的所有span元素，获取span元素的value;
+			//遍历拿到各自的id
+			$('.xm-select-title').children(":first").children(":first").find("span").each(function(i){ 
+	            classId[i] =  $(this).attr('value'); 
+	        });
+			//遍历拿到各自的名称
+			$('.xm-select-title').children(":first").children(":first").find('font').each(function(i){ 
+	            className[i] =  $(this).text();
+	        });
+	        //将遍历得到的value值赋给classIds
+	         classIds = classId;
+	         classNames = className;
+			$.ajax({
+				async: false, //同步
+				url: "api/teacher/charge-cls",
+				type: "post",
+				data:{
+					classIds:"'" + classIds + "',",
+					classNames:classNames +','
+				},
+				dataType: "json", 
+				success: function(data){
+					layui.use('layer', function(){
+					  var layer = layui.layer;					  
+					  layer.msg('选择班级成功');
+					});   
+//      			//成功后跳转到老师列表
+					setTimeout(function(){
+							//点击下一步						
+							$('#bmbjContent').hide();
+							$('#xsbmContent').show();					
+						$('.fanHui').click(function(){
+							$('#bmbjContent').show();
+							$('#xsbmContent').hide();
+						})
+					},800)					
+				},
+				error:function(){
+					layui.use('layer', function(){
+					   var layer = layui.layer;					  
+					   layer.msg('选择班级失败');
+					}); 
+				}
+			})
+		});
+
+		layui.use(['layer', 'form','laydate'], function(){
+            var form = layui.form;  
+            var laydate = layui.laydate; 
+			          
+		  //入学时间
+		  laydate.render({
+		    elem: '#entertime'
+		  });
+		  //毕业时间
+		  laydate.render({
+		    elem: '#graduatetime'
+		  });
+		
+	
+		//报名方法
+		$('#enroll').click(function(){ 
+			var classid=classIds.join(",");
+			var classname=classNames.join(",");
+			var stuname       = $('#personName').val();         //学生姓名
+			var sex           = $('#gender').val();             //性别
+			var sfzh          = $('#certNumber').val();         //身份证号
+			var nation        = $('#nation').val();             //民族
+			var address       = $('#nowAddress').val();         //身份证地址
+			var sfzaddress    = $('#address').val();         //身份证地址
+			var phone         = $('#phone').val();              //联系方式
+			var carnumber     = $('#carNumber').val();          //汽车车牌号
+			var emergency     = $('#emergency').val();	        //家庭联系方式
+			var fee           = $('#fee').val();                //学费
+			var entertime     = $('#entertime').val();          //入学时间
+			var graduatetime  = $('#graduatetime').val();       //毕业时间
+			var studentCard   = $('#studentCard option:selected').val();           //学生证val
+			var  stuAge = $('#age').val();
+			
+			
+			if(stuname==''||sex==''||sfzh==''||nation==''||address==''||sfzaddress==''||phone==''||emergency==''||studentCard==''||entertime==''||graduatetime==''||classid==''||classname==''){
+				layui.use('layer', function(){
+					var layer = layui.layer;
+					layer.msg('除车牌号和学费，其他所有都是必填项');
+				});
+			}else if(entertime<graduatetime){
+				$.ajax({
+					type: "post",
+					async: false,
+					url: "api/student/enter",
+					data:{
+			        	stuname:stuname, 
+			        	sex:sex,
+			        	sfzh:sfzh,
+			        	nation:nation,
+			        	address:address,
+		        		sfzaddress:sfzaddress,
+			        	phone:phone,
+			        	age:stuAge, 
+			        	carnumber:carnumber,
+			        	emergency:emergency,
+			        	iscard:studentCard,  //0是需要学生证，1是不需要学生证
+			        	fee:fee,
+			        	entertime:entertime,
+			        	graduatetime:graduatetime,
+						classid: classid,
+						classname:classname
+			       },
+					success: function(data){			
+						if(data.code==1){
+							layui.use('layer', function(){
+							var layer = layui.layer;
+							layer.msg('报名成功');
+							});
+							setTimeout(function(){
+								window.location="bmgl_xzbj.html";
+							},800)	
+						}else{
+							layui.use('layer', function(){ 
+							var layer = layui.layer;
+							layer.msg('报名失败：'+data.msg);
+							});
+						}										
+					},
+					error: function(){
+						layui.use('layer', function(){
+							var layer = layui.layer;
+							layer.msg('请求失败');
+						});
+					}
+				});
+			}else{
+                layui.use('layer', function (){
+                    var layer = layui.layer;
+                    layer.msg('入学时间应小于毕业时间!');
+                });
+            }
+			
+		});
+	});

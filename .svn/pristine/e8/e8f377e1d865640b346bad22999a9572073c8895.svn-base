@@ -1,0 +1,29 @@
+// 异动档案弹窗
+  function ydbutton() {
+    layui.use('layer', function(){
+        var layer = layui.layer;
+        layer.open({
+            //layer提供了5种层类型。可传入的值有：0（信息框，默认）1（页面层）2（iframe层）3（加载层）4（tips层）
+            type: 1,
+            skin: '',
+            title: "异动档案",
+            area: ['50%', '50%'],
+            content: $("#popSearchRoleTest").html()
+        })
+    });
+  };
+
+// 弹窗选择老师
+function xzls() {
+    layui.use('layer', function(){
+        var layer = layui.layer;
+        layer.open({
+            //layer提供了5种层类型。可传入的值有：0（信息框，默认）1（页面层）2（iframe层）3（加载层）4（tips层）
+            type: 1,
+            skin: '',
+            title: "授课老师选择",
+            area: ['50%', '50%'],
+            content: $("#popSearchRoleTest").html()
+        })
+    });
+};

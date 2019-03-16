@@ -1,0 +1,52 @@
+package com.zrtjoa.entity;
+
+import java.util.Date;
+
+/**
+ * @Author: yangli
+ * @Description: 资源建设表
+ * @Date: Created in 14:34 2018/11/16
+ * @Modified by:
+ */
+public class Resource {
+    //主键id
+    private int id;
+    //类别(0:数字化资源建设；1：教材建设)
+    private String zylb;
+    //内容
+    private String content;
+    //填写时间
+    private Date crttime;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getZylb() {
+        return zylb;
+    }
+
+    public void setZylb(String zylb) {
+        this.zylb = zylb;
+    }
+
+    public String getContent() {
+        return content;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
+    }
+
+    public Date getCrttime() {
+        return crttime;
+    }
+
+    public void setCrttime(Date crttime) {
+        this.crttime = crttime;
+    }
+}

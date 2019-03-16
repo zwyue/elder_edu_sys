@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zrtjoa.dao.StudentRecordDao">
+  <resultMap id="BaseResultMap" type="com.zrtjoa.entity.StudentRecord">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="birthdate" jdbcType="TIMESTAMP" property="birthdate" />
+    <result column="stunumber" jdbcType="VARCHAR" property="stunumber" />
+    <result column="classid" jdbcType="INTEGER" property="classid" />
+    <result column="classname" jdbcType="VARCHAR" property="classname" />
+    <result column="stuid" jdbcType="INTEGER" property="stuid" />
+    <result column="stuname" jdbcType="VARCHAR" property="stuname" />
+    <result column="age" jdbcType="INTEGER" property="age" />
+    <result column="isleader" jdbcType="VARCHAR" property="isleader" />
+    <result column="crttime" jdbcType="TIMESTAMP" property="crttime" />
+    <result column="termid" jdbcType="INTEGER" property="termid" />
+    <result column="termname" jdbcType="VARCHAR" property="termname" />
+    <result column="phone" jdbcType="VARCHAR" property="phone" />
+    <result column="famPhone" jdbcType="VARCHAR" property="famPhone" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, birthdate, stunumber, classid, classname, stuid, stuname, age, isleader, termid, termname,phone,famPhone,
+    DATE_FORMAT(crttime,'%Y-%m-%d %H:%i:%S') crttime
+  </sql>
+  <select id="getList" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select <include refid="Base_Column_List"/>
+    from studentrecord
+    where termid = #{0}
+    and classid = #{1}
+  </select>
+  <delete id="deleteMany" parameterType="java.lang.Integer" >
+    delete from studentrecord
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insertList" parameterType="java.util.List">
+    insert into studentrecord (birthdate, stunumber, classid, classname, stuid, stuname, age, isleader, crttime, termid, termname,phone,famPhone)
+    values
+    <foreach collection="list" item="item" index="index" separator=",">
+      (
+      #{item.birthdate,jdbcType=TIMESTAMP},#{item.stunumber,jdbcType=VARCHAR}, #{item.classid,jdbcType=INTEGER},
+      #{item.classname,jdbcType=VARCHAR},#{item.stuid,jdbcType=INTEGER},#{item.stuname,jdbcType=VARCHAR},
+      #{item.age,jdbcType=INTEGER}, #{item.isleader,jdbcType=VARCHAR}, now(),
+      #{item.termid,jdbcType=INTEGER},#{item.termname,jdbcType=VARCHAR},
+      #{item.phone,jdbcType=VARCHAR},#{item.famPhone,jdbcType=VARCHAR}
+      )
+    </foreach>
+  </insert>
+</mapper>

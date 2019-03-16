@@ -1,0 +1,277 @@
+package com.zrtjoa.controller;
+
+import com.github.pagehelper.PageInfo;
+import com.zrtjoa.common.ResultUtils;
+import com.zrtjoa.entity.*;
+import com.zrtjoa.service.ClassRoomService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import javax.ws.rs.GET;
+import javax.ws.rs.POST;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import static com.zrtjoa.constant.SysConstant.MAP_DEFAULT_SIZE;
+import static com.zrtjoa.exception.ExceptionEnum.SUCCESS;
+
+/**
+ * copyright    <a href="http://www.qaqavr.com/>中锐</a>
+ * <pre>
+ *     @author      zwy
+ *     @date        2018/12/3 15:42
+ *     email        1092478224@qq.com
+ *     desc         教室管理
+ * </pre>
+ */
+@RestController
+@RequestMapping("classroom")
+public class ClassRoomController {
+
+    private static final Logger logger = LoggerFactory.getLogger(ClassRoomController.class);
+
+    @Autowired
+    private ClassRoomService classRoomService;
+
+
+    /*
+     *     ***************************教室类别管理********************************
+     */
+
+    /**
+     * 获取教室类别列表
+     *
+     * @author zwy
+     * @date 2019/1/4 14:47
+     */
+    @RequestMapping("typelist")
+    @GET
+    public Map categoryList(){
+        PageInfo<Classtype> pageInfo = new PageInfo<>(classRoomService.queryClassTypeList());
+        return ResultUtils.success(pageInfo);
+    }
+
+    /**
+     * 新增教室类别
+     *
+     * @author zwy
+     * @date 2018/12/3 16:39
+     */
+    @RequestMapping(value = "/addNewCategory")
+    @POST
+    public Map addNewCategory(Classtype classtype){
+        classRoomService.addNewCategory(classtype);
+        return ResultUtils.success("保存成功");
+    }
+
+    /**
+     * 更新教室类别
+     *
+     * @author zwy
+     * @date 2018/12/5 14:19
+     */
+    @RequestMapping("/updateClassRoomType")
+    @POST
+    public Map updateClassRoomType(Classtype classtype){
+        logger.info("..........更新教室类别，教室id:{}..........",classtype.getId());
+        classRoomService.updateClassRoomType(classtype);
+        return ResultUtils.success("修改成功");
+    }
+
+    /**
+     * 教室类别详情查询
+     * @author yangli
+     * @date 2019/02/20 14:10
+     */
+    @RequestMapping(value = "querytype" ,method = RequestMethod.GET)
+    public Map querytype(Integer id){
+        Classtype classtype=classRoomService.selectByPrimaryKeys(id);
+        return ResultUtils.success(classtype);
+    }
+
+    /**
+     * 教室类别删除
+     * @author yangli
+     * @date 2018/11/28 14:10
+     */
+    @RequestMapping(value = "deletetype" ,method = RequestMethod.GET)
+    public Map deletetype(Integer id){
+        Integer delete = classRoomService.deleteByPrimaryKeys(id);
+        if(delete>0){
+            return ResultUtils.success("删除成功");
+        }else {
+            return ResultUtils.error("删除失败");
+        }
+    }
+
+    /**
+     * 根据标题查询教室类别
+     * @author yangli
+     * @date 2019/1/3
+     */
+    @RequestMapping(value = "getCate")
+    public Map getCate(String catename){
+        PageInfo<Classtype> pageInfo;
+        if(catename!=null){
+            pageInfo = new PageInfo<>(classRoomService.getCateList(catename));
+        }else{
+            pageInfo = new PageInfo<>(classRoomService.queryClassTypeList());
+        }
+        return ResultUtils.success(pageInfo);
+    }
+
+    /*
+     *      *********************************教室管理************************************
+     */
+
+    /**
+     * 获取教室列表
+     *
+     * @author zwy
+     * @date 2019/1/4 14:38
+     */
+    @RequestMapping("/list")
+    @GET
+    public Map classRoomList(Classroom classroom){
+        PageInfo<Classroom> pageInfo = new PageInfo<>(classRoomService.queryClassroomList(classroom));
+        return ResultUtils.success(pageInfo);
+    }
+
+    /**
+     * 获取教室类别列表
+     *
+     * @author yangli
+     * @date 2019/2/19 14:38
+     */
+    @RequestMapping(value = "tylist",method = RequestMethod.GET)
+    @ResponseBody
+    public Map classtypeList(){
+        List<Classtype> list = classRoomService.queryClassTypeList();
+        return ResultUtils.success(list);
+    }
+
+    /**
+     * 获取课时段列表
+     *
+     * @author yangli
+     * @date 2019/2/19 14:38
+     */
+    @RequestMapping(value = "courselist",method = RequestMethod.GET)
+    @ResponseBody
+    public Map getcourseList(){
+        List<CourseTime> list = classRoomService.queryAllTimeSlot();
+        return ResultUtils.success(list);
+    }
+
+    /**
+     * 添加新教室
+     *
+     * @author zwy
+     * @date 2018/12/3 15:59
+     */
+    @RequestMapping(value = "addNewClassRoom")
+    @POST
+    public Map addNewClassRoom(Classroom classroom){
+        classroom.setIsuser("0");
+        classRoomService.addNewClassRoom(classroom) ;
+        return ResultUtils.success("保存成功");
+    }
+
+    /**
+     * 更新教室
+     *
+     * @author zwy
+     * @date 2018/12/5 14:30
+     */
+    @RequestMapping("updateClassroom")
+    @POST
+    public Map updataClassRoom(Classroom classroom){
+        classroom.setIsuser("0");
+        classRoomService.updateClassRoom(classroom);
+        return ResultUtils.success("修改成功");
+    }
+
+    /**
+     * 教室查询
+     * @author yangli
+     * @date 2018/11/28 14:10
+     */
+    @RequestMapping(value = "query" ,method = RequestMethod.GET)
+    public Map query(Integer id){
+        Classroom classroom=classRoomService.selectByPrimaryKey(id);
+        List<Classtype> list = classRoomService.queryClassTypeList();
+        Map<String,Object> returnMap = new HashMap<>(MAP_DEFAULT_SIZE);
+        returnMap.put("typelist",list);
+        returnMap.put("classroom",classroom);
+        return ResultUtils.success(returnMap,SUCCESS.errorMessage);
+    }
+
+    /*
+     *    *****************教室使用历史************************
+     */
+
+    /**
+     * 教室使用历史
+     *
+     * @author zwy
+     * @date 2018/12/5 14:40
+     */
+    @RequestMapping(value = "clsRmUsageHistory") 
+    @POST
+    public Map clsRmUsageHistory(Integer roomid){
+        PageInfo<Classrecord> pageInfo = new PageInfo<>(classRoomService.clsRmUsageHistory(roomid));
+        return ResultUtils.success(pageInfo);
+    }
+
+    /**
+     * 教室删除
+     * @author yangli
+     * @date 2018/11/28 14:10
+     */
+    @RequestMapping(value = "delete" ,method = RequestMethod.GET)
+    public Map delete(Integer id){
+        Integer delete = classRoomService.deleteByPrimaryKey(id);
+        if(delete>0){
+            return ResultUtils.success("删除成功");
+        }else {
+            return ResultUtils.error("删除失败");
+        }
+    }
+
+    /**
+     * 根据教室名称和类别查询教室
+     * @author yangli
+     * @date 2019/2/19
+     */
+    @RequestMapping(value = "getClassroom",method = RequestMethod.GET)
+    @ResponseBody
+    public Map query(String classroom,String catename){
+        PageInfo<Classroom> pageInfo;
+        if(classroom==null && catename==null){
+            pageInfo = new PageInfo<>(classRoomService.queryClassroomList(null));
+        }else{
+            pageInfo = new PageInfo<>(classRoomService.getClassroomList(classroom,catename));
+        }
+        return ResultUtils.success(pageInfo);
+    }
+
+    /**
+     * 查看空闲教室（当天）
+     *
+     * @author zwy
+     * @date 2019/2/18 14:22
+     */
+    @RequestMapping("/queryvacantclsroom")
+    @GET
+    public Map queryVacantClsRoom(Integer week,String date,String starttime,String endtime){
+        List<Classroom> classrooms = classRoomService.queryVacantClsRoom(week,date,starttime,endtime);
+        PageInfo<Classroom> pageInfo = new PageInfo<>(classrooms);
+        return ResultUtils.success(pageInfo) ;
+    }
+}

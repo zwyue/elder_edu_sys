@@ -1,0 +1,96 @@
+ /*班级管理页面*/
+   /*班级管理内容*/
+   .bjgl_nav{
+      display: block; visibility:visible;padding-left:10px;box-sizing: border-box;
+      width: 50%;height: 30px;line-height: 40px;
+   }
+   .bjglContent{
+      background: #f3f3f3;padding: 0.5rem 1rem; box-sizing: border-box;
+      position: absolute; bottom: 0!important;
+   }
+   .smallNav{
+      width: 100%; height: 40px;
+   }
+
+   .bjgl_nav a{
+      font-size: 1rem;
+   }
+  /*查询*/
+  .chaXun{
+      height:auto; padding:20px 15px 5px 15px;box-sizing: border-box; background: #FFFFFF;
+      margin: 1rem 0; font-size:1rem; border-radius:10px;
+  }
+  .chaXun input{
+      border-radius: 7px;border:1px solid #bfbfbf;
+  }
+  #idCard{
+      width: 150%;
+  }
+  .btn_chaXun{
+      position:absolute; right:2%; width: 100px;height:40px;background: #3d9def;color: #FFFFFF;
+      text-align: center;line-height: 40px;font-size: 1.1rem;border-radius:20px;letter-spacing: 0.2rem;
+      box-shadow:0px 5px 10px #b0cdfc;
+  }
+  .btn_chaXun:hover{
+      color:#FFFFFF;
+  }
+  /*查询 end*/
+  /*表格*/
+   .biaoGe{
+      height:auto;padding:10px 10px 20px 10px;box-sizing: border-box;background: #FFFFFF;
+   }
+   .biaoGe section{
+      width: 100%;
+       /*height: 40px;*/
+   }
+   .bjlb_bt{
+      display:block;width: 150px;height: 35px;border-left: 5px solid #3d9def;padding-left: 10px;
+      line-height:35px;font-size: 1.2rem;font-weight: 500;letter-spacing: 0.1rem;
+   }
+   .xzbj{
+      background-color:#3d9def; padding:0.4rem 0.6rem 0.4rem 0.6rem; text-align:center; line-height:150%;
+      color: #FFFFFF!important; border-radius: 7px; font-size: 1rem; float: right; position: relative; top: -2rem;
+   }
+   .xzbj a:hover{
+       color:#FFFFFF;
+   }
+   .layui-table td, .layui-table th{
+      text-align: center;
+   }
+   .bg{
+      padding:3px 10px; line-height:150%; border: 1px solid #BFBFBF; border-radius: 10px;
+      box-sizing: border-box;margin-right: 0.2rem;
+   }
+   .bgActive{
+      background:#3d9def;color:#FFFFFF;border: none;
+   }
+   .bgActive:hover{
+      color: #FFFFFF;
+   }
+   .showPage{
+      color: #666666;
+   }
+   .showPage select{
+      border: 1px solid #3d9def;
+    }
+   /*表格 end*/
+   /*分页*/
+   .page {
+     margin: 0.5rem 0 0.5rem 40%;
+   }
+   .page p{
+     color: #999;float: left;line-height: 50px;margin-right: 1rem;
+   }
+   .layui-laypage .layui-laypage-curr .layui-laypage-em{
+     background: #3d9def;
+   }
+   /*背景*/
+   .search_bg{
+      text-align: center;padding:8% 0;box-sizing: border-box;display: none;
+   }
+   .search_bg h2 {
+       color: #666666;
+   }
+
+
+/*分页*/

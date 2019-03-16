@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="plugins/layui-v2.4.3/layui/css/layui.css"/>
+    <style>
+        .layui-form-select dl{
+            max-height: 199px!important;
+        }
+    </style>
+</head>
+<body>
+    <form class="layui-form">
+        <div class="layui-form-item layui-form" lay-filter="classCategory">
+            <label class="layui-form-label"> 班级类别：</label>
+            <div class="layui-input-inline">
+                <select name="city" lay-verify="required" id="classCategory">
+                </select>
+            </div>
+        </div>
+        <div class="layui-form-item layui-form" lay-filter="classMajor">
+            <label class="layui-form-label">班级专业：</label>
+            <div class="layui-input-inline">
+                <select name="city" lay-verify="required" id="classMajor">
+
+                </select>
+            </div>
+        </div>
+    </form>
+
+
+    <script src="plugins/jQuery/jquery-3.3.1.js"></script>
+    <script src="plugins/layui-v2.4.3/layui/layui.js"></script>
+    <!--获取下拉列表内容-->
+    <script type="text/javascript" src="js/yhgl_lsgl_select_cate_major.js"></script>
+
+</body>
+</html>

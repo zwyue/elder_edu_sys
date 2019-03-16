@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>老年大学系统—班主任管理</title>
+    <link rel="stylesheet" href="plugins/layui-v2.4.3/layui/css/layui.css"/>
+    <link rel="stylesheet" href="css/common_style.css" />
+    <link rel="stylesheet" href="css/bzrgl.css" />
+    <style>
+        .layui-layer-iframe iframe{
+            height: 180px!important;
+        }
+    </style>
+</head>
+<body>
+    <!--学期管理内容-->
+    <div class="layui-body bzrglContent">
+		<span class="layui-breadcrumb bzrgl_nav">
+			<a href="javascript:;"><cite>班主任管理</cite></a><span lay-separator="">></span>
+            <a href="javascript:;"><cite>班委会职位管理</cite></a>
+		</span>
+      <!--表格-->
+      <div class="biaoGe">
+          <section >
+            <span class="bzrgl_bt fl">班委会职务列表</span>
+            <a class="xz fr" id="xzxq" onclick="xzzw()" >
+                <i class="layui-icon layui-icon-add-1"></i>新增
+            </a>
+          </section>
+          <!---数据表格-->
+          <table class="layui-table" lay-skin="line" id="tb">
+            <thead>
+            <tr>
+                <th>序号</th>
+                <th>职务名称</th>
+                <th>创建时间</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+            <tbody id="list"></tbody>
+          </table>
+          <!--数据表格 end-->
+
+          <!--分页-->
+          <div class="page">
+            <div id="demo5"></div>
+          </div>
+        <!--分页 end-->
+       </div>
+       <!--表格end-->
+    </div>
+    <!--学期管理内容end-->
+
+   <script src="plugins/jQuery/jquery-3.3.1.js"></script>
+   <script src="plugins/layui-v2.4.3/layui/layui.js"></script>
+   <script src="js/bzrgl_bwh.js"></script>
+
+
+</body>
+</html>

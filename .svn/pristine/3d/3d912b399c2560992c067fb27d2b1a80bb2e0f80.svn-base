@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>老年大学系统——班主任管理</title>
+    <link rel="stylesheet" href="plugins/layui-v2.4.3/layui/css/layui.css"/>
+    <link rel="stylesheet" href="css/common_style.css" />
+    <link rel="stylesheet" href="font/iconfont.css"/>
+    <link rel="stylesheet" href="css/bzrgl.css" />
+</head>
+<body id="bzrgl">
+    <!--学校活动记录内容-->
+    <div class="layui-body bzrglContent">
+		<span class="layui-breadcrumb bzrgl_nav">
+		  <a href="javascript:;"><cite>班主任管理</cite></a><span lay-separator="">></span>
+          <a href="javascript:;"><cite>学校活动记录</cite></a>
+		</span>
+        <!--查询-->
+        <div class="layui-form chaXun">
+          <div class="layui-form-item">
+            <div class="layui-inline">
+                <label class="layui-form-label">名称：</label>
+                <div class="layui-input-inline">
+                    <input type="text" class="layui-input" id="name">
+                </div>
+            </div>
+            <a href="javascript:;" class="btn_chaXun fr" id="chaXun">查询</a>
+          </div>
+        </div>
+        <!--查询 end-->
+
+        <!--表格-->
+        <div class="biaoGe">
+          <section >
+            <span class="bzrgl_bt fl">学校活动记录列表</span>
+            <a href="bzrgl_xxhdjl_xz.html" class="xzzj fr" id="xzxs">
+                <i class="layui-icon layui-icon-add-1"></i>新增活动记录
+            </a>
+          </section>
+          <!---数据表格-->
+          <table class="layui-table" lay-skin="line">
+            <!--<colgroup>
+              <col width="150">
+              <col width="200">
+              <col>
+            </colgroup>-->
+            <thead>
+            <tr>
+                <th>序号</th>
+                <th>名称</th>
+                <th>活动时间</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+            <tbody id="list_xxhdjl"></tbody>
+          </table>
+          <p class="showPage">每页显示
+            <select>
+                <option value ="volvo">7</option>
+                <option value ="saab">8</option>
+                <option value="opel">9</option>
+                <option value="audi">10</option>
+            </select>
+            列</p>
+          <!--数据表格 end-->
+
+          <!--分页-->
+          <div class="page">
+            <p>共50页</p>
+            <div id="demo5"></div>
+          </div>
+          <!--分页 end-->
+        </div>
+        <!--表格end-->
+    </div>
+    <!--学校活动记录 内容 end-->
+
+
+    <script src="plugins/jQuery/jquery-3.3.1.js"></script>
+    <script src="plugins/layui-v2.4.3/layui/layui.js"></script>
+    <script src="js/bzrgl.js"></script>
+
+</body>
+</html>

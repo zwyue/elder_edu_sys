@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>老年大学系统—学期管理</title>
+    <link rel="stylesheet" href="plugins/layui-v2.4.3/layui/css/layui.css"/>
+    <link rel="stylesheet" href="css/common_style.css" />
+    <link rel="stylesheet" href="css/xqgl.css" />
+
+</head>
+<body>
+    <!--学期管理内容-->
+    <div class="layui-body xqglContent">
+		<span class="layui-breadcrumb xqgl_nav">
+			<a href="javascript:;"><cite>学期管理</cite></a><span lay-separator="">></span>
+            <a href="javascript:;"><cite>查看</cite></a>
+		</span>
+       <!--选择框-->
+       <div class="biaoGe">
+          <section >
+            <span class="xqlb_bt fl">学期查看</span>
+            <a href="xqgl.html" class="xqxz_cancel fr" id="xzxq" >
+                <i class=""></i>返回
+            </a>
+          </section>
+          <!---选择框开始-->
+          <section class="xqgl_xz">
+              <form class="layui-form" action="">
+                  <div class="layui-form-item">
+                      <label class="layui-form-label">学期名称：</label>
+                      <div class="layui-input-inline xqmc">
+                          <input type="text" name="title" required  lay-verify="required" autocomplete="off" class="layui-input">
+                      </div>
+                  </div>
+
+                  <div class="layui-form-item">
+                      <label class="layui-form-label">开始时间：</label>
+                      <div class="layui-input-block">
+                          <select class="endtime" name="year1"></select>
+                          <select class="endtime" name="month1"></select>
+                          <select class="endtime" name="day1"></select>
+                      </div>
+                  </div>
+
+                  <div class="layui-form-item">
+                      <label class="layui-form-label">结束时间：</label>
+                      <div class="layui-input-block">
+                          <select class="endtime" name="year2"></select>
+                          <select class="endtime" name="month2"></select>
+                          <select class="endtime" name="day2"></select>
+                      </div>
+                  </div>
+              </form>
+              <div class="layui-form-item">
+                  <div class="layui-input-block btn-ok">
+                      <a href="javascript:;" class="btn" >保存</a>
+                  </div>
+              </div>
+          </section>
+          <!--选择框end-->
+
+
+       </div>
+       <!--选择框end-->
+    </div>
+    <!--学期管理内容end-->
+    <script src="plugins/jQuery/jquery-3.3.1.js"></script>
+    <script src="plugins/layui-v2.4.3/layui/layui.js"></script>
+    <script src="js/YMDClass.js"></script>
+    <script src="js/xqgl.js"></script>
+
+</body>
+</html>

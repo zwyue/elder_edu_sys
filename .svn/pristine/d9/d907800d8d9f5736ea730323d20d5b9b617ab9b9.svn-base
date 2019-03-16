@@ -1,0 +1,5 @@
+
+.layui-body{left: 0px!important;}
+*{margin: 0;padding: 0;}
+.clear{clear:both;}
+

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">	
+		<title>老年大学系统——报名管理</title>
+		<link rel="stylesheet" href="plugins/layui-v2.4.3/layui/css/layui.css"/>
+		<link rel="stylesheet" href="css/common_style.css" />
+		<link rel="stylesheet" href="css/bmgl.css"/>
+		<style>
+			/*弹窗样式*/
+			body .layui-layer-title{
+				background-color: #3d9def;
+				border-radius: 0.3rem;
+				color: #FFFFFF;
+				font-size: 18px;
+			}
+			body .layui-layer{
+				border-radius: 0.5rem;
+			}
+			body .tc_btn button{
+				border-radius: 0.3rem;
+			}
+			.layui-table th{
+				text-align: center;
+			}
+			.layui-layer-close{
+				position: unset!important;
+			}
+
+		</style>
+	</head>
+	<body>
+
+		<!--用户管理内容-->
+		<div class="layui-body yhglContent">
+			<span class="layui-breadcrumb yhgl_nav">			  
+			  <a href="javascript:;">报名管理</a><span lay-separator="">＞</span>
+			</span>			
+			
+			<!--编辑内容-->
+			<div class="lsglContent">
+				<section class="lsglBt">
+					<span class="fl">学生报名</span>
+					<a href="javascript:;" onclick="ydbutton()" class="ydglBtn fr">异动管理</a>
+					
+				</section>
+				<div class="layui-form-item">
+				    <div class="layui-inline">
+				      <label class="layui-form-label">学生姓名：</label>
+				      <div class="layui-input-inline">
+				        <input type="text"  class="layui-input inputTop" placeholder="通过身份证获取、禁用"/>
+				      </div>
+				    </div>
+			    	<div class="layui-inline">
+				      <label class="layui-form-label">性 &nbsp;&nbsp;&nbsp; 别：</label>
+				      <div class="layui-input-inline">
+				        <input type="text" placeholder="通过身份证获取、禁用"  class="layui-input inputTop"/>
+				      </div>
+				    </div>	    
+				  </div>
+				  <div class="layui-form-item">
+				    
+				    <div class="layui-inline">
+				      <label class="layui-form-label">身份证号：</label>
+				      <div class="layui-input-inline">
+				        <input type="text" class="layui-input inputTop" placeholder="通过身份证获取、禁用"/>
+				      </div>
+				    </div>	
+				    <div class="layui-inline">
+				      <label class="layui-form-label">民 &nbsp;&nbsp;&nbsp; 族：</label>
+				      <div class="layui-input-inline">
+				        <input type="text" class="layui-input inputTop" placeholder="通过身份证获取、禁用"/>
+				      </div>
+				    </div>			    
+				  </div>
+				  <div class="layui-form-item">
+				    <div class="layui-inline">
+				      <label class="layui-form-label">联系方式：</label>
+				      <div class="layui-input-inline">
+				        <input type="tel" lay-verify="required|phone" autocomplete="off" class="layui-input inputTop"/>
+				      </div>
+				    </div>
+				    <div class="layui-inline">
+				      <label class="layui-form-label">家庭联系方式：</label>
+				      <div class="layui-input-inline">
+				        <input type="text" class="layui-input inputTop" lay-verify="required|phone" autocomplete="off" class="layui-input"/>
+				      </div>
+				    </div>	
+				   		    
+				  </div>
+				  <div class="layui-form-item">
+				  	<div class="layui-inline">
+				      <label class="layui-form-label">家庭住址：</label>
+				      <div class="layui-input-inline">
+				        <input type="text" class="layui-input inputTop"/>
+				      </div>
+				    </div>	
+				    <div class="layui-inline">
+				      <label class="layui-form-label">报名费用：</label>
+				      <div class="layui-input-inline">
+				        <input type="tel" lay-verify="required|phone" autocomplete="off" class="layui-input inputTop"/>
+				      </div>
+				    </div>			   	    
+				  </div>
+				   <div class="layui-form-item">				    
+				    <div class="layui-inline">
+				      <label class="layui-form-label">学生证：</label>
+				      <div class="layui-input-inline">
+				        <input type="text" class="layui-input inputTop" />
+				      </div>
+				    </div>	
+				     <div class="layui-inline">
+				      <label class="layui-form-label">汽车车牌号：</label>
+				      <div class="layui-input-inline">
+				        <input type="text" class="layui-input inputTop" />
+				      </div>
+				    </div>	
+				  </div>				 
+			</div>
+			<!--编辑内容end-->
+					
+			<!--编辑内容-->
+			<div class="lsglContent">
+				<section class="lsglBt">
+					<span class="fl">报名班级</span>						
+				</section>
+				<form class="layui-form" action="">
+					<div class="layui-form-item">
+			          <label class="layui-form-label"> 班级类别：</label>
+			          <div class="layui-input-block">
+			            <select name="city" lay-verify="required">
+			              <option value=""></option>
+			              <option value="0">北京</option>
+			              <option value="1">上海</option>
+			              <option value="2">广州</option>
+			              <option value="3">深圳</option>
+			              <option value="4">杭州</option>
+			            </select>
+			          </div>
+			        </div>
+					<div class="layui-form-item">
+			          <label class="layui-form-label">班级专业：</label>
+			          <div class="layui-input-block">
+			            <select name="city" lay-verify="required">
+			              <option value=""></option>
+			              <option value="0">北京</option>
+			              <option value="1">上海</option>
+			              <option value="2">广州</option>
+			              <option value="3">深圳</option>
+			              <option value="4">杭州</option>
+			            </select>
+			          </div>
+			        </div>
+					<div class="layui-form-item">
+			          <label class="layui-form-label">具体班级：</label>
+			          <div class="layui-input-block">
+			            <select name="city" lay-verify="required">
+			              <option value=""></option>
+			              <option value="0">北京</option>
+			              <option value="1">上海</option>
+			              <option value="2">广州</option>
+			              <option value="3">深圳</option>
+			              <option value="4">杭州</option>
+			            </select>			           
+			          </div>
+			       </div>				
+				</form>				
+			</div>
+			<!--编辑内容end-->
+
+			<a href="javascript:;" class="bmBtn">报名</a>
+						
+		</div>
+		<!--用户管理内容 end-->
+		<!--弹出层内容-->
+		<div id="popSearchRoleTest" style="display:none;">
+			<div style="width: 80%; text-align:center;  margin:0 auto; padding-top:5%;">
+				<form class="layui-form">
+					<div class="table_style">
+						<table class="layui-table">
+							<colgroup>
+								<!--<col width="150">-->
+								<!--<col width="200">-->
+								<!--<col >-->
+							</colgroup>
+							<thead>
+							<tr>
+								<th>序号</th>
+								<th>异动类型</th>
+								<th>异动时间</th>
+							</tr>
+							</thead>
+							<tbody>
+							<tr>
+								<td>1</td>
+								<td>退学</td>
+								<td>2018-11-11</td>
+							</tr>
+							<tr>
+								<td>2</td>
+								<td>退学</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>3</td>
+								<td>休学</td>
+								<td></td>
+							</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="layui-form-item">
+						<div class="tc_btn">
+							<button type="button" class="layui-layer-close layui-btn layui-btn-normal">关闭</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+		<!--弹出层内容end-->
+
+		<script src="plugins/jQuery/jquery-3.3.1.js"></script>
+		<script src="plugins/layui-v2.4.3/layui/layui.js"></script>
+		<script src="./js/bmgl_tc.js"></script>
+			<script>
+			layui.use('form', function(){
+			  var form = layui.form;
+			  
+			  //监听提交
+			  form.on('submit(formDemo)', function(data){
+			    layer.msg(JSON.stringify(data.field));
+			    return false;
+			  });
+			});
+		</script>
+	</body>
+</html>

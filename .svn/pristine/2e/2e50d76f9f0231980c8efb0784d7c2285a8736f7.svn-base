@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>老年大学系统——学委会管理</title>
+    <link rel="stylesheet" href="plugins/layui-v2.4.3/layui/css/layui.css"/>
+    <link rel="stylesheet" href="css/common_style.css" />
+    <link rel="stylesheet" href="font/iconfont.css"/>
+    <link rel="stylesheet" href="css/bzrgl.css" />
+    <style>
+        .layui-input{
+            color: #333333!important
+        }
+        .layui-textarea{
+            color: #333333!important
+        }
+    </style>
+</head>
+<body id="bzrgl">
+<!--学委会日志-查看内容-->
+<div class="layui-body bzrglContent">
+		<span class="layui-breadcrumb bzrgl_nav">
+		  <a href="javascript:;"><cite>学委会管理</cite></a><span lay-separator="">></span>
+          <a href="javascript:;"><cite>学委会日志</cite></a><span lay-separator="">></span>
+          <a href="javascript:;"><cite>查看</cite></a>
+		</span>
+    <!--内容部分-->
+    <div class="content">
+        <div class="content-head">
+            <a class="title" href="javascript:;" >学委会日志记录查看</a>
+            <a href="javascript:history.go(-1);" class="fanHui">返回</a>
+        </div>
+        <div class="">
+            <form class="layui-form" action="">
+                <div class="layui-form-item">
+                    <label class="layui-form-label">时间：</label>
+                    <div class="layui-input-block" style="width:30%;">
+                        <input type="text" id="time" name="time" required  lay-verify="required" placeholder="请输入"
+                               autocomplete="off" class="layui-input layui-disabled" disabled="disabled" >
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">名称：</label>
+                    <div class="layui-input-block">
+                        <input type="text" id="name" name="title" required  lay-verify="required" placeholder="请输入标题"
+                               autocomplete="off" class="layui-input layui-disabled" disabled="disabled">
+                    </div>
+                </div>
+                <div class="layui-form-item layui-form-text">
+                    <label class="layui-form-label">内容：</label>
+                    <div class="layui-input-block">
+                        <textarea id="content" name="desc" placeholder="请输入内容"
+                                  class="nr_textarea layui-textarea layui-disabled" disabled="disabled"></textarea>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!--内容部分end-->
+</div>
+<!--学委会日志-查看内容end-->
+
+   <script src="plugins/jQuery/jquery-3.3.1.js"></script>
+   <script src="plugins/layui-v2.4.3/layui/layui.js"></script>
+   <script>
+       //获取浏览地址id
+       (function ($) {
+           $.getUrlParam = function (name) {
+               var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+               var r = window.location.search.substr(1).match(reg);
+               if (r != null) return unescape(r[2]);
+               return null;
+           }
+       })(jQuery);
+       var id = $.getUrlParam('id');
+       // 查询到id，并把表格页面的值带到修改页面
+       $(function () {
+           $.ajax({
+               type: 'GET',
+               url: "api/studylog/query",
+               async: false,
+               data: {
+                   id: id
+               },
+               dataType: 'json',
+               xhrFields: {withCredentials: true},
+               success: function (data) {
+                   console.log(data.data);
+                   $("#time").val(data.data.starttime);
+                   $("#name").val(data.data.title);
+                   $("#content").append(data.data.content);
+               },
+               error: function () {
+                   layui.use('layer', function () {
+                       var layer = layui.layer;
+                       layer.msg('未查到数据');
+                   });
+               }
+           });
+       });
+   </script>
+
+</body>
+</html>

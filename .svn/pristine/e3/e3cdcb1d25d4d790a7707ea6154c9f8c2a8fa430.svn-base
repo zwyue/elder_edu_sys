@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">	
+		<title>老年大学系统——角色绑定用户</title>
+		<link rel="stylesheet" href="plugins/layui-v2.4.3/layui/css/layui.css"/>
+		<link rel="stylesheet" href="css/common_style.css" />
+		<link rel="stylesheet" href="css/yhgl_xsgl.css" />
+		<style>
+			html,body{
+				height: 100%;
+			}
+			.bdjs{
+				padding: 5px 10px;box-sizing: border-box;border: 1px solid #CCCCCC;border-radius: 5px;
+			}
+			iframe{height: 300px!important;}
+		</style>
+	</head>
+	<body>
+		<!--用户管理内容-->
+		<div class="layui-body yhglContent">
+			<span class="layui-breadcrumb yhgl_nav">
+			  <a href="javascript:;"><cite>角色管理</cite></a><span lay-separator="">＞</span>
+			  <a href="javascript:;">角色绑定用户</a>
+			</span>			
+			<!--查询-->
+			<div class="layui-form chaXun">
+			  <div class="layui-form-item">
+			    <div class="layui-inline">
+			      <label class="layui-form-label">姓名：</label>
+			      <div class="layui-input-inline">
+			        <input type="text" class="layui-input" id="name" placeholder="输入姓氏可模糊查询">
+			      </div>
+			    </div>
+			    <div class="layui-inline">
+			      <label class="layui-form-label">身份证：</label>
+			      <div class="layui-input-inline">
+			        <input type="text" class="layui-input" id="idCard">
+			      </div>
+			    </div>
+			    <a href="javascript:;" class="btn_chaXun fr" id="chaXun">查询</a>
+			  </div>			  
+			</div>
+			<!--查询 end-->
+			
+			<!--表格-->
+			<div class="biaoGe">
+				<section >
+					<span class="xslb_bt fl">老师列表</span>
+				</section>
+				<!---数据表格-->
+				<table class="layui-table" lay-skin="line" >
+				  <thead>
+				    <tr style="background: #e2e2e2;color: #000000;">
+				      <th>序号</th>
+				      <th>姓名</th>
+				      <th>工作单位</th>
+				      <th>年龄</th>
+				       <th>教授专业</th>
+				      <th>任职时间</th>
+				      <th>操作</th>
+				    </tr> 
+				  </thead>
+				  <tbody id="yhTableList">				   
+				  </tbody>
+				</table> 
+				 <p class="showPage">每页显示
+			    	<select>
+					  <option value ="" id="showPage"></option>	
+
+					</select>
+			        列</p>
+				<!--数据表格 end-->
+				
+				<!--分页-->
+			      <div class="page">
+			        <div id="text1"></div>
+			    </div>
+			    <!--分页end-->
+			</div>
+			<!--表格end-->
+		</div>
+		<!--用户管理内容 end-->
+
+		
+		
+		<script src="plugins/jQuery/jquery-3.3.1.js"></script>
+		<script src="plugins/layui-v2.4.3/layui/layui.js"></script>
+		<script type="text/javascript" src="js/dateUtil.js"></script>
+		<script>
+		$(function(){			
+            ajaxPLists();           
+        });
+        
+        function ajaxPLists(){ 
+        	//分页
+            var pageNum = 0, pageSize;  //初始化页数为第一页
+            layui.use('laypage', function (){
+                var laypage = layui.laypage;
+                var totalRecord = 0;    //初始化总记录数                
+                //每页显示条数
+                getNewsData();
+                //每页显示列数限制
+				if(totalRecord>0 && totalRecord<6){
+            		var pageSize = 5;  //限定每页显示5页 
+            		$("#showPage").html(pageSize);
+	            }else{
+	            	var pageSize = 10;  
+	            	$("#showPage").html(pageSize);
+	            };
+                //显示弹窗
+               
+                function getNewsData(){
+                    $.ajax({
+                        type: "get",
+                        async: false,
+                        url: "api/teacher/list",
+                        xhrFields: {withCredentials: true}, 
+                        data: {
+                            pageNum: pageNum,
+                            pageSize: pageSize
+                        },
+                        success: function (data){
+                            totalRecord = data.data.total;//数据总条数
+                            var html ="";             
+                            $.each(data.data.list, function (i, item){
+                            	//年龄和专业需要调整
+                                var addTime = new Date(item.crttime).Format("yyyy-MM-dd");
+                                html += '<tr>';
+                                html += '<td>' + (i+1) + '</td>' +'<td>' + item.tname + '</td>' + '<td>' + item.workunit + '</td>' + '<td>' + item.age + '</td>' + '<td>' + item.majorname + '</td>' +'<td>' + addTime + '</td>'+'<td style="display:none">' + item.id + '</td>';
+                                html += '<td><a href="JavaScript:;" class="bdjs" onclick="openPopup('+item.id+')">绑定角色</a></td>'
+                                html += '</tr>';
+                            })
+                            $('tbody').html(html);
+                        },
+                        error: function (){
+                            console.log('请求列表错误');
+                        }
+                    });
+                };
+                //执行一个laypage实例
+                laypage.render({
+                    elem: 'text1' //注意，这里的 test1 是 ID，不用加 #号
+                    , count: totalRecord //数据总数，从服务端得到
+                    , curr: pageNum
+                    , limit: pageSize
+                    , jump: function (obj, first) {
+                        //obj包含了当前分页的所有参数，比如：
+                        pageNum = obj.curr;//得到当前页，以便向服务端请求对应页的数据。
+                        pageSize = obj.limit;//得到每页显示的条数
+                        //首次不执行，清除上一页数据
+                        if (!first) {
+                            //do something
+                            $('tbody').empty();
+                            getNewsData();
+                        }
+                    }
+                });
+            });
+        };
+        //点击绑定角色按钮出现弹窗
+        function openPopup(id){
+			layui.use('layer', function(){
+	            var layer = layui.layer;
+				layer.open({
+				  type: 2, 
+				  title:'绑定角色',
+				  area: ['500px', '450px'],
+				  content: ['jsgl_jsbd.html','no'], //这里content是一个普通的String
+				  btn: ['确定', '取消'],
+				  yes:function(index,layero){
+						console.log('带过来的用户id:'+id);
+			        	//当点击‘确定’按钮的时候，获取弹出层返回的值
+					    var callBackRoleId = window["layui-layer-iframe" + index].callbackdata();
+					    //打印返回的值，看是否有我们想返回的值。
+					    console.log(callBackRoleId);
+						$.ajax({
+						async: false,    //同步
+						url: "api/role/allocate",
+						type: "POST",
+						data:{
+							userId:id,  //用户ID 
+							roleId:callBackRoleId.roleId   //角色ID
+						},
+						dataType: "json",
+						success: function(data){
+							layui.use('layer', function(){
+							  var layer = layui.layer;					  
+							  layer.msg('角色绑定成功');
+							});   
+					    	setTimeout(function(){
+					    		layer.close(index);	
+					    	},800)
+						},
+						error: function(){
+							layui.use('layer', function(){
+							  var layer = layui.layer;					  
+							  layer.msg('角色绑定失败');
+							});   
+							setTimeout(function(){
+								layer.close(index);				 
+					    	},800)
+						}				
+					});
+				  }
+				  
+				});
+			});
+		};
+
+         //查询
+         $('#chaXun').click(function(){
+         	 var name=document.getElementById("name").value;
+         	 var idCard = document.getElementById("idCard").value;
+         	 if(name!=''||idCard!=''){
+         	 	$.ajax({
+                    type: 'GET',
+                    url: "api/teacher/list",
+                    async: false, //同步
+                    data: {
+                    	name:name,
+                        idCard: idCard
+                    },
+                    dataType: 'json',
+                    xhrFields: {withCredentials: true},
+                    success: function (data) {
+                        var chaXunHtml;
+                        var len = data.data.list.length;
+                        for(var i = 1;i<len+1;i++){  
+                            $('table tr:eq('+i+')td:first').text(i);
+                        }
+                        $.each(data.data.list,function(i,item){
+                            //年龄和专业需要调整
+                            var addTime = new Date(item.crttime).Format("yyyy-MM-dd");
+                            chaXunHtml += '<tr>';
+                            chaXunHtml += '<td>' + (i+1) + '</td>' +'<td>' + item.tname + '</td>' + '<td>' + item.workunit + '</td>' + '<td>' + item.age + '</td>' + '<td>' + item.majorname + '</td>' +'<td>' + addTime + '</td>'+'<td style="display:none">' + item.id + '</td>';
+                            chaXunHtml += '<td class="td-manage">' +
+                                '<a title="删除" class="layui-btn layui-btn-xs layui-btn-danger" onclick="delTeacher('+item.id+')" lay-event="del" >删除</a>' +
+                                '<a title="编辑" href="yhgl_lsgl_jsxg.html?id=+' + item.id + '"  class="layui-btn layui-btn-xs" lay-event="edit" >修改</a>' +
+                                '<a title="查看" href="yhgl_lsgl_jsck.html?id=+' + item.id + '" class="layui-btn layui-btn-xs layui-btn-primary">查看</a>' +
+                                '</td>';
+                            chaXunHtml += '</tr>';
+                        });
+                        $("tbody").html(chaXunHtml);
+                    },
+                    error: function () {
+                        layui.use('layer', function(){
+                            var layer = layui.layer;
+                            layer.msg('查询失败！');
+                        });
+                    }
+                });
+         	 }else{
+         	 	layui.use('layer', function(){
+                    var layer = layui.layer;
+                    layer.msg('请输入姓名或身份证号！');
+               });  
+         	 }
+                
+         });
+		</script>
+	</body>
+</html>

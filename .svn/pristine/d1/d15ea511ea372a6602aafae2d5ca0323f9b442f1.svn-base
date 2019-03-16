@@ -1,0 +1,19 @@
+package com.zrtjoa.dao;
+
+import com.zrtjoa.entity.Award;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface AwardDao {
+    int deleteByPrimaryKey(Integer id);
+
+    int insert(Award record);
+
+    int insertSelective(Award record);
+
+    Award selectByPrimaryKey(Integer id);
+
+    int updateByPrimaryKeySelective(Award record);
+
+    int updateByPrimaryKey(Award record);
+}

@@ -1,0 +1,20 @@
+package com.zrtjoa.common;
+
+import com.zrtjoa.entity.Teacher;
+
+import javax.servlet.http.HttpSession;
+
+import static com.zrtjoa.constant.SysConstant.CACHE_USER;
+
+/**
+ * BaseController class
+ *
+ * @author zwy
+ * @date 2018/11/22 13:46
+ */
+public class BaseController {
+
+    public Teacher getLoginUser(HttpSession httpSession){
+        return (Teacher) httpSession.getAttribute(CACHE_USER);
+    }
+}

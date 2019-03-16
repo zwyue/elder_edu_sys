@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">	
+		<title>老年大学系统——教师类别管理</title>
+		<link rel="stylesheet" href="plugins/layui-v2.4.3/layui/css/layui.css"/>
+		<link rel="stylesheet" href="css/common_style.css" />
+		<link rel="stylesheet" href="css/jslb.css"/>
+	</head>
+	<body>
+		<!--用户管理内容-->
+		<div class="layui-body jslbContent">
+			<span class="layui-breadcrumb jslb_nav">
+			  <a href="javascript:;"><cite>教室管理</cite></a><span lay-separator="">＞</span>
+			  <a href="jslb_jslb.html">教室列表</a><span lay-separator="">＞</span>
+			  <a href="jslb_jslb.html">修改</a>
+			</span>			
+			
+			
+			<div class="jslbCont">
+				<section>
+					<span class="jslbgl_bt fl">教室新增</span>
+	                <a href="javascript:history.go(-1);" class="fanHui fr" data-method="setTop">返回</a>
+				</section>	
+				<!--表格-->
+				<div class="layui-form">
+				  <div class="layui-form-item">
+				    <div class="layui-inline">
+				      <label class="layui-form-label">教室名称：</label>
+				      <div class="layui-input-inline">
+				        <input type="text" class="layui-input" id="className" style="width: 150%!important;">
+				      </div>
+				    </div>
+				    <div class="layui-inline"> 
+				      <label class="layui-form-label">教室用途：</label>
+				      <div class="layui-input-inline">
+				        <input type="text" class="layui-input" id="purpose" style="width: 150%!important;">
+				      </div>
+				    </div>				    	  
+				</div>
+			
+				 <div class="layui-form-item">
+                     <div class="layui-inline">
+                         <label class="layui-form-label">教室类别：</label>
+                         <div class="layui-input-inline" style="width:285px;">
+                             <select name="">
+                             	<option>请选择</option>
+                                 <option value="退班">音乐</option>
+                                 <option value="休学">古典</option>
+                             </select>
+                         </div>
+                     </div>
+                     <div class="layui-inline">
+                         <label class="layui-form-label">教室地址：</label>
+                         <div class="layui-input-inline" style="width:285px;">
+                             <input type="text"  name="address" class="layui-input">
+                         </div>
+                     </div>
+                 </div>				
+			</div>
+			<!--表格 end-->
+			<a href="javascript:;" onclick="if(confirm('确定修改吗?')==false)return false;" class="bcBtn" >确认修改</a>
+		</div>
+		
+		<!--用户管理内容 end-->
+
+		<script src="plugins/jQuery/jquery-3.3.1.js"></script>
+		<script src="plugins/layui-v2.4.3/layui/layui.js"></script>
+		<!--<script src="js/jsgl_jslbsyls.js"></script>-->
+		<script>
+		  //from表单select 通用
+		   layui.use('form', function(){
+		     var form = layui.form;
+		     //监听提交
+		     form.on('submit(formDemo)', function(data){
+		        layer.msg(JSON.stringify(data.field));
+		        return false;
+		     });
+		   });		  
+		</script>
+	</body>
+</html>

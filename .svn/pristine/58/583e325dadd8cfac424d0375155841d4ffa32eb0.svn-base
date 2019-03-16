@@ -1,0 +1,19 @@
+package com.zrtjoa.dao;
+
+import com.zrtjoa.entity.Resource;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface ResourceDao {
+    int deleteByPrimaryKey(Integer id);
+
+    int insert(Resource record);
+
+    int insertSelective(Resource record);
+
+    Resource selectByPrimaryKey(Integer id);
+
+    int updateByPrimaryKeySelective(Resource record);
+
+    int updateByPrimaryKey(Resource record);
+}

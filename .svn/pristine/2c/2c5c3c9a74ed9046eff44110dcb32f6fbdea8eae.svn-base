@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>老年大学系统——登录页</title>
+		<link rel="stylesheet" href="plugins/layui-v2.4.3/layui/css/layui.css" />
+		<link rel="stylesheet" href="css/common.css" />
+		<link rel="stylesheet" href="css/loginStudy.css" />
+	</head>
+	<body>
+		<div class="all">
+			<div class="login">
+				<div class="login_cont">
+					<!--登录框-->
+					<div class="loginContent">
+						<section class="fl loginContentLeft"> 
+							<div class="logoStudy">
+								<img src="images/logoLogin.png" style="">
+							</div>						
+							<h1>天津市南开区老年大学</h1>
+							<h2>教学管理系统</h2>
+						</section>
+						<!--表单-->
+						<section class="fr loginContentRight">
+							<form>
+								<h2>登录</h2>
+								<p class="zh">账号</p>
+								<input type="text" id="user_name"/>
+								<p id="hint"></p>
+								<p>密码</p>
+								<input type="password" id="password"/>
+								<p id="hint2"></p>
+								<a href="javascript:;" class="loginBtn" id="loginBtn">登录</a>
+							</form>
+							<!--<p class="warn">用户名和密码不能空</p>-->
+						</section>
+						<!--表单 end-->
+					</div>
+					<!--登录框 end-->
+				</div>
+			</div>
+		</div>
+
+	<script type="text/javascript" src="plugins/jQuery/jquery-3.3.1.min.js"></script>
+	<script>
+	//aiax请求数据
+    function ajax_get(){
+       $("#loginBtn").click(function (){
+           var tnumber=$("#user_name").val();
+           var passWord=$("#password").val();
+           $.ajax({
+               url:"http://192.168.0.166:8080/index/login",
+               type:'POST',
+               dataType:'json',
+               async:false,
+               xhrFields: {withCredentials: true},  
+			   data:{
+					'tnumber':tnumber,
+					'password':passWord
+				},
+               success:function(data){
+                       window.location="common/comm_left.html";
+               },
+               error:function(){
+               		console.log('请求错误！')
+               }
+           })
+       })
+   };
+   ajax_get();
+</script>  
+</body>
+</html>

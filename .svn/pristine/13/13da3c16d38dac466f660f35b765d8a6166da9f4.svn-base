@@ -1,0 +1,82 @@
+package com.zrtjoa.entity;
+
+import java.util.Date;
+
+/**
+ * @Author: yangli
+ * @Description: 角色信息表
+ * @Date: Created in 18:23 2018/11/12
+ * @Modified by:
+ */
+public class Role {
+    //主键id
+    private int id;
+    //角色名称
+    private String rolename;
+    //权限ID
+    private int qxid;
+    //权限名称
+    private String qxmc;
+    //角色描述
+    private String description;
+    //状态（0：启用；1：禁用）
+    private String status;
+    //创建时间
+    private Date cjsj;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getRolename() {
+        return rolename;
+    }
+
+    public void setRolename(String rolename) {
+        this.rolename = rolename;
+    }
+
+    public int getQxid() {
+        return qxid;
+    }
+
+    public void setQxid(int qxid) {
+        this.qxid = qxid;
+    }
+
+    public String getQxmc() {
+        return qxmc;
+    }
+
+    public void setQxmc(String qxmc) {
+        this.qxmc = qxmc;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public Date getCjsj() {
+        return cjsj;
+    }
+
+    public void setCjsj(Date cjsj) {
+        this.cjsj = cjsj;
+    }
+}

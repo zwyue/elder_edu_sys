@@ -1,0 +1,75 @@
+			//左侧导航
+		    layui.use('element', function(){
+		          var element = layui.element;
+		     });
+		     //时间控件
+		     layui.use('laydate', function(){
+			  var laydate = layui.laydate;
+			 
+			  //日期时间选择器
+			  laydate.render({
+			    elem: '#test5'
+			    ,type: 'datetime'
+			  });
+			  
+			});
+		     //教室名称模糊查询
+		     $().ready(function() {
+				$("#className").keyup(
+					function() {
+						$("table tr:gt(0)").hide();
+						var $d = $("table tr:gt(0)").filter(":contains('" + $.trim($("#className").val()) + "')");
+						$d.show();
+					}
+				)
+			});
+			 //教室类别模糊查询
+		     $().ready(function() {
+				$("#classCategory").keyup(
+					function() {
+						$("table tr:gt(0)").hide();
+						var $d = $("table tr:gt(0)").filter(":contains('" + $.trim($("#classCategory").val()) + "')");
+						$d.show();
+					}
+				)
+			});
+		     
+		    //查询事件
+		    $('#chaXun').click(function(){
+		    	var className = $('#className').val();
+		    	var classCategory = $('#classCategory').val();
+		    	if(className=='' || classCategory==''){
+		    		layui.alert('请输入查询条件');
+		    		return false;
+		    	}
+		    });
+		     
+		    //分页
+			layui.use(['laypage', 'layer'], function(){
+			  var laypage = layui.laypage,layer = layui.layer;			
+			   laypage.render({
+			    elem: 'demo5'
+			    ,count: 500
+			    ,curr: location.hash.replace('#!fenye=', '') //获取hash值为fenye的当前页
+			    ,hash: 'fenye' //自定义hash值
+			  });
+			});
+
+		//表格增删改查     
+		var tableList = [
+			{ id: '1',  classname: '国画教室', category: '艺术',address:'东区一楼',state:'空闲' },
+			{ id: '2',  classname: '国画教室', category: '艺术',address:'东区二楼',state:'空闲'  },
+			{ id: '3',  classname: '围棋教室', category: '娱乐',address:'西区二楼',state:'使用中'  },
+			{ id: '4',  classname: '舞蹈教室', category: '艺术',address:'东区一楼',state:'使用中'  },
+			{ id: '5',  classname: '计算机教室', category: '程序',address:'东区一楼',state:'使用中'  },
+			{ id: '6',  classname: '国画教室', category: '艺术',address:'东区一楼',state:'使用中'  },
+		];
+		  $.each(tableList, function(){
+            $('<tr id="'+this.id+'">' +
+                '<td>'+this.id+'</td>' +
+                '<td>'+this.classname+'</td>' +
+                '<td>'+this.category+'</td>' +
+                '<td>'+this.address+'</td>' +
+                '<td>'+this.state+'</td>' +
+               '</tr>').appendTo('#listJslb');                   	
+          });

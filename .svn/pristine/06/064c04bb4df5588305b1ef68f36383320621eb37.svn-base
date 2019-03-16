@@ -1,0 +1,65 @@
+package com.zrtjoa.service.impl;
+
+import com.zrtjoa.dao.MemorabiliaDao;
+import com.zrtjoa.entity.Memorabilia;
+import com.zrtjoa.service.MemorabiliaService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+
+/**
+ * 大事记
+ *
+ * @author zwy
+ * @date 2018/11/28 14:04
+ */
+@Service
+public class MemorabiliaServiceImpl implements MemorabiliaService {
+
+    private static final Logger logger = LoggerFactory.getLogger(MemorabiliaServiceImpl.class);
+
+    @Autowired
+    private MemorabiliaDao memorabiliaDao ;
+
+    /**
+     * @Author Joanne
+     * @Description 新增档案，主要为档案内容
+     * @Date 2018/11/20 16:30
+     * @Param content
+     * @return
+     **/
+    @Override
+    public Integer saveMemorabilia(Memorabilia memorabilia) {
+        return memorabiliaDao.saveMemorabilia(memorabilia);
+    }
+
+    @Override
+    public Integer deleteMemorabilia(Integer[] ids) {
+        return memorabiliaDao.deleteMemorabilia(ids);
+    }
+
+    /**
+     * @Author Joanne
+     * @Description 档案更新
+     * @Date 2018/11/20 16:46
+     * @Param
+     * @return
+     **/
+    @Override
+    public Integer updateMemorabilia(Memorabilia memorabilia) {
+        return memorabiliaDao.updateMemorabilia(memorabilia);
+    }
+
+    @Override
+    public Memorabilia queryMemorabiliaById(Integer id) {
+        return memorabiliaDao.queryMemorabiliaById(id);
+    }
+
+    @Override
+    public List<Memorabilia> queryAllMemorabilia(Memorabilia memorabilia) {
+        return memorabiliaDao.queryMemorabilia(memorabilia);
+    }
+}

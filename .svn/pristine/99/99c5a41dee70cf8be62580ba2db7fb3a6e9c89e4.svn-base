@@ -1,0 +1,115 @@
+package com.zrtjoa.controller.studymeet;
+
+import com.zrtjoa.common.BaseController;
+import com.zrtjoa.common.ResultUtils;
+import com.zrtjoa.entity.Student;
+import com.zrtjoa.entity.StudyMeet;
+import com.zrtjoa.service.StudentService;
+import com.zrtjoa.service.StudyMeetService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+import java.util.Map;
+
+/**
+ * 学委会管理
+ * @author yangli
+ * @date 2018/12/25
+ */
+@RestController
+@RequestMapping("/studymeet")
+public class StudyMeetController extends BaseController {
+
+    @Autowired
+    private StudyMeetService studyMeetService;
+
+    @Autowired
+    private StudentService studentService;
+
+    /**
+     * 查询学委会学生列表
+     * @author yangli
+     * @date 2018/12/25
+     */
+    @RequestMapping(value = "list",method = RequestMethod.GET)
+    public List<StudyMeet> list(Model model){
+        List<StudyMeet> list = studyMeetService.getList();
+        for (int i = 0; i < list.size(); i++) {
+            System.out.print("------1-----"+list.get(i).getSname());
+        }
+        return list;
+    }
+
+    /**
+     * 查询未加入学委会的学生列表
+     * @author yangli
+     * @date 2018/12/25
+     */
+    @RequestMapping(value = "slist",method = RequestMethod.GET)
+    public List<Student> slist(Model model){
+        List<Student> list = studentService.getStudentList();
+        for (int i = 0; i < list.size(); i++) {
+            System.out.print("------2-----"+list.get(i).getStuname());
+        }
+        return list;
+    }
+
+    /**
+     * 删除学委会学生
+     * @author yangli
+     * @date 2018/12/25
+     */
+    @RequestMapping(value = "delete",method = RequestMethod.GET)
+    public Map delete(Integer id){
+        Integer delete = studyMeetService.deleteByPrimaryKey(id);
+        if(delete>0){
+            return ResultUtils.success("删除失败");
+        }else{
+            return ResultUtils.success("删除成功");
+        }
+    }
+
+    /**
+     * 学委会成员新增
+     * @author yangli
+     * @date 2018/12/25
+     */
+    @RequestMapping(value = "save",method = RequestMethod.POST)
+    @ResponseBody
+    public Map save(Integer sid){
+        Student student = studentService.selectByPrimaryKey(sid);
+        StudyMeet studyMeet = new StudyMeet();
+        studyMeet.setSid(student.getId());
+        studyMeet.setSname(student.getStuname());
+        studyMeet.setClassid(student.getClassid());
+        studyMeet.setClassname(student.getClassname());
+        studyMeet.setPhone(student.getPhone());
+        studyMeet.setEmergency(student.getEmergency());
+        studyMeetService.insert(studyMeet);
+        if(studyMeetService.insert(studyMeet)>0){
+            return ResultUtils.success("保存成功");
+        }else{
+            return ResultUtils.success("保存失败");
+        }
+    }
+    
+    /**
+     * 学委会添加职务
+     * @author yangli
+     * @date 2018/12/25
+     */
+    @RequestMapping(value = "addduties",method = RequestMethod.POST)
+    @ResponseBody
+    public Map addduties(StudyMeet studyMeet,Integer id){
+        studyMeetService.updateByPrimaryKey(studyMeet);
+        if(studyMeetService.updateByPrimaryKey(studyMeet)>0){
+            return ResultUtils.success("添加成功");
+        }else{
+            return ResultUtils.success("添加失败");
+        }
+    }
+
+}

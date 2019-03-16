@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>老年大学系统——教学管理</title>
+    <link rel="stylesheet" href="plugins/layui-v2.4.3/layui/css/layui.css"/>
+    <!--<link rel="stylesheet" href="css/jxgl.css" />-->
+    <style>
+        .layui-form-select dl{
+            max-height: 199px!important;
+        }
+    </style>
+</head>
+<body>
+    <!--弹出层内容-->
+    <div class="main">
+        <form class="layui-form" action="">
+            <div class="layui-form-item">
+                <div class="layui-inline layui-form" lay-filter="classroomType">
+                    <label class="layui-form-label">类别：</label>
+                    <div class="layui-input-inline">
+                        <select name="classroomType" lay-verify="required" id="classroomType">
+                            <option value="">请选择类别</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <div class="layui-inline layui-form" lay-filter="classroom">
+                    <label class="layui-form-label">教室：</label>
+                    <div class="layui-input-inline">
+                        <select name="" lay-verify="required" id="classroom">
+                            <option value="">请选择</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <!--弹出层内容end-->
+    
+    <script src="plugins/jQuery/jquery-3.3.1.js"></script>
+    <script src="plugins/layui-v2.4.3/layui/layui.js"></script>
+    <script src="js/pkgl_zdpk_select.js"></script>
+    <script>
+        var callbackdata = function () {
+
+            var classRoom=$("#classroom option:selected").text();
+            var classRoomVal=$("#classroom option:selected").val();
+            var data = {
+                classRoom: classRoom,
+                classRoomId:classRoomVal
+            };
+            return data;
+        }
+    </script>
+
+</body>
+</html>

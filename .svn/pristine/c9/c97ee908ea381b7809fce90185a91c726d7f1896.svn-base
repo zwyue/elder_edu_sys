@@ -24,12 +24,10 @@
                         });
                     }
                 },
-                error: function(error) {
+                error: function (error) {
                     layui.use('layer', function () {
                         var layer = layui.layer;
-                        var msg = error.responseText.replace(/^\s*|\s*$/g,"");
-                        msg = msg==""?"系统错误":msg;
-                        layer.msg(msg);
+                        layer.msg(error.responseText);
                     });
                 }
             })

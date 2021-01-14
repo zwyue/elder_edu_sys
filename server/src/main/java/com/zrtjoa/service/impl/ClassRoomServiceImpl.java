@@ -5,13 +5,15 @@ import com.zrtjoa.dao.ClassrecordDao;
 import com.zrtjoa.dao.ClassroomDao;
 import com.zrtjoa.dao.ClasstypeDao;
 import com.zrtjoa.dao.CourseTimeDao;
-import com.zrtjoa.entity.*;
+import com.zrtjoa.entity.Classrecord;
+import com.zrtjoa.entity.Classroom;
+import com.zrtjoa.entity.Classtype;
+import com.zrtjoa.entity.CourseTime;
 import com.zrtjoa.service.ClassRoomService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -95,22 +97,20 @@ public class ClassRoomServiceImpl implements ClassRoomService {
         week = week == null ? LocalDate.now().getDayOfWeek().getValue() : week ;
         starttime = starttime == null ? LocalDate.now().toString() + " 00:00:00": starttime ;
         endtime = endtime == null ? LocalDate.now().toString() + " 23:59:59" : endtime ;
-        Map<String,Object> map = new HashMap();
+        Map<String,Object> map = new HashMap<>();
         map.put("week",week);
         map.put("date",date);
         map.put("starttime",starttime);
         map.put("endtime",endtime);
-        List<Classroom> classrooms = classroomDao.queryVacantClsRoom(map);
-        return classrooms;
+        return classroomDao.queryVacantClsRoom(map);
     }
 
     @Override
     public List<Classroom> getClassroomList(String classroom, String catename) {
-        Map map = new HashMap();
+        Map<String,Object> map = new HashMap<>();
         map.put("classroom",classroom);
         map.put("catename",catename);
-        List<Classroom> classrooms = classroomDao.getClassroomList(map);
-        return classrooms;
+        return classroomDao.getClassroomList(map);
     }
 
     @Override

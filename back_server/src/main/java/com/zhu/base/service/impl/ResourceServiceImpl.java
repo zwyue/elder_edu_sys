@@ -1,0 +1,78 @@
+package com.zhu.base.service.impl;
+
+import com.zhu.base.annotation.PagingQuery;
+import com.zhu.base.service.ResourceService;
+import com.zhu.base.dao.ResourceDao;
+import com.zhu.base.entity.Resource;
+import com.zhu.base.enums.CategoryEnum;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+
+import java.util.List;
+import java.util.Map;
+
+/**
+ * RecourceServiceImpl class
+ *
+ * @author zwy
+ * @date 2018/11/28 15:46
+ */
+@Repository
+public class ResourceServiceImpl implements ResourceService {
+
+    private static final Logger logger = LoggerFactory.getLogger(ResourceServiceImpl.class);
+
+    @Autowired
+    private ResourceDao resourceDao ;
+
+    @Override
+    public Integer saveResouce(Resource resource) {
+        return resourceDao.insert(resource);
+    }
+
+    /**
+     * 查询资源建设列表
+     *
+     * @author zwy
+     * @date 2018/11/28 17:10
+     */
+    @Override
+    @PagingQuery
+    public List<Resource> queryResourceList() {
+        List<Resource> list = resourceDao.queryResourceList();
+        //list.forEach(li->li.setCategoryTxt(CategoryEnum.returnEnumByCode(li.getCategory()).desc));
+        return list;
+    }
+
+    @Override
+    public Resource queryResourceById(Integer id) {
+        Resource resource = resourceDao.selectByPrimaryKey(id) ;
+        resource.setCategoryTxt(CategoryEnum.returnEnumByCode(resource.getCategory()).desc);
+        return resource;
+    }
+
+    @Override
+    public Integer updateResource(Resource resource) {
+        return resourceDao.updateByPrimaryKeySelective(resource);
+    }
+
+    @Override
+    public Integer deleteResouece(List<Integer> idList) {
+        return resourceDao.deleteResourceByIds(idList);
+    }
+
+    @Override
+    @PagingQuery
+    public List<Resource> getTitleList(Map map) {
+        List<Resource> list = resourceDao.getTitleList(map);
+        //list.forEach(li->li.setCategoryTxt(CategoryEnum.returnEnumByCode(li.getCategory()).desc));
+        return list;
+    }
+
+    @Override
+    public Integer deleteByPrimaryKey(Integer id) {
+        return resourceDao.deleteByPrimaryKey(id);
+    }
+}

@@ -4,6 +4,7 @@
     <currentScheme>IDE</currentScheme>
   </component>
   <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/back_server" />
     <file type="web" url="file://$PROJECT_DIR$/customer" />
     <file type="web" url="file://$PROJECT_DIR$/service" />
   </component>
@@ -15,6 +16,7 @@
       <list>
         <option value="$PROJECT_DIR$/customer/pom.xml" />
         <option value="$PROJECT_DIR$/service/pom.xml" />
+        <option value="$PROJECT_DIR$/back_server/pom.xml" />
       </list>
     </option>
   </component>

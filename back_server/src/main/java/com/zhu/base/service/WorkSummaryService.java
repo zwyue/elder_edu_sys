@@ -1,0 +1,33 @@
+package com.zhu.base.service;
+
+import com.zhu.base.entity.WorkSummary;
+
+import java.util.List;
+
+/**
+ * 班主任工作总结管理
+ * @author yangli
+ * @date 2018/12/25
+ */
+public interface WorkSummaryService {
+
+    int deleteByPrimaryKey(Integer id);
+
+    int insert(WorkSummary record);
+
+    int insertSelective(WorkSummary record);
+
+    WorkSummary selectByPrimaryKey(Integer id);
+
+    int updateByPrimaryKeySelective(WorkSummary record);
+
+    int updateByPrimaryKey(WorkSummary record);
+
+    List<WorkSummary> getLists();
+
+    List<WorkSummary> getList(Integer tid);
+
+    List<WorkSummary> getTitleList(String title);
+
+    List<WorkSummary> getTitleLists(Integer tid,String title);
+}

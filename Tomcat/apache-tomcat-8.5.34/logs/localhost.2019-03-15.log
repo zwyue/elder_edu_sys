@@ -1,16 +1,16 @@
-15-Mar-2019 09:06:08.898 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log No Spring WebApplicationInitializer types detected on classpath
-15-Mar-2019 09:06:09.223 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring root WebApplicationContext
-15-Mar-2019 09:06:21.097 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring FrameworkServlet 'SpringMVC'
-15-Mar-2019 09:06:41.038 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log No Spring WebApplicationInitializer types detected on classpath
-15-Mar-2019 09:06:41.169 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring root WebApplicationContext
-15-Mar-2019 09:06:44.563 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring FrameworkServlet 'SpringMVC'
-15-Mar-2019 09:06:48.406 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
-15-Mar-2019 09:06:48.406 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
-15-Mar-2019 09:06:48.406 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@43f9d450')
-15-Mar-2019 11:15:35.521 信息 [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.core.ApplicationContext.log Destroying Spring FrameworkServlet 'SpringMVC'
-15-Mar-2019 11:15:35.717 信息 [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.core.ApplicationContext.log Closing Spring root WebApplicationContext
-15-Mar-2019 11:15:35.782 严重 [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.core.StandardContext.listenerStop Exception sending context destroyed event to listener instance of class [org.springframework.web.context.ContextLoaderListener]
- java.lang.IllegalStateException: java.io.FileNotFoundException: C:\zwy\environment\Tomcat\apache-tomcat-8.5.34\webapps\zrtjoa\WEB-INF\lib\activation-1.1.jar (系统找不到指定的路径。)
+15-Mar-2019 09:06:08.898 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log No Spring WebApplicationInitializer types detected on classpath
+15-Mar-2019 09:06:09.223 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring root WebApplicationContext
+15-Mar-2019 09:06:21.097 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring FrameworkServlet 'SpringMVC'
+15-Mar-2019 09:06:41.038 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log No Spring WebApplicationInitializer types detected on classpath
+15-Mar-2019 09:06:41.169 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring root WebApplicationContext
+15-Mar-2019 09:06:44.563 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring FrameworkServlet 'SpringMVC'
+15-Mar-2019 09:06:48.406 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+15-Mar-2019 09:06:48.406 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+15-Mar-2019 09:06:48.406 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@43f9d450')
+15-Mar-2019 11:15:35.521 锟斤拷息 [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.core.ApplicationContext.log Destroying Spring FrameworkServlet 'SpringMVC'
+15-Mar-2019 11:15:35.717 锟斤拷息 [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.core.ApplicationContext.log Closing Spring root WebApplicationContext
+15-Mar-2019 11:15:35.782 锟斤拷锟斤拷 [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.core.StandardContext.listenerStop Exception sending context destroyed event to listener instance of class [org.springframework.web.context.ContextLoaderListener]
+ java.lang.IllegalStateException: java.io.FileNotFoundException: C:\zwy\environment\Tomcat\apache-tomcat-8.5.34\webapps\zrtjoa\WEB-INF\lib\activation-1.1.jar (系统锟揭诧拷锟斤拷指锟斤拷锟斤拷路锟斤拷锟斤拷)
 	at org.apache.catalina.webresources.AbstractSingleArchiveResourceSet.getArchiveEntry(AbstractSingleArchiveResourceSet.java:100)
 	at org.apache.catalina.webresources.AbstractArchiveResourceSet.getResource(AbstractArchiveResourceSet.java:257)
 	at org.apache.catalina.webresources.StandardRoot.getResourceInternal(StandardRoot.java:281)
@@ -36,7 +36,7 @@
 	at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1393)
 	at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.run(ContainerBase.java:1361)
 	at java.lang.Thread.run(Thread.java:748)
-Caused by: java.io.FileNotFoundException: C:\zwy\environment\Tomcat\apache-tomcat-8.5.34\webapps\zrtjoa\WEB-INF\lib\activation-1.1.jar (系统找不到指定的路径。)
+Caused by: java.io.FileNotFoundException: C:\zwy\environment\Tomcat\apache-tomcat-8.5.34\webapps\zrtjoa\WEB-INF\lib\activation-1.1.jar (系统锟揭诧拷锟斤拷指锟斤拷锟斤拷路锟斤拷锟斤拷)
 	at java.util.zip.ZipFile.open(Native Method)
 	at java.util.zip.ZipFile.<init>(ZipFile.java:225)
 	at java.util.zip.ZipFile.<init>(ZipFile.java:155)
@@ -48,61 +48,61 @@ Caused by: java.io.FileNotFoundException: C:\zwy\environment\Tomcat\apache-tomca
 	at org.apache.catalina.webresources.AbstractSingleArchiveResourceSet.getArchiveEntry(AbstractSingleArchiveResourceSet.java:96)
 	... 24 more
 
-15-Mar-2019 11:15:48.623 信息 [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log No Spring WebApplicationInitializer types detected on classpath
-15-Mar-2019 11:15:48.830 信息 [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log Initializing Spring root WebApplicationContext
-15-Mar-2019 11:15:55.401 信息 [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log Initializing Spring FrameworkServlet 'SpringMVC'
-15-Mar-2019 11:16:01.486 信息 [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log Destroying Spring FrameworkServlet 'SpringMVC'
-15-Mar-2019 11:16:01.514 信息 [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log Closing Spring root WebApplicationContext
-15-Mar-2019 11:16:01.588 信息 [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log SessionListener: contextDestroyed()
-15-Mar-2019 11:16:01.588 信息 [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log ContextListener: contextDestroyed()
-15-Mar-2019 11:16:01.611 信息 [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log Destroying Spring FrameworkServlet 'SpringMVC'
-15-Mar-2019 11:16:01.619 信息 [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log Closing Spring root WebApplicationContext
-15-Mar-2019 11:16:13.863 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log No Spring WebApplicationInitializer types detected on classpath
-15-Mar-2019 11:16:14.009 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring root WebApplicationContext
-15-Mar-2019 11:16:20.435 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring FrameworkServlet 'SpringMVC'
-15-Mar-2019 11:16:33.107 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log No Spring WebApplicationInitializer types detected on classpath
-15-Mar-2019 11:16:33.348 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring root WebApplicationContext
-15-Mar-2019 11:16:37.500 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring FrameworkServlet 'SpringMVC'
-15-Mar-2019 11:16:42.593 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
-15-Mar-2019 11:16:42.593 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
-15-Mar-2019 11:16:42.596 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@3072dfcc')
-15-Mar-2019 11:26:43.820 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log No Spring WebApplicationInitializer types detected on classpath
-15-Mar-2019 11:26:43.950 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring root WebApplicationContext
-15-Mar-2019 11:26:49.065 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring FrameworkServlet 'SpringMVC'
-15-Mar-2019 11:26:58.061 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log No Spring WebApplicationInitializer types detected on classpath
-15-Mar-2019 11:26:58.172 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring root WebApplicationContext
-15-Mar-2019 11:27:01.838 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring FrameworkServlet 'SpringMVC'
-15-Mar-2019 11:27:06.622 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
-15-Mar-2019 11:27:06.622 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
-15-Mar-2019 11:27:06.625 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@3072dfcc')
-15-Mar-2019 11:28:58.272 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log No Spring WebApplicationInitializer types detected on classpath
-15-Mar-2019 11:28:58.491 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring root WebApplicationContext
-15-Mar-2019 11:29:03.247 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring FrameworkServlet 'SpringMVC'
-15-Mar-2019 11:29:15.321 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log No Spring WebApplicationInitializer types detected on classpath
-15-Mar-2019 11:29:15.437 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring root WebApplicationContext
-15-Mar-2019 11:29:18.924 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring FrameworkServlet 'SpringMVC'
-15-Mar-2019 11:29:23.377 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
-15-Mar-2019 11:29:23.377 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
-15-Mar-2019 11:29:23.380 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@3fb23a5c')
-15-Mar-2019 11:29:28.992 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Destroying Spring FrameworkServlet 'SpringMVC'
-15-Mar-2019 11:29:29.010 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Closing Spring root WebApplicationContext
-15-Mar-2019 11:29:29.045 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log SessionListener: contextDestroyed()
-15-Mar-2019 11:29:29.045 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: contextDestroyed()
-15-Mar-2019 11:29:29.058 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Destroying Spring FrameworkServlet 'SpringMVC'
-15-Mar-2019 11:29:29.067 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Closing Spring root WebApplicationContext
-15-Mar-2019 11:29:38.204 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log No Spring WebApplicationInitializer types detected on classpath
-15-Mar-2019 11:29:38.350 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring root WebApplicationContext
-15-Mar-2019 11:29:43.583 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring FrameworkServlet 'SpringMVC'
-15-Mar-2019 11:29:52.222 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log No Spring WebApplicationInitializer types detected on classpath
-15-Mar-2019 11:29:52.325 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring root WebApplicationContext
-15-Mar-2019 11:29:56.345 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring FrameworkServlet 'SpringMVC'
-15-Mar-2019 11:30:00.873 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
-15-Mar-2019 11:30:00.873 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
-15-Mar-2019 11:30:00.875 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@64f87069')
-15-Mar-2019 13:40:37.606 信息 [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.core.ApplicationContext.log Destroying Spring FrameworkServlet 'SpringMVC'
-15-Mar-2019 13:40:37.713 信息 [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.core.ApplicationContext.log Closing Spring root WebApplicationContext
-15-Mar-2019 13:40:37.745 严重 [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.core.StandardContext.listenerStop Exception sending context destroyed event to listener instance of class [org.springframework.web.context.ContextLoaderListener]
- java.lang.IllegalStateException: java.io.FileNotFoundException: C:\zwy\environment\Tomcat\apache-tomcat-8.5.34\webapps\zrtjoa\WEB-INF\lib\activation-1.1.jar (系统找不到指定的路径。)
+15-Mar-2019 11:15:48.623 锟斤拷息 [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log No Spring WebApplicationInitializer types detected on classpath
+15-Mar-2019 11:15:48.830 锟斤拷息 [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log Initializing Spring root WebApplicationContext
+15-Mar-2019 11:15:55.401 锟斤拷息 [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log Initializing Spring FrameworkServlet 'SpringMVC'
+15-Mar-2019 11:16:01.486 锟斤拷息 [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log Destroying Spring FrameworkServlet 'SpringMVC'
+15-Mar-2019 11:16:01.514 锟斤拷息 [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log Closing Spring root WebApplicationContext
+15-Mar-2019 11:16:01.588 锟斤拷息 [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log SessionListener: contextDestroyed()
+15-Mar-2019 11:16:01.588 锟斤拷息 [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log ContextListener: contextDestroyed()
+15-Mar-2019 11:16:01.611 锟斤拷息 [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log Destroying Spring FrameworkServlet 'SpringMVC'
+15-Mar-2019 11:16:01.619 锟斤拷息 [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log Closing Spring root WebApplicationContext
+15-Mar-2019 11:16:13.863 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log No Spring WebApplicationInitializer types detected on classpath
+15-Mar-2019 11:16:14.009 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring root WebApplicationContext
+15-Mar-2019 11:16:20.435 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring FrameworkServlet 'SpringMVC'
+15-Mar-2019 11:16:33.107 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log No Spring WebApplicationInitializer types detected on classpath
+15-Mar-2019 11:16:33.348 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring root WebApplicationContext
+15-Mar-2019 11:16:37.500 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring FrameworkServlet 'SpringMVC'
+15-Mar-2019 11:16:42.593 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+15-Mar-2019 11:16:42.593 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+15-Mar-2019 11:16:42.596 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@3072dfcc')
+15-Mar-2019 11:26:43.820 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log No Spring WebApplicationInitializer types detected on classpath
+15-Mar-2019 11:26:43.950 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring root WebApplicationContext
+15-Mar-2019 11:26:49.065 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring FrameworkServlet 'SpringMVC'
+15-Mar-2019 11:26:58.061 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log No Spring WebApplicationInitializer types detected on classpath
+15-Mar-2019 11:26:58.172 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring root WebApplicationContext
+15-Mar-2019 11:27:01.838 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring FrameworkServlet 'SpringMVC'
+15-Mar-2019 11:27:06.622 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+15-Mar-2019 11:27:06.622 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+15-Mar-2019 11:27:06.625 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@3072dfcc')
+15-Mar-2019 11:28:58.272 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log No Spring WebApplicationInitializer types detected on classpath
+15-Mar-2019 11:28:58.491 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring root WebApplicationContext
+15-Mar-2019 11:29:03.247 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring FrameworkServlet 'SpringMVC'
+15-Mar-2019 11:29:15.321 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log No Spring WebApplicationInitializer types detected on classpath
+15-Mar-2019 11:29:15.437 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring root WebApplicationContext
+15-Mar-2019 11:29:18.924 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring FrameworkServlet 'SpringMVC'
+15-Mar-2019 11:29:23.377 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+15-Mar-2019 11:29:23.377 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+15-Mar-2019 11:29:23.380 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@3fb23a5c')
+15-Mar-2019 11:29:28.992 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Destroying Spring FrameworkServlet 'SpringMVC'
+15-Mar-2019 11:29:29.010 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Closing Spring root WebApplicationContext
+15-Mar-2019 11:29:29.045 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log SessionListener: contextDestroyed()
+15-Mar-2019 11:29:29.045 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: contextDestroyed()
+15-Mar-2019 11:29:29.058 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Destroying Spring FrameworkServlet 'SpringMVC'
+15-Mar-2019 11:29:29.067 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Closing Spring root WebApplicationContext
+15-Mar-2019 11:29:38.204 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log No Spring WebApplicationInitializer types detected on classpath
+15-Mar-2019 11:29:38.350 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring root WebApplicationContext
+15-Mar-2019 11:29:43.583 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring FrameworkServlet 'SpringMVC'
+15-Mar-2019 11:29:52.222 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log No Spring WebApplicationInitializer types detected on classpath
+15-Mar-2019 11:29:52.325 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring root WebApplicationContext
+15-Mar-2019 11:29:56.345 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring FrameworkServlet 'SpringMVC'
+15-Mar-2019 11:30:00.873 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+15-Mar-2019 11:30:00.873 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+15-Mar-2019 11:30:00.875 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@64f87069')
+15-Mar-2019 13:40:37.606 锟斤拷息 [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.core.ApplicationContext.log Destroying Spring FrameworkServlet 'SpringMVC'
+15-Mar-2019 13:40:37.713 锟斤拷息 [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.core.ApplicationContext.log Closing Spring root WebApplicationContext
+15-Mar-2019 13:40:37.745 锟斤拷锟斤拷 [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.core.StandardContext.listenerStop Exception sending context destroyed event to listener instance of class [org.springframework.web.context.ContextLoaderListener]
+ java.lang.IllegalStateException: java.io.FileNotFoundException: C:\zwy\environment\Tomcat\apache-tomcat-8.5.34\webapps\zrtjoa\WEB-INF\lib\activation-1.1.jar (系统锟揭诧拷锟斤拷指锟斤拷锟斤拷路锟斤拷锟斤拷)
 	at org.apache.catalina.webresources.AbstractSingleArchiveResourceSet.getArchiveEntry(AbstractSingleArchiveResourceSet.java:100)
 	at org.apache.catalina.webresources.AbstractArchiveResourceSet.getResource(AbstractArchiveResourceSet.java:257)
 	at org.apache.catalina.webresources.StandardRoot.getResourceInternal(StandardRoot.java:281)
@@ -128,7 +128,7 @@ Caused by: java.io.FileNotFoundException: C:\zwy\environment\Tomcat\apache-tomca
 	at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1393)
 	at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.run(ContainerBase.java:1361)
 	at java.lang.Thread.run(Thread.java:748)
-Caused by: java.io.FileNotFoundException: C:\zwy\environment\Tomcat\apache-tomcat-8.5.34\webapps\zrtjoa\WEB-INF\lib\activation-1.1.jar (系统找不到指定的路径。)
+Caused by: java.io.FileNotFoundException: C:\zwy\environment\Tomcat\apache-tomcat-8.5.34\webapps\zrtjoa\WEB-INF\lib\activation-1.1.jar (系统锟揭诧拷锟斤拷指锟斤拷锟斤拷路锟斤拷锟斤拷)
 	at java.util.zip.ZipFile.open(Native Method)
 	at java.util.zip.ZipFile.<init>(ZipFile.java:225)
 	at java.util.zip.ZipFile.<init>(ZipFile.java:155)
@@ -140,28 +140,28 @@ Caused by: java.io.FileNotFoundException: C:\zwy\environment\Tomcat\apache-tomca
 	at org.apache.catalina.webresources.AbstractSingleArchiveResourceSet.getArchiveEntry(AbstractSingleArchiveResourceSet.java:96)
 	... 24 more
 
-15-Mar-2019 13:40:51.038 信息 [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log No Spring WebApplicationInitializer types detected on classpath
-15-Mar-2019 13:40:51.200 信息 [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log Initializing Spring root WebApplicationContext
-15-Mar-2019 13:40:58.053 信息 [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log Initializing Spring FrameworkServlet 'SpringMVC'
-15-Mar-2019 13:41:24.654 信息 [localhost-startStop-3] org.apache.catalina.core.ApplicationContext.log Destroying Spring FrameworkServlet 'SpringMVC'
-15-Mar-2019 13:41:24.693 信息 [localhost-startStop-3] org.apache.catalina.core.ApplicationContext.log Closing Spring root WebApplicationContext
-15-Mar-2019 13:41:24.763 信息 [localhost-startStop-3] org.apache.catalina.core.ApplicationContext.log SessionListener: contextDestroyed()
-15-Mar-2019 13:41:24.764 信息 [localhost-startStop-3] org.apache.catalina.core.ApplicationContext.log ContextListener: contextDestroyed()
-15-Mar-2019 13:41:24.793 信息 [localhost-startStop-3] org.apache.catalina.core.ApplicationContext.log Destroying Spring FrameworkServlet 'SpringMVC'
-15-Mar-2019 13:41:24.799 信息 [localhost-startStop-3] org.apache.catalina.core.ApplicationContext.log Closing Spring root WebApplicationContext
-15-Mar-2019 13:41:39.481 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log No Spring WebApplicationInitializer types detected on classpath
-15-Mar-2019 13:41:39.654 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring root WebApplicationContext
-15-Mar-2019 13:41:47.673 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring FrameworkServlet 'SpringMVC'
-15-Mar-2019 13:41:58.810 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log No Spring WebApplicationInitializer types detected on classpath
-15-Mar-2019 13:41:58.945 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring root WebApplicationContext
-15-Mar-2019 13:42:04.196 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring FrameworkServlet 'SpringMVC'
-15-Mar-2019 13:42:09.675 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
-15-Mar-2019 13:42:09.675 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
-15-Mar-2019 13:42:09.677 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@74f4c4c4')
-15-Mar-2019 13:47:00.052 信息 [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.core.ApplicationContext.log Destroying Spring FrameworkServlet 'SpringMVC'
-15-Mar-2019 13:47:00.068 信息 [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.core.ApplicationContext.log Closing Spring root WebApplicationContext
-15-Mar-2019 13:47:00.080 严重 [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.core.StandardContext.listenerStop Exception sending context destroyed event to listener instance of class [org.springframework.web.context.ContextLoaderListener]
- java.lang.IllegalStateException: java.io.FileNotFoundException: C:\zwy\environment\Tomcat\apache-tomcat-8.5.34\webapps\zrtjoa\WEB-INF\lib\activation-1.1.jar (系统找不到指定的路径。)
+15-Mar-2019 13:40:51.038 锟斤拷息 [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log No Spring WebApplicationInitializer types detected on classpath
+15-Mar-2019 13:40:51.200 锟斤拷息 [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log Initializing Spring root WebApplicationContext
+15-Mar-2019 13:40:58.053 锟斤拷息 [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log Initializing Spring FrameworkServlet 'SpringMVC'
+15-Mar-2019 13:41:24.654 锟斤拷息 [localhost-startStop-3] org.apache.catalina.core.ApplicationContext.log Destroying Spring FrameworkServlet 'SpringMVC'
+15-Mar-2019 13:41:24.693 锟斤拷息 [localhost-startStop-3] org.apache.catalina.core.ApplicationContext.log Closing Spring root WebApplicationContext
+15-Mar-2019 13:41:24.763 锟斤拷息 [localhost-startStop-3] org.apache.catalina.core.ApplicationContext.log SessionListener: contextDestroyed()
+15-Mar-2019 13:41:24.764 锟斤拷息 [localhost-startStop-3] org.apache.catalina.core.ApplicationContext.log ContextListener: contextDestroyed()
+15-Mar-2019 13:41:24.793 锟斤拷息 [localhost-startStop-3] org.apache.catalina.core.ApplicationContext.log Destroying Spring FrameworkServlet 'SpringMVC'
+15-Mar-2019 13:41:24.799 锟斤拷息 [localhost-startStop-3] org.apache.catalina.core.ApplicationContext.log Closing Spring root WebApplicationContext
+15-Mar-2019 13:41:39.481 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log No Spring WebApplicationInitializer types detected on classpath
+15-Mar-2019 13:41:39.654 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring root WebApplicationContext
+15-Mar-2019 13:41:47.673 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring FrameworkServlet 'SpringMVC'
+15-Mar-2019 13:41:58.810 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log No Spring WebApplicationInitializer types detected on classpath
+15-Mar-2019 13:41:58.945 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring root WebApplicationContext
+15-Mar-2019 13:42:04.196 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring FrameworkServlet 'SpringMVC'
+15-Mar-2019 13:42:09.675 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+15-Mar-2019 13:42:09.675 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+15-Mar-2019 13:42:09.677 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@74f4c4c4')
+15-Mar-2019 13:47:00.052 锟斤拷息 [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.core.ApplicationContext.log Destroying Spring FrameworkServlet 'SpringMVC'
+15-Mar-2019 13:47:00.068 锟斤拷息 [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.core.ApplicationContext.log Closing Spring root WebApplicationContext
+15-Mar-2019 13:47:00.080 锟斤拷锟斤拷 [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.core.StandardContext.listenerStop Exception sending context destroyed event to listener instance of class [org.springframework.web.context.ContextLoaderListener]
+ java.lang.IllegalStateException: java.io.FileNotFoundException: C:\zwy\environment\Tomcat\apache-tomcat-8.5.34\webapps\zrtjoa\WEB-INF\lib\activation-1.1.jar (系统锟揭诧拷锟斤拷指锟斤拷锟斤拷路锟斤拷锟斤拷)
 	at org.apache.catalina.webresources.AbstractSingleArchiveResourceSet.getArchiveEntry(AbstractSingleArchiveResourceSet.java:100)
 	at org.apache.catalina.webresources.AbstractArchiveResourceSet.getResource(AbstractArchiveResourceSet.java:257)
 	at org.apache.catalina.webresources.StandardRoot.getResourceInternal(StandardRoot.java:281)
@@ -187,7 +187,7 @@ Caused by: java.io.FileNotFoundException: C:\zwy\environment\Tomcat\apache-tomca
 	at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1393)
 	at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.run(ContainerBase.java:1361)
 	at java.lang.Thread.run(Thread.java:748)
-Caused by: java.io.FileNotFoundException: C:\zwy\environment\Tomcat\apache-tomcat-8.5.34\webapps\zrtjoa\WEB-INF\lib\activation-1.1.jar (系统找不到指定的路径。)
+Caused by: java.io.FileNotFoundException: C:\zwy\environment\Tomcat\apache-tomcat-8.5.34\webapps\zrtjoa\WEB-INF\lib\activation-1.1.jar (系统锟揭诧拷锟斤拷指锟斤拷锟斤拷路锟斤拷锟斤拷)
 	at java.util.zip.ZipFile.open(Native Method)
 	at java.util.zip.ZipFile.<init>(ZipFile.java:225)
 	at java.util.zip.ZipFile.<init>(ZipFile.java:155)
@@ -199,112 +199,112 @@ Caused by: java.io.FileNotFoundException: C:\zwy\environment\Tomcat\apache-tomca
 	at org.apache.catalina.webresources.AbstractSingleArchiveResourceSet.getArchiveEntry(AbstractSingleArchiveResourceSet.java:96)
 	... 24 more
 
-15-Mar-2019 13:47:06.347 信息 [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log No Spring WebApplicationInitializer types detected on classpath
-15-Mar-2019 13:47:06.452 信息 [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log Initializing Spring root WebApplicationContext
-15-Mar-2019 13:47:09.921 信息 [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log Initializing Spring FrameworkServlet 'SpringMVC'
-15-Mar-2019 13:47:17.868 信息 [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log Destroying Spring FrameworkServlet 'SpringMVC'
-15-Mar-2019 13:47:17.892 信息 [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log Closing Spring root WebApplicationContext
-15-Mar-2019 13:47:17.922 信息 [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log SessionListener: contextDestroyed()
-15-Mar-2019 13:47:17.923 信息 [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log ContextListener: contextDestroyed()
-15-Mar-2019 13:47:17.942 信息 [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log Destroying Spring FrameworkServlet 'SpringMVC'
-15-Mar-2019 13:47:17.948 信息 [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log Closing Spring root WebApplicationContext
-15-Mar-2019 13:47:36.076 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log No Spring WebApplicationInitializer types detected on classpath
-15-Mar-2019 13:47:36.218 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring root WebApplicationContext
-15-Mar-2019 13:47:46.611 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring FrameworkServlet 'SpringMVC'
-15-Mar-2019 13:48:04.370 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log No Spring WebApplicationInitializer types detected on classpath
-15-Mar-2019 13:48:04.588 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring root WebApplicationContext
-15-Mar-2019 13:48:10.891 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring FrameworkServlet 'SpringMVC'
-15-Mar-2019 13:48:19.978 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
-15-Mar-2019 13:48:19.978 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
-15-Mar-2019 13:48:19.982 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@48a697a4')
-15-Mar-2019 13:48:21.423 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Destroying Spring FrameworkServlet 'SpringMVC'
-15-Mar-2019 13:48:21.458 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Closing Spring root WebApplicationContext
-15-Mar-2019 13:48:21.502 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log SessionListener: contextDestroyed()
-15-Mar-2019 13:48:21.502 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: contextDestroyed()
-15-Mar-2019 13:48:21.520 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Destroying Spring FrameworkServlet 'SpringMVC'
-15-Mar-2019 13:48:21.529 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Closing Spring root WebApplicationContext
-15-Mar-2019 14:03:30.357 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log No Spring WebApplicationInitializer types detected on classpath
-15-Mar-2019 14:03:30.500 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring root WebApplicationContext
-15-Mar-2019 14:03:36.158 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring FrameworkServlet 'SpringMVC'
-15-Mar-2019 14:03:50.345 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log No Spring WebApplicationInitializer types detected on classpath
-15-Mar-2019 14:03:50.472 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring root WebApplicationContext
-15-Mar-2019 14:03:53.913 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring FrameworkServlet 'SpringMVC'
-15-Mar-2019 14:03:58.394 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
-15-Mar-2019 14:03:58.394 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
-15-Mar-2019 14:03:58.396 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@103d8460')
-15-Mar-2019 14:03:59.215 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Destroying Spring FrameworkServlet 'SpringMVC'
-15-Mar-2019 14:03:59.236 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Closing Spring root WebApplicationContext
-15-Mar-2019 14:03:59.270 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log SessionListener: contextDestroyed()
-15-Mar-2019 14:03:59.270 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: contextDestroyed()
-15-Mar-2019 14:03:59.282 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Destroying Spring FrameworkServlet 'SpringMVC'
-15-Mar-2019 14:03:59.285 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Closing Spring root WebApplicationContext
-15-Mar-2019 14:07:41.026 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log No Spring WebApplicationInitializer types detected on classpath
-15-Mar-2019 14:07:41.203 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring root WebApplicationContext
-15-Mar-2019 14:07:48.837 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring FrameworkServlet 'SpringMVC'
-15-Mar-2019 14:08:10.451 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log No Spring WebApplicationInitializer types detected on classpath
-15-Mar-2019 14:08:10.627 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring root WebApplicationContext
-15-Mar-2019 14:08:18.469 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring FrameworkServlet 'SpringMVC'
-15-Mar-2019 14:08:29.459 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
-15-Mar-2019 14:08:29.459 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
-15-Mar-2019 14:08:29.461 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@48a697a4')
-15-Mar-2019 14:08:30.706 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Destroying Spring FrameworkServlet 'SpringMVC'
-15-Mar-2019 14:08:30.756 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Closing Spring root WebApplicationContext
-15-Mar-2019 14:08:30.835 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log SessionListener: contextDestroyed()
-15-Mar-2019 14:08:30.835 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: contextDestroyed()
-15-Mar-2019 14:08:30.853 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Destroying Spring FrameworkServlet 'SpringMVC'
-15-Mar-2019 14:08:30.859 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Closing Spring root WebApplicationContext
-15-Mar-2019 14:09:07.044 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log No Spring WebApplicationInitializer types detected on classpath
-15-Mar-2019 14:09:07.159 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring root WebApplicationContext
-15-Mar-2019 14:09:12.325 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring FrameworkServlet 'SpringMVC'
-15-Mar-2019 14:09:27.135 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log No Spring WebApplicationInitializer types detected on classpath
-15-Mar-2019 14:09:27.826 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring root WebApplicationContext
-15-Mar-2019 14:09:32.067 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring FrameworkServlet 'SpringMVC'
-15-Mar-2019 14:09:38.961 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
-15-Mar-2019 14:09:38.962 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
-15-Mar-2019 14:09:38.972 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@48a697a4')
-15-Mar-2019 14:09:41.816 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Destroying Spring FrameworkServlet 'SpringMVC'
-15-Mar-2019 14:09:41.839 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Closing Spring root WebApplicationContext
-15-Mar-2019 14:09:41.883 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log SessionListener: contextDestroyed()
-15-Mar-2019 14:09:41.883 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: contextDestroyed()
-15-Mar-2019 14:09:41.898 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Destroying Spring FrameworkServlet 'SpringMVC'
-15-Mar-2019 14:09:41.903 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Closing Spring root WebApplicationContext
-15-Mar-2019 14:09:58.034 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log No Spring WebApplicationInitializer types detected on classpath
-15-Mar-2019 14:09:58.162 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring root WebApplicationContext
-15-Mar-2019 14:10:03.229 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring FrameworkServlet 'SpringMVC'
-15-Mar-2019 14:10:16.824 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log No Spring WebApplicationInitializer types detected on classpath
-15-Mar-2019 14:10:17.045 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring root WebApplicationContext
-15-Mar-2019 14:10:20.953 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring FrameworkServlet 'SpringMVC'
-15-Mar-2019 14:10:26.900 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
-15-Mar-2019 14:10:26.900 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
-15-Mar-2019 14:10:26.907 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@103d8460')
-15-Mar-2019 14:50:20.273 信息 [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log Destroying Spring FrameworkServlet 'SpringMVC'
-15-Mar-2019 14:50:20.346 信息 [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log Closing Spring root WebApplicationContext
-15-Mar-2019 14:50:20.504 信息 [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log SessionListener: contextDestroyed()
-15-Mar-2019 14:50:20.504 信息 [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log ContextListener: contextDestroyed()
-15-Mar-2019 14:50:20.534 信息 [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log Destroying Spring FrameworkServlet 'SpringMVC'
-15-Mar-2019 14:50:20.626 信息 [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log Closing Spring root WebApplicationContext
-15-Mar-2019 14:50:32.261 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log No Spring WebApplicationInitializer types detected on classpath
-15-Mar-2019 14:50:32.406 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring root WebApplicationContext
-15-Mar-2019 14:50:37.792 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring FrameworkServlet 'SpringMVC'
-15-Mar-2019 14:50:50.209 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log No Spring WebApplicationInitializer types detected on classpath
-15-Mar-2019 14:50:50.318 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring root WebApplicationContext
-15-Mar-2019 14:50:55.237 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring FrameworkServlet 'SpringMVC'
-15-Mar-2019 14:51:01.658 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
-15-Mar-2019 14:51:01.658 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
-15-Mar-2019 14:51:01.666 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@5cbb0288')
-15-Mar-2019 15:48:52.349 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log No Spring WebApplicationInitializer types detected on classpath
-15-Mar-2019 15:48:52.474 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring root WebApplicationContext
-15-Mar-2019 15:48:59.477 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring FrameworkServlet 'SpringMVC'
-15-Mar-2019 15:49:13.857 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log No Spring WebApplicationInitializer types detected on classpath
-15-Mar-2019 15:49:13.969 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring root WebApplicationContext
-15-Mar-2019 15:49:19.157 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring FrameworkServlet 'SpringMVC'
-15-Mar-2019 15:49:25.827 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
-15-Mar-2019 15:49:25.827 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
-15-Mar-2019 15:49:25.829 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@567e41fa')
-15-Mar-2019 18:04:34.538 信息 [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.core.ApplicationContext.log Destroying Spring FrameworkServlet 'SpringMVC'
-15-Mar-2019 18:04:34.658 信息 [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.core.ApplicationContext.log Closing Spring root WebApplicationContext
-15-Mar-2019 18:04:34.698 严重 [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.core.StandardContext.listenerStop Exception sending context destroyed event to listener instance of class [org.springframework.web.context.ContextLoaderListener]
- java.lang.IllegalStateException: java.io.FileNotFoundException: C:\zwy\environment\Tomcat\apache-tomcat-8.5.34\webapps\zrtjoa\WEB-INF\lib\activation-1.1.jar (系统找不到指定的路径。)
+15-Mar-2019 13:47:06.347 锟斤拷息 [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log No Spring WebApplicationInitializer types detected on classpath
+15-Mar-2019 13:47:06.452 锟斤拷息 [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log Initializing Spring root WebApplicationContext
+15-Mar-2019 13:47:09.921 锟斤拷息 [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log Initializing Spring FrameworkServlet 'SpringMVC'
+15-Mar-2019 13:47:17.868 锟斤拷息 [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log Destroying Spring FrameworkServlet 'SpringMVC'
+15-Mar-2019 13:47:17.892 锟斤拷息 [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log Closing Spring root WebApplicationContext
+15-Mar-2019 13:47:17.922 锟斤拷息 [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log SessionListener: contextDestroyed()
+15-Mar-2019 13:47:17.923 锟斤拷息 [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log ContextListener: contextDestroyed()
+15-Mar-2019 13:47:17.942 锟斤拷息 [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log Destroying Spring FrameworkServlet 'SpringMVC'
+15-Mar-2019 13:47:17.948 锟斤拷息 [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log Closing Spring root WebApplicationContext
+15-Mar-2019 13:47:36.076 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log No Spring WebApplicationInitializer types detected on classpath
+15-Mar-2019 13:47:36.218 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring root WebApplicationContext
+15-Mar-2019 13:47:46.611 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring FrameworkServlet 'SpringMVC'
+15-Mar-2019 13:48:04.370 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log No Spring WebApplicationInitializer types detected on classpath
+15-Mar-2019 13:48:04.588 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring root WebApplicationContext
+15-Mar-2019 13:48:10.891 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring FrameworkServlet 'SpringMVC'
+15-Mar-2019 13:48:19.978 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+15-Mar-2019 13:48:19.978 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+15-Mar-2019 13:48:19.982 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@48a697a4')
+15-Mar-2019 13:48:21.423 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Destroying Spring FrameworkServlet 'SpringMVC'
+15-Mar-2019 13:48:21.458 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Closing Spring root WebApplicationContext
+15-Mar-2019 13:48:21.502 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log SessionListener: contextDestroyed()
+15-Mar-2019 13:48:21.502 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: contextDestroyed()
+15-Mar-2019 13:48:21.520 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Destroying Spring FrameworkServlet 'SpringMVC'
+15-Mar-2019 13:48:21.529 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Closing Spring root WebApplicationContext
+15-Mar-2019 14:03:30.357 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log No Spring WebApplicationInitializer types detected on classpath
+15-Mar-2019 14:03:30.500 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring root WebApplicationContext
+15-Mar-2019 14:03:36.158 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring FrameworkServlet 'SpringMVC'
+15-Mar-2019 14:03:50.345 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log No Spring WebApplicationInitializer types detected on classpath
+15-Mar-2019 14:03:50.472 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring root WebApplicationContext
+15-Mar-2019 14:03:53.913 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring FrameworkServlet 'SpringMVC'
+15-Mar-2019 14:03:58.394 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+15-Mar-2019 14:03:58.394 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+15-Mar-2019 14:03:58.396 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@103d8460')
+15-Mar-2019 14:03:59.215 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Destroying Spring FrameworkServlet 'SpringMVC'
+15-Mar-2019 14:03:59.236 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Closing Spring root WebApplicationContext
+15-Mar-2019 14:03:59.270 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log SessionListener: contextDestroyed()
+15-Mar-2019 14:03:59.270 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: contextDestroyed()
+15-Mar-2019 14:03:59.282 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Destroying Spring FrameworkServlet 'SpringMVC'
+15-Mar-2019 14:03:59.285 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Closing Spring root WebApplicationContext
+15-Mar-2019 14:07:41.026 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log No Spring WebApplicationInitializer types detected on classpath
+15-Mar-2019 14:07:41.203 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring root WebApplicationContext
+15-Mar-2019 14:07:48.837 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring FrameworkServlet 'SpringMVC'
+15-Mar-2019 14:08:10.451 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log No Spring WebApplicationInitializer types detected on classpath
+15-Mar-2019 14:08:10.627 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring root WebApplicationContext
+15-Mar-2019 14:08:18.469 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring FrameworkServlet 'SpringMVC'
+15-Mar-2019 14:08:29.459 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+15-Mar-2019 14:08:29.459 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+15-Mar-2019 14:08:29.461 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@48a697a4')
+15-Mar-2019 14:08:30.706 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Destroying Spring FrameworkServlet 'SpringMVC'
+15-Mar-2019 14:08:30.756 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Closing Spring root WebApplicationContext
+15-Mar-2019 14:08:30.835 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log SessionListener: contextDestroyed()
+15-Mar-2019 14:08:30.835 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: contextDestroyed()
+15-Mar-2019 14:08:30.853 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Destroying Spring FrameworkServlet 'SpringMVC'
+15-Mar-2019 14:08:30.859 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Closing Spring root WebApplicationContext
+15-Mar-2019 14:09:07.044 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log No Spring WebApplicationInitializer types detected on classpath
+15-Mar-2019 14:09:07.159 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring root WebApplicationContext
+15-Mar-2019 14:09:12.325 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring FrameworkServlet 'SpringMVC'
+15-Mar-2019 14:09:27.135 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log No Spring WebApplicationInitializer types detected on classpath
+15-Mar-2019 14:09:27.826 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring root WebApplicationContext
+15-Mar-2019 14:09:32.067 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring FrameworkServlet 'SpringMVC'
+15-Mar-2019 14:09:38.961 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+15-Mar-2019 14:09:38.962 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+15-Mar-2019 14:09:38.972 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@48a697a4')
+15-Mar-2019 14:09:41.816 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Destroying Spring FrameworkServlet 'SpringMVC'
+15-Mar-2019 14:09:41.839 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Closing Spring root WebApplicationContext
+15-Mar-2019 14:09:41.883 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log SessionListener: contextDestroyed()
+15-Mar-2019 14:09:41.883 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: contextDestroyed()
+15-Mar-2019 14:09:41.898 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Destroying Spring FrameworkServlet 'SpringMVC'
+15-Mar-2019 14:09:41.903 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Closing Spring root WebApplicationContext
+15-Mar-2019 14:09:58.034 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log No Spring WebApplicationInitializer types detected on classpath
+15-Mar-2019 14:09:58.162 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring root WebApplicationContext
+15-Mar-2019 14:10:03.229 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring FrameworkServlet 'SpringMVC'
+15-Mar-2019 14:10:16.824 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log No Spring WebApplicationInitializer types detected on classpath
+15-Mar-2019 14:10:17.045 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring root WebApplicationContext
+15-Mar-2019 14:10:20.953 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring FrameworkServlet 'SpringMVC'
+15-Mar-2019 14:10:26.900 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+15-Mar-2019 14:10:26.900 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+15-Mar-2019 14:10:26.907 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@103d8460')
+15-Mar-2019 14:50:20.273 锟斤拷息 [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log Destroying Spring FrameworkServlet 'SpringMVC'
+15-Mar-2019 14:50:20.346 锟斤拷息 [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log Closing Spring root WebApplicationContext
+15-Mar-2019 14:50:20.504 锟斤拷息 [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log SessionListener: contextDestroyed()
+15-Mar-2019 14:50:20.504 锟斤拷息 [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log ContextListener: contextDestroyed()
+15-Mar-2019 14:50:20.534 锟斤拷息 [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log Destroying Spring FrameworkServlet 'SpringMVC'
+15-Mar-2019 14:50:20.626 锟斤拷息 [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log Closing Spring root WebApplicationContext
+15-Mar-2019 14:50:32.261 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log No Spring WebApplicationInitializer types detected on classpath
+15-Mar-2019 14:50:32.406 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring root WebApplicationContext
+15-Mar-2019 14:50:37.792 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring FrameworkServlet 'SpringMVC'
+15-Mar-2019 14:50:50.209 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log No Spring WebApplicationInitializer types detected on classpath
+15-Mar-2019 14:50:50.318 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring root WebApplicationContext
+15-Mar-2019 14:50:55.237 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring FrameworkServlet 'SpringMVC'
+15-Mar-2019 14:51:01.658 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+15-Mar-2019 14:51:01.658 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+15-Mar-2019 14:51:01.666 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@5cbb0288')
+15-Mar-2019 15:48:52.349 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log No Spring WebApplicationInitializer types detected on classpath
+15-Mar-2019 15:48:52.474 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring root WebApplicationContext
+15-Mar-2019 15:48:59.477 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring FrameworkServlet 'SpringMVC'
+15-Mar-2019 15:49:13.857 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log No Spring WebApplicationInitializer types detected on classpath
+15-Mar-2019 15:49:13.969 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring root WebApplicationContext
+15-Mar-2019 15:49:19.157 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring FrameworkServlet 'SpringMVC'
+15-Mar-2019 15:49:25.827 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+15-Mar-2019 15:49:25.827 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+15-Mar-2019 15:49:25.829 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@567e41fa')
+15-Mar-2019 18:04:34.538 锟斤拷息 [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.core.ApplicationContext.log Destroying Spring FrameworkServlet 'SpringMVC'
+15-Mar-2019 18:04:34.658 锟斤拷息 [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.core.ApplicationContext.log Closing Spring root WebApplicationContext
+15-Mar-2019 18:04:34.698 锟斤拷锟斤拷 [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.core.StandardContext.listenerStop Exception sending context destroyed event to listener instance of class [org.springframework.web.context.ContextLoaderListener]
+ java.lang.IllegalStateException: java.io.FileNotFoundException: C:\zwy\environment\Tomcat\apache-tomcat-8.5.34\webapps\zrtjoa\WEB-INF\lib\activation-1.1.jar (系统锟揭诧拷锟斤拷指锟斤拷锟斤拷路锟斤拷锟斤拷)
 	at org.apache.catalina.webresources.AbstractSingleArchiveResourceSet.getArchiveEntry(AbstractSingleArchiveResourceSet.java:100)
 	at org.apache.catalina.webresources.AbstractArchiveResourceSet.getResource(AbstractArchiveResourceSet.java:257)
 	at org.apache.catalina.webresources.StandardRoot.getResourceInternal(StandardRoot.java:281)
@@ -330,7 +330,7 @@ Caused by: java.io.FileNotFoundException: C:\zwy\environment\Tomcat\apache-tomca
 	at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1393)
 	at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.run(ContainerBase.java:1361)
 	at java.lang.Thread.run(Thread.java:748)
-Caused by: java.io.FileNotFoundException: C:\zwy\environment\Tomcat\apache-tomcat-8.5.34\webapps\zrtjoa\WEB-INF\lib\activation-1.1.jar (系统找不到指定的路径。)
+Caused by: java.io.FileNotFoundException: C:\zwy\environment\Tomcat\apache-tomcat-8.5.34\webapps\zrtjoa\WEB-INF\lib\activation-1.1.jar (系统锟揭诧拷锟斤拷指锟斤拷锟斤拷路锟斤拷锟斤拷)
 	at java.util.zip.ZipFile.open(Native Method)
 	at java.util.zip.ZipFile.<init>(ZipFile.java:225)
 	at java.util.zip.ZipFile.<init>(ZipFile.java:155)
@@ -342,32 +342,32 @@ Caused by: java.io.FileNotFoundException: C:\zwy\environment\Tomcat\apache-tomca
 	at org.apache.catalina.webresources.AbstractSingleArchiveResourceSet.getArchiveEntry(AbstractSingleArchiveResourceSet.java:96)
 	... 24 more
 
-15-Mar-2019 18:04:45.224 信息 [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log No Spring WebApplicationInitializer types detected on classpath
-15-Mar-2019 18:04:45.408 信息 [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log Initializing Spring root WebApplicationContext
-15-Mar-2019 18:04:50.745 信息 [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log Initializing Spring FrameworkServlet 'SpringMVC'
-15-Mar-2019 18:04:56.625 信息 [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log Destroying Spring FrameworkServlet 'SpringMVC'
-15-Mar-2019 18:04:56.688 信息 [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log Closing Spring root WebApplicationContext
-15-Mar-2019 18:04:56.772 信息 [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log SessionListener: contextDestroyed()
-15-Mar-2019 18:04:56.772 信息 [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log ContextListener: contextDestroyed()
-15-Mar-2019 18:04:56.804 信息 [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log Destroying Spring FrameworkServlet 'SpringMVC'
-15-Mar-2019 18:04:56.812 信息 [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log Closing Spring root WebApplicationContext
-15-Mar-2019 18:05:26.818 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log No Spring WebApplicationInitializer types detected on classpath
-15-Mar-2019 18:05:26.954 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring root WebApplicationContext
-15-Mar-2019 18:05:32.703 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring FrameworkServlet 'SpringMVC'
-15-Mar-2019 18:05:46.574 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log No Spring WebApplicationInitializer types detected on classpath
-15-Mar-2019 18:05:46.694 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring root WebApplicationContext
-15-Mar-2019 18:05:51.980 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring FrameworkServlet 'SpringMVC'
-15-Mar-2019 18:05:58.720 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
-15-Mar-2019 18:05:58.720 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
-15-Mar-2019 18:05:58.722 信息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@60d700c9')
-15-Mar-2019 18:59:38.249 严重 [http-nio-8088-exec-5] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [SpringMVC] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
+15-Mar-2019 18:04:45.224 锟斤拷息 [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log No Spring WebApplicationInitializer types detected on classpath
+15-Mar-2019 18:04:45.408 锟斤拷息 [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log Initializing Spring root WebApplicationContext
+15-Mar-2019 18:04:50.745 锟斤拷息 [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log Initializing Spring FrameworkServlet 'SpringMVC'
+15-Mar-2019 18:04:56.625 锟斤拷息 [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log Destroying Spring FrameworkServlet 'SpringMVC'
+15-Mar-2019 18:04:56.688 锟斤拷息 [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log Closing Spring root WebApplicationContext
+15-Mar-2019 18:04:56.772 锟斤拷息 [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log SessionListener: contextDestroyed()
+15-Mar-2019 18:04:56.772 锟斤拷息 [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log ContextListener: contextDestroyed()
+15-Mar-2019 18:04:56.804 锟斤拷息 [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log Destroying Spring FrameworkServlet 'SpringMVC'
+15-Mar-2019 18:04:56.812 锟斤拷息 [localhost-startStop-2] org.apache.catalina.core.ApplicationContext.log Closing Spring root WebApplicationContext
+15-Mar-2019 18:05:26.818 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log No Spring WebApplicationInitializer types detected on classpath
+15-Mar-2019 18:05:26.954 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring root WebApplicationContext
+15-Mar-2019 18:05:32.703 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring FrameworkServlet 'SpringMVC'
+15-Mar-2019 18:05:46.574 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log No Spring WebApplicationInitializer types detected on classpath
+15-Mar-2019 18:05:46.694 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring root WebApplicationContext
+15-Mar-2019 18:05:51.980 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring FrameworkServlet 'SpringMVC'
+15-Mar-2019 18:05:58.720 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+15-Mar-2019 18:05:58.720 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+15-Mar-2019 18:05:58.722 锟斤拷息 [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@60d700c9')
+15-Mar-2019 18:59:38.249 锟斤拷锟斤拷 [http-nio-8088-exec-5] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [SpringMVC] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
  java.lang.NullPointerException
 	at java.util.regex.Matcher.getTextLength(Matcher.java:1283)
 	at java.util.regex.Matcher.reset(Matcher.java:309)
 	at java.util.regex.Matcher.<init>(Matcher.java:229)
 	at java.util.regex.Pattern.matcher(Pattern.java:1093)
-	at com.zrtjoa.common.ResultUtils.isChinese(ResultUtils.java:82)
-	at com.zrtjoa.exception.TjoaExceptionResolver.resolveException(TjoaExceptionResolver.java:61)
+	at ResultUtils.isChinese(ResultUtils.java:82)
+	at TjoaExceptionResolver.resolveException(TjoaExceptionResolver.java:61)
 	at org.springframework.web.servlet.DispatcherServlet.processHandlerException(DispatcherServlet.java:1182)
 	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1020)
 	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:971)
@@ -386,7 +386,7 @@ Caused by: java.io.FileNotFoundException: C:\zwy\environment\Tomcat\apache-tomca
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at com.zrtjoa.filter.SimpleCORSFilter.doFilter(SimpleCORSFilter.java:65)
+	at SimpleCORSFilter.doFilter(SimpleCORSFilter.java:65)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
@@ -407,14 +407,14 @@ Caused by: java.io.FileNotFoundException: C:\zwy\environment\Tomcat\apache-tomca
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:748)
 
-15-Mar-2019 19:05:03.216 严重 [http-nio-8088-exec-6] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [SpringMVC] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
+15-Mar-2019 19:05:03.216 锟斤拷锟斤拷 [http-nio-8088-exec-6] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [SpringMVC] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
  java.lang.NullPointerException
 	at java.util.regex.Matcher.getTextLength(Matcher.java:1283)
 	at java.util.regex.Matcher.reset(Matcher.java:309)
 	at java.util.regex.Matcher.<init>(Matcher.java:229)
 	at java.util.regex.Pattern.matcher(Pattern.java:1093)
-	at com.zrtjoa.common.ResultUtils.isChinese(ResultUtils.java:82)
-	at com.zrtjoa.exception.TjoaExceptionResolver.resolveException(TjoaExceptionResolver.java:61)
+	at ResultUtils.isChinese(ResultUtils.java:82)
+	at TjoaExceptionResolver.resolveException(TjoaExceptionResolver.java:61)
 	at org.springframework.web.servlet.DispatcherServlet.processHandlerException(DispatcherServlet.java:1182)
 	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1020)
 	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:971)
@@ -433,7 +433,7 @@ Caused by: java.io.FileNotFoundException: C:\zwy\environment\Tomcat\apache-tomca
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at com.zrtjoa.filter.SimpleCORSFilter.doFilter(SimpleCORSFilter.java:65)
+	at SimpleCORSFilter.doFilter(SimpleCORSFilter.java:65)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
@@ -454,14 +454,14 @@ Caused by: java.io.FileNotFoundException: C:\zwy\environment\Tomcat\apache-tomca
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:748)
 
-15-Mar-2019 19:05:05.429 严重 [http-nio-8088-exec-7] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [SpringMVC] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
+15-Mar-2019 19:05:05.429 锟斤拷锟斤拷 [http-nio-8088-exec-7] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [SpringMVC] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
  java.lang.NullPointerException
 	at java.util.regex.Matcher.getTextLength(Matcher.java:1283)
 	at java.util.regex.Matcher.reset(Matcher.java:309)
 	at java.util.regex.Matcher.<init>(Matcher.java:229)
 	at java.util.regex.Pattern.matcher(Pattern.java:1093)
-	at com.zrtjoa.common.ResultUtils.isChinese(ResultUtils.java:82)
-	at com.zrtjoa.exception.TjoaExceptionResolver.resolveException(TjoaExceptionResolver.java:61)
+	at ResultUtils.isChinese(ResultUtils.java:82)
+	at TjoaExceptionResolver.resolveException(TjoaExceptionResolver.java:61)
 	at org.springframework.web.servlet.DispatcherServlet.processHandlerException(DispatcherServlet.java:1182)
 	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1020)
 	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:971)
@@ -480,7 +480,7 @@ Caused by: java.io.FileNotFoundException: C:\zwy\environment\Tomcat\apache-tomca
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at com.zrtjoa.filter.SimpleCORSFilter.doFilter(SimpleCORSFilter.java:65)
+	at SimpleCORSFilter.doFilter(SimpleCORSFilter.java:65)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
@@ -501,14 +501,14 @@ Caused by: java.io.FileNotFoundException: C:\zwy\environment\Tomcat\apache-tomca
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:748)
 
-15-Mar-2019 19:05:06.080 严重 [http-nio-8088-exec-8] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [SpringMVC] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
+15-Mar-2019 19:05:06.080 锟斤拷锟斤拷 [http-nio-8088-exec-8] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [SpringMVC] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
  java.lang.NullPointerException
 	at java.util.regex.Matcher.getTextLength(Matcher.java:1283)
 	at java.util.regex.Matcher.reset(Matcher.java:309)
 	at java.util.regex.Matcher.<init>(Matcher.java:229)
 	at java.util.regex.Pattern.matcher(Pattern.java:1093)
-	at com.zrtjoa.common.ResultUtils.isChinese(ResultUtils.java:82)
-	at com.zrtjoa.exception.TjoaExceptionResolver.resolveException(TjoaExceptionResolver.java:61)
+	at ResultUtils.isChinese(ResultUtils.java:82)
+	at TjoaExceptionResolver.resolveException(TjoaExceptionResolver.java:61)
 	at org.springframework.web.servlet.DispatcherServlet.processHandlerException(DispatcherServlet.java:1182)
 	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1020)
 	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:971)
@@ -527,7 +527,7 @@ Caused by: java.io.FileNotFoundException: C:\zwy\environment\Tomcat\apache-tomca
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at com.zrtjoa.filter.SimpleCORSFilter.doFilter(SimpleCORSFilter.java:65)
+	at SimpleCORSFilter.doFilter(SimpleCORSFilter.java:65)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
@@ -548,14 +548,14 @@ Caused by: java.io.FileNotFoundException: C:\zwy\environment\Tomcat\apache-tomca
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:748)
 
-15-Mar-2019 19:05:06.613 严重 [http-nio-8088-exec-10] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [SpringMVC] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
+15-Mar-2019 19:05:06.613 锟斤拷锟斤拷 [http-nio-8088-exec-10] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [SpringMVC] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
  java.lang.NullPointerException
 	at java.util.regex.Matcher.getTextLength(Matcher.java:1283)
 	at java.util.regex.Matcher.reset(Matcher.java:309)
 	at java.util.regex.Matcher.<init>(Matcher.java:229)
 	at java.util.regex.Pattern.matcher(Pattern.java:1093)
-	at com.zrtjoa.common.ResultUtils.isChinese(ResultUtils.java:82)
-	at com.zrtjoa.exception.TjoaExceptionResolver.resolveException(TjoaExceptionResolver.java:61)
+	at ResultUtils.isChinese(ResultUtils.java:82)
+	at TjoaExceptionResolver.resolveException(TjoaExceptionResolver.java:61)
 	at org.springframework.web.servlet.DispatcherServlet.processHandlerException(DispatcherServlet.java:1182)
 	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1020)
 	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:971)
@@ -574,7 +574,7 @@ Caused by: java.io.FileNotFoundException: C:\zwy\environment\Tomcat\apache-tomca
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at com.zrtjoa.filter.SimpleCORSFilter.doFilter(SimpleCORSFilter.java:65)
+	at SimpleCORSFilter.doFilter(SimpleCORSFilter.java:65)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
@@ -595,14 +595,14 @@ Caused by: java.io.FileNotFoundException: C:\zwy\environment\Tomcat\apache-tomca
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:748)
 
-15-Mar-2019 19:05:06.893 严重 [http-nio-8088-exec-9] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [SpringMVC] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
+15-Mar-2019 19:05:06.893 锟斤拷锟斤拷 [http-nio-8088-exec-9] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [SpringMVC] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
  java.lang.NullPointerException
 	at java.util.regex.Matcher.getTextLength(Matcher.java:1283)
 	at java.util.regex.Matcher.reset(Matcher.java:309)
 	at java.util.regex.Matcher.<init>(Matcher.java:229)
 	at java.util.regex.Pattern.matcher(Pattern.java:1093)
-	at com.zrtjoa.common.ResultUtils.isChinese(ResultUtils.java:82)
-	at com.zrtjoa.exception.TjoaExceptionResolver.resolveException(TjoaExceptionResolver.java:61)
+	at ResultUtils.isChinese(ResultUtils.java:82)
+	at TjoaExceptionResolver.resolveException(TjoaExceptionResolver.java:61)
 	at org.springframework.web.servlet.DispatcherServlet.processHandlerException(DispatcherServlet.java:1182)
 	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1020)
 	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:971)
@@ -621,7 +621,7 @@ Caused by: java.io.FileNotFoundException: C:\zwy\environment\Tomcat\apache-tomca
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at com.zrtjoa.filter.SimpleCORSFilter.doFilter(SimpleCORSFilter.java:65)
+	at SimpleCORSFilter.doFilter(SimpleCORSFilter.java:65)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
@@ -642,14 +642,14 @@ Caused by: java.io.FileNotFoundException: C:\zwy\environment\Tomcat\apache-tomca
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:748)
 
-15-Mar-2019 19:05:07.112 严重 [http-nio-8088-exec-1] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [SpringMVC] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
+15-Mar-2019 19:05:07.112 锟斤拷锟斤拷 [http-nio-8088-exec-1] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [SpringMVC] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
  java.lang.NullPointerException
 	at java.util.regex.Matcher.getTextLength(Matcher.java:1283)
 	at java.util.regex.Matcher.reset(Matcher.java:309)
 	at java.util.regex.Matcher.<init>(Matcher.java:229)
 	at java.util.regex.Pattern.matcher(Pattern.java:1093)
-	at com.zrtjoa.common.ResultUtils.isChinese(ResultUtils.java:82)
-	at com.zrtjoa.exception.TjoaExceptionResolver.resolveException(TjoaExceptionResolver.java:61)
+	at ResultUtils.isChinese(ResultUtils.java:82)
+	at TjoaExceptionResolver.resolveException(TjoaExceptionResolver.java:61)
 	at org.springframework.web.servlet.DispatcherServlet.processHandlerException(DispatcherServlet.java:1182)
 	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1020)
 	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:971)
@@ -668,7 +668,7 @@ Caused by: java.io.FileNotFoundException: C:\zwy\environment\Tomcat\apache-tomca
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at com.zrtjoa.filter.SimpleCORSFilter.doFilter(SimpleCORSFilter.java:65)
+	at SimpleCORSFilter.doFilter(SimpleCORSFilter.java:65)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)

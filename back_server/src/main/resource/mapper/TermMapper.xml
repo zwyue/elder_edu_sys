@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zhu.base.dao.TermDao">
+  <resultMap id="BaseResultMap" type="com.zhu.base.entity.Term">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="term" jdbcType="VARCHAR" property="term" />
+    <result column="starttime" jdbcType="TIMESTAMP" property="starttime" />
+    <result column="endtime" jdbcType="TIMESTAMP" property="endtime" />
+    <result column="isenable" jdbcType="VARCHAR" property="isenable" />
+    <result column="crttime" jdbcType="TIMESTAMP" property="crttime" />
+    <result column="userid" jdbcType="INTEGER" property="userid" />
+    <result column="username" jdbcType="VARCHAR" property="username" />
+  </resultMap>
+
+  <sql id="Base_Column_List">
+    isenable,
+    userid,
+    username ,
+    term,
+    id,
+    DATE_FORMAT(starttime,'%Y-%m-%d') starttime,
+    DATE_FORMAT(endtime,'%Y-%m-%d') endtime,
+    DATE_FORMAT(crttime,'%Y-%m-%d %H:%i:%S') crttime
+  </sql>
+
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select <include refid="Base_Column_List" /> from term where id = #{id}
+  </select>
+
+  <insert id="insert" parameterType="com.zhu.base.entity.Term">
+    insert into term ( term, starttime,
+      endtime, isenable, crttime, 
+      userid, username)
+    values (#{term,jdbcType=VARCHAR}, #{starttime,jdbcType=TIMESTAMP},
+      #{endtime,jdbcType=TIMESTAMP}, #{isenable,jdbcType=VARCHAR}, now(),
+      #{userid,jdbcType=INTEGER}, #{username,jdbcType=VARCHAR})
+  </insert>
+
+  <update id="updateByPrimaryKey" parameterType="com.zhu.base.entity.Term">
+    update term
+    set term = #{term}
+    where id = #{id}
+  </update>
+
+  <select id="selectLastTerm" resultType="com.zhu.base.entity.Term">
+    select
+    <include refid="Base_Column_List"/>
+    from term
+    where 1=1
+    <if test="id!=null and id!=''">
+      and id &lt; #{id}
+    </if>
+    order by id desc limit 1
+    ;
+  </select>
+
+  <!--使学期过期-->
+  <update id="disableTerm">
+     update term set isenable = 3 where endtime  &lt; now();
+  </update>
+
+  <!--使激活学期成为当前学期-->
+  <update id="enableTerm" >
+     update term set isenable = 0 where starttime &lt; now() and isenable = 1
+  </update>
+
+  <!--激活学期-->
+  <update id="enableTermById" parameterType="int">
+    update term set isenable = 1 where starttime > now() and id = #{value};
+  </update>
+
+  <!--禁用学期-->
+  <update id="disableTermById">
+    update term set isenable = 2 where starttime > now() and id = #{value};
+  </update>
+
+  <select id="queryTermList" resultType="com.zhu.base.entity.Term">
+    select
+    <include refid="Base_Column_List"/>
+    from term
+    order by isenable ,crttime desc
+  </select>
+
+  <!--查询激活状态的学期-->
+  <select id="queryActiveTerm" resultType="com.zhu.base.entity.Term">
+    select
+    <include refid="Base_Column_List"/>
+    from term where isenable = 1
+  </select>
+
+  <!--查询当前学期-->
+  <select id="queryThisTerm" resultType="com.zhu.base.entity.Term">
+    select <include refid="Base_Column_List" /> from term where isenable = 0 ;
+  </select>
+</mapper>

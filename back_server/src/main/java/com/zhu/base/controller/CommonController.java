@@ -4,8 +4,6 @@ import com.zhu.base.common.BaseController;
 import com.zhu.base.common.ResultUtils;
 import com.zhu.base.entity.*;
 import com.zhu.base.service.*;
-import com.zrtjoa.entity.*;
-import com.zrtjoa.service.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;

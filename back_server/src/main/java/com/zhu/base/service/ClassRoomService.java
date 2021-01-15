@@ -4,7 +4,6 @@ import com.zhu.base.entity.Classrecord;
 import com.zhu.base.entity.Classroom;
 import com.zhu.base.entity.Classtype;
 import com.zhu.base.entity.CourseTime;
-import com.zrtjoa.entity.*;
 
 import java.util.List;
 
@@ -82,7 +81,6 @@ public interface ClassRoomService {
      *
      * @author zwy
      * @date 2018/12/5 14:42
-     * @param classrecord 使用历史查询条件
      * @return list
      */
     List<Classrecord> clsRmUsageHistory(Integer roomid);

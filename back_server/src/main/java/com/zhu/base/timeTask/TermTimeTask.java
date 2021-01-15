@@ -7,7 +7,6 @@ import com.zhu.base.entity.Roster;
 import com.zhu.base.entity.StudentEnter;
 import com.zhu.base.entity.Term;
 import com.zhu.base.service.TermService;
-import org.omg.CORBA.COMM_FAILURE;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

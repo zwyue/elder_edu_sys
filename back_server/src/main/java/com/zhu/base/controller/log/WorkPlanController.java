@@ -4,7 +4,6 @@ import com.github.pagehelper.PageInfo;
 import com.zhu.base.common.BaseController;
 import com.zhu.base.common.ResultUtils;
 import com.zhu.base.entity.*;
-import com.zrtjoa.entity.*;
 import com.zhu.base.service.CategoryService;
 import com.zhu.base.service.ClassesService;
 import com.zhu.base.service.ProfessionService;

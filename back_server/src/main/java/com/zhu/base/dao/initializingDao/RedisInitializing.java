@@ -9,9 +9,6 @@ import com.zhu.base.entity.Category;
 import com.zhu.base.entity.Profession;
 import com.zhu.base.entity.Teacher;
 import com.zhu.base.entity.Term;
-import com.zrtjoa.dao.*;
-import com.zrtjoa.entity.*;
-import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.InitializingBean;
@@ -21,7 +18,10 @@ import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Component;
 import redis.clients.jedis.Jedis;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.List;
 import java.util.stream.Collectors;
 
 /**

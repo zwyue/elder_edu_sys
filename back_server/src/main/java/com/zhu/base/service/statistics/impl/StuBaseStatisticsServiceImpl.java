@@ -11,17 +11,13 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import sun.misc.BASE64Decoder;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.OutputStream;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 import static com.zhu.base.util.FileUtil.setResponseHeader;
 import static com.zhu.base.util.WordDocument.addImagesToWordDocument;
@@ -100,7 +96,7 @@ public class StuBaseStatisticsServiceImpl implements StuBaseStatisticsService {
             if(!StringUtils.isEmpty(imgUrl)) {
                 //拆分base64编码后部分
                 String[] imgUrlArr = imgUrl.split("base64,");
-                byte[] buffer = new BASE64Decoder().decodeBuffer(imgUrlArr[1]);
+                byte[] buffer = Base64.getDecoder().decode(imgUrlArr[1]);
 
                 //记住系统如果为Linux，此处路径需改
                 String picPath = "C:\\pic\\pic" + ".png";
@@ -123,12 +119,12 @@ public class StuBaseStatisticsServiceImpl implements StuBaseStatisticsService {
                 out.flush();
                 //关闭流
                 out.close();
-                XWPFDocument doc = addImagesToWordDocument(file);
+//                XWPFDocument doc = addImagesToWordDocument(file);
 
                 if (file.exists()) {
                     file.delete();//删除图片
                 }
-                setResponseHeader(response, "test.doc",doc);
+//                setResponseHeader(response, "test.doc",doc);
             }
         }catch (Exception e){
             e.printStackTrace();

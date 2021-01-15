@@ -1,18 +1,19 @@
 package com.zhu.base.util;
 
 import com.zhu.base.constant.SysConstant;
-import org.apache.commons.lang.StringUtils;
-import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
-import org.apache.poi.util.Units;
-import org.apache.poi.xwpf.usermodel.*;
-import org.openxmlformats.schemas.wordprocessingml.x2006.main.*;
+//import org.apache.poi.util.Units;
+//import org.apache.poi.xwpf.usermodel.ParagraphAlignment;
+import org.apache.poi.xwpf.usermodel.XWPFDocument;
+//import org.apache.poi.xwpf.usermodel.XWPFParagraph;
+//import org.apache.poi.xwpf.usermodel.XWPFRun;
+//import org.openxmlformats.schemas.wordprocessingml.x2006.main.CTBody;
+//import org.openxmlformats.schemas.wordprocessingml.x2006.main.CTDocument1;
+//import org.openxmlformats.schemas.wordprocessingml.x2006.main.CTSectPr;
 
-import javax.imageio.ImageIO;
-import java.awt.image.BufferedImage;
-import java.io.*;
-import java.math.BigInteger;
-
-import static org.apache.poi.xwpf.usermodel.TextAlignment.CENTER;
+//import javax.imageio.ImageIO;
+//import java.awt.image.BufferedImage;
+import java.io.File;
+//import java.io.FileInputStream;
 
 /**
  * copyright    <a href="http://www.qaqavr.com/">中锐</a>
@@ -26,47 +27,48 @@ import static org.apache.poi.xwpf.usermodel.TextAlignment.CENTER;
 public class WordDocument {
 
     public static XWPFDocument addImagesToWordDocument(File... imageFiles)throws Exception{
-        XWPFDocument doc = new XWPFDocument();
-
-        XWPFParagraph paragraph = doc.createParagraph();
-        paragraph.setAlignment(ParagraphAlignment.CENTER);
-
-        XWPFRun run = paragraph.createRun();
-
-        //设置纸张方向
-        CTDocument1 document = doc.getDocument();
-        CTBody body = document.getBody();
-        if (!body.isSetSectPr()) {
-            body.addNewSectPr();
-        }
-        CTSectPr section = body.getSectPr();
-
-        if(!section.isSetPgSz()) {
-            section.addNewPgSz();
-        }
-        CTPageSz pageSize = section.getPgSz();
+//        XWPFDocument doc = new XWPFDocument();
+//
+//        XWPFParagraph paragraph = doc.createParagraph();
+//        paragraph.setAlignment(ParagraphAlignment.CENTER);
+//
+//        XWPFRun run = paragraph.createRun();
+//
+//        //设置纸张方向
+//        CTDocument1 document = doc.getDocument();
+//        CTBody body = document.getBody();
+//        if (!body.isSetSectPr()) {
+//            body.addNewSectPr();
+//        }
+//        CTSectPr section = body.getSectPr();
+//
+//        if(!section.isSetPgSz()) {
+//            section.addNewPgSz();
+//        }
+//        CTPageSz pageSize = section.getPgSz();
         //必须要设置下面两个参数，否则整个的代码是无效的
-        pageSize.setW(BigInteger.valueOf(15840));
-        pageSize.setH(BigInteger.valueOf(12240));
-        pageSize.setOrient(STPageOrientation.LANDSCAPE);
+//        pageSize.setW(BigInteger.valueOf(15840));
+//        pageSize.setH(BigInteger.valueOf(12240));
+//        pageSize.setOrient(STPageOrientation.LANDSCAPE);
+//
+//        //设置页边距
+//        CTPageMar ctpagemar = section.addNewPgMar();
+//        ctpagemar.setLeft(BigInteger.valueOf(567));
+//        ctpagemar.setRight(BigInteger.valueOf(567));
+//        ctpagemar.setTop(BigInteger.valueOf(567));
+//        ctpagemar.setBottom(BigInteger.valueOf(567));
 
-        //设置页边距
-        CTPageMar ctpagemar = section.addNewPgMar();
-        ctpagemar.setLeft(BigInteger.valueOf(567));
-        ctpagemar.setRight(BigInteger.valueOf(567));
-        ctpagemar.setTop(BigInteger.valueOf(567));
-        ctpagemar.setBottom(BigInteger.valueOf(567));
-
-        for (File imageFile : imageFiles) {
-
-            BufferedImage bimg = ImageIO.read(imageFile);
-//            int width = bimg.getWidth();
-//            int height = bimg.getHeight();
-            String imgFile = imageFile.getName();
-            int imgFormat = getImageFormat(imgFile);
-            run.addPicture(new FileInputStream(imageFile), imgFormat, imgFile, Units.toEMU(712), Units.toEMU(544));
-        }
-        return doc ;
+//        for (File imageFile : imageFiles) {
+//
+//            BufferedImage bimg = ImageIO.read(imageFile);
+////            int width = bimg.getWidth();
+////            int height = bimg.getHeight();
+//            String imgFile = imageFile.getName();
+//            int imgFormat = getImageFormat(imgFile);
+//            run.addPicture(new FileInputStream(imageFile), imgFormat, imgFile, Units.toEMU(712), Units.toEMU(544));
+//        }
+//        return doc ;
+        return null ;
     }
 
     private static int getImageFormat(String imgFileName) {

@@ -6,7 +6,6 @@ import com.zhu.base.dao.ProfessionDao;
 import com.zhu.base.entity.Classes;
 import com.zhu.base.entity.Profession;
 import com.zhu.base.service.ClassesService;
-import org.omg.CORBA.COMM_FAILURE;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;

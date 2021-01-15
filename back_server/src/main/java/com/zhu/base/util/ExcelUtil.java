@@ -5,12 +5,12 @@ import org.apache.poi.hssf.usermodel.*;
 import org.apache.poi.ss.usermodel.BorderStyle;
 import org.apache.poi.ss.usermodel.HorizontalAlignment;
 import org.apache.poi.ss.usermodel.VerticalAlignment;
-import sun.misc.BASE64Decoder;
 
 import javax.imageio.ImageIO;
 import javax.servlet.http.HttpServletRequest;
 import java.awt.image.BufferedImage;
 import java.io.*;
+import java.util.Base64;
 
 import static org.apache.poi.ss.usermodel.HorizontalAlignment.CENTER;
 
@@ -365,7 +365,7 @@ public class ExcelUtil {
         if(!StringUtils.isEmpty(imgUrl)) {
             String[] imgUrlArr = imgUrl.split("base64,");//拆分base64编码后部分
 
-            byte[] buffer = new BASE64Decoder().decodeBuffer(imgUrlArr[1]);
+            byte[] buffer = Base64.getDecoder().decode(imgUrlArr[1]);
             //记住系统如果为Linux，此处路径需改
             String picPath = "C:\\pic\\pic" + ".png";
             File file = new File(picPath);//图片文件

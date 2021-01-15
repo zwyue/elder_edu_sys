@@ -3,6 +3,83 @@
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="ALL" />
   </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:dependabot" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:dependabot" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:maven" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:dependabot" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:maven" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:Tomcat" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:dependabot" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:maven" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:Tomcat" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:apache-tomcat-7.0.88-src" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:dependabot" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:maven" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:Tomcat" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:apache-tomcat-7.0.88-src" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:modules" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:dependabot" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:maven" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:Tomcat" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:apache-tomcat-7.0.88-src" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:modules" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:jdbc-pool" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:dependabot" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:maven" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:server" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="a23d5f46-ed1a-4f8a-8ebe-c4ec36a21c09" name="Default Changelist" comment="修改敏感信息及项目结构">
       <change afterPath="$PROJECT_DIR$/.idea/artifacts/back_server_war.xml" afterDir="false" />
@@ -301,1034 +378,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/zrtjoa.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/zrtjoa.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/logs/catalina.2019-02-13.log" beforeDir="false" afterPath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/logs/catalina.2019-02-13.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/logs/catalina.2019-02-14.log" beforeDir="false" afterPath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/logs/catalina.2019-02-14.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/logs/catalina.2019-02-15.log" beforeDir="false" afterPath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/logs/catalina.2019-02-15.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/logs/catalina.2019-02-18.log" beforeDir="false" afterPath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/logs/catalina.2019-02-18.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/logs/catalina.2019-02-19.log" beforeDir="false" afterPath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/logs/catalina.2019-02-19.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/logs/catalina.2019-02-20.log" beforeDir="false" afterPath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/logs/catalina.2019-02-20.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/logs/catalina.2019-02-22.log" beforeDir="false" afterPath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/logs/catalina.2019-02-22.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/logs/catalina.2019-02-27.log" beforeDir="false" afterPath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/logs/catalina.2019-02-27.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/logs/catalina.2019-03-05.log" beforeDir="false" afterPath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/logs/catalina.2019-03-05.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/logs/localhost.2019-02-13.log" beforeDir="false" afterPath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/logs/localhost.2019-02-13.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/logs/localhost.2019-03-15.log" beforeDir="false" afterPath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/logs/localhost.2019-03-15.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa.war" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/META-INF/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/META-INF/war-tracker" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/META-INF/zrtjoa.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/annotation/PagingQuery.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/common/BaseController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/common/ResultUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/common/TimeUtil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/common/VeDate.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/constant/SysConstant$Admin.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/constant/SysConstant$IsEnable.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/constant/SysConstant$PowerType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/constant/SysConstant$Punctuation.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/constant/SysConstant$SheetTitle.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/constant/SysConstant$TeacherStatus.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/constant/SysConstant$TermStatus.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/constant/SysConstant.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/controller/ClassRoomController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/controller/ClassesController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/controller/CommonController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/controller/CourseController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/controller/IndexController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/controller/RosterController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/controller/ScheduleClassController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/controller/SpecialManagerController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/controller/StudentRecordController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/controller/TeachManagerController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/controller/TermController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/controller/archive/ActivitiesController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/controller/archive/AwardController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/controller/archive/MemorabiliaController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/controller/archive/ResourceController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/controller/archive/ScientificController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/controller/auth/PowerController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/controller/auth/RoleController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/controller/log/ActivityReordController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/controller/log/AwardRecordController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/controller/log/ClassSuggestController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/controller/log/MeetRecordController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/controller/log/WorkNotesController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/controller/log/WorkPlanController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/controller/log/WorkSummaryComtroller.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/controller/statistics/StudentBaseInfoStatistics.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/controller/statistics/StudentNumberStatistics.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/controller/student/IdentityController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/controller/student/StudentController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/controller/studymeet/StudyLogController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/controller/studymeet/StudyMeetController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/controller/teacher/TeacherController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/dao/ActivitiesDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/dao/ActivityRecordDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/dao/AwardDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/dao/AwardRecordDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/dao/CategoryDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/dao/ClassSuggestDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/dao/ClassesDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/dao/ClassrecordDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/dao/ClassroomDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/dao/ClasstypeDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/dao/CourseTimeDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/dao/CoursesDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/dao/IdentitysDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/dao/InforRemindDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/dao/MeetRecordDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/dao/MemorabiliaDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/dao/PlanRecordDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/dao/PowerDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/dao/ProfessionDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/dao/ResourceDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/dao/RoleDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/dao/RosterDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/dao/ScientificDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/dao/SpecialManagerDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/dao/StudentDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/dao/StudentEnterDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/dao/StudentRecordDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/dao/StudyLogDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/dao/StudyMeetDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/dao/TeachManagerDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/dao/TeacherDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/dao/TermDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/dao/WorkNotesDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/dao/WorkPlanDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/dao/WorkSummaryDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/dao/initializingDao/CourseTimeInitializingDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/dao/initializingDao/RedisInitializing.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/dao/initializingDao/RoleInitializingDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/dto/StuAndStuEnter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/entity/Activities.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/entity/ActivityRecord.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/entity/Award.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/entity/AwardRecord.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/entity/Category.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/entity/ClassSuggest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/entity/Classes.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/entity/Classrecord.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/entity/Classroom.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/entity/Classtype.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/entity/CourseTime.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/entity/Courses.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/entity/Identitys.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/entity/InforRemind.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/entity/MeetRecord.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/entity/Memorabilia.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/entity/PlanRecord.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/entity/Power.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/entity/Profession.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/entity/Resource.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/entity/Role.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/entity/Roster.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/entity/Scientific.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/entity/SpecialManager.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/entity/Student.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/entity/StudentEnter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/entity/StudentRecord.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/entity/StudyLog.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/entity/StudyMeet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/entity/TeachManager.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/entity/Teacher.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/entity/Term.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/entity/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/entity/WeekClass.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/entity/WorkNotes.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/entity/WorkPlan.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/entity/WorkSummary.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/enums/CategoryEnum.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/enums/StatusEnum.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/enums/WeekEnum.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/exception/ExceptionEnum.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/exception/TjoaException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/exception/TjoaExceptionResolver.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/filter/AuthFilter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/filter/SimpleCORSFilter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/interceptor/AuthInterceptor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/service/ActivitiesService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/service/ActivityRecordService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/service/AwardRecordService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/service/AwardServie.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/service/CategoryService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/service/ClassRoomService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/service/ClassSuggestService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/service/ClassesService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/service/CourseService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/service/IdentityService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/service/MeetRecordService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/service/MemorabiliaService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/service/PowerService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/service/ProfessionService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/service/ResourceService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/service/RoleService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/service/RosterService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/service/ScheduleClassService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/service/ScientificService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/service/SpecialManagerService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/service/StudentRecordService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/service/StudentService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/service/StudyLogService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/service/StudyMeetService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/service/TeachManagerService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/service/TeacherService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/service/TermService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/service/WorkNotesService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/service/WorkPlanService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/service/WorkSummaryService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/service/impl/ActivitiesServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/service/impl/ActivityRecordServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/service/impl/AwardRecordServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/service/impl/AwardServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/service/impl/ClassRoomServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/service/impl/ClassSuggestServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/service/impl/ClassesServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/service/impl/CourseServiceImpl$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/service/impl/CourseServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/service/impl/IdentityServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/service/impl/MeetRecordServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/service/impl/MemorabiliaServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/service/impl/PowerServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/service/impl/ResourceServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/service/impl/RoleServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/service/impl/RosterServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/service/impl/ScheduleClassServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/service/impl/ScientificServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/service/impl/SpecialManagerServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/service/impl/StudentRecordServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/service/impl/StudentServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/service/impl/StudyLogServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/service/impl/StudyMeetServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/service/impl/TeachManagerServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/service/impl/TeacherServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/service/impl/TermServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/service/impl/WorkNotesServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/service/impl/WorkPlanServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/service/impl/WorkSummaryServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/service/impl/categoryServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/service/impl/professionServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/service/statistics/StuBaseStatisticsService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/service/statistics/StuNumStatisticsService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/service/statistics/impl/StuBaseStatisticsServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/service/statistics/impl/StuNumStatisticsServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/sysAop/PagingAop.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/timeTask/TermTimeTask.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/util/DocUtil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/util/ExcelUtil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/util/FileUtil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/util/ObectUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/util/WordDocument.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/util/WordExport.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/com/zrtjoa/vo/PowerVo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/jdbc.properties" beforeDir="false" afterPath="$PROJECT_DIR$/back_server/src/main/resource/jdbc.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/log4j.properties" beforeDir="false" afterPath="$PROJECT_DIR$/back_server/src/main/resource/log4j.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/mapper/ActivitiesMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/mapper/ActivityRecordMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/mapper/AwardMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/mapper/AwardRecordMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/mapper/CategoryMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/back_server/src/main/resource/mapper/CategoryMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/mapper/ClassSuggestMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/mapper/ClassesMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/back_server/src/main/resource/mapper/ClassesMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/mapper/ClassrecordMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/back_server/src/main/resource/mapper/ClassrecordMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/mapper/ClassroomMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/mapper/ClasstypeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/back_server/src/main/resource/mapper/ClasstypeMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/mapper/CourseTimeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/back_server/src/main/resource/mapper/CourseTimeMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/mapper/CoursesMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/mapper/IdentityMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/back_server/src/main/resource/mapper/IdentityMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/mapper/InforRemindMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/back_server/src/main/resource/mapper/InforRemindMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/mapper/MeetRecordMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/mapper/MemorabiliaMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/mapper/PlanRecordMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/back_server/src/main/resource/mapper/PlanRecordMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/mapper/PowerMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/mapper/ProfessionMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/back_server/src/main/resource/mapper/ProfessionMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/mapper/ResourceMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/mapper/RoleMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/back_server/src/main/resource/mapper/RoleMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/mapper/RosterMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/mapper/ScientificMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/mapper/SpecialManagerMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/mapper/StudentEnterMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/back_server/src/main/resource/mapper/StudentEnterMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/mapper/StudentMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/back_server/src/main/resource/mapper/StudentMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/mapper/StudentRecordMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/back_server/src/main/resource/mapper/StudentRecordMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/mapper/StudyLogMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/back_server/src/main/resource/mapper/StudyLogMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/mapper/StudyMeetMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/back_server/src/main/resource/mapper/StudyMeetMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/mapper/TeachManagerMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/back_server/src/main/resource/mapper/TeachManagerMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/mapper/TeacherMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/back_server/src/main/resource/mapper/TeacherMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/mapper/TermMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/back_server/src/main/resource/mapper/TermMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/mapper/WorkNotesMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/mapper/WorkPlanMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/mapper/WorkSummaryMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/redis.properties" beforeDir="false" afterPath="$PROJECT_DIR$/back_server/src/main/resource/redis.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/spring-mvc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/back_server/src/main/resource/spring-mvc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/spring-mybatis.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/spring-task.xml" beforeDir="false" afterPath="$PROJECT_DIR$/back_server/src/main/resource/spring-task.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/templates/activities.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/templates/activitiesrecord.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/templates/award.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/templates/awardrecord.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/templates/leave.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/templates/memorabilia.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/templates/resource.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/templates/scientific.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/templates/specialmanager.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/templates/test.ftl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/templates/worknotes.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/templates/workplan.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/classes/templates/worksummary.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/jsp/error.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/lib/activation-1.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/lib/aopalliance-1.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/lib/aspectjrt-1.9.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/lib/aspectjweaver-1.8.8.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/lib/async-http-client-1.9.32.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/lib/commons-codec-1.9.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/lib/commons-collections4-4.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/lib/commons-compress-1.18.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/lib/commons-dbcp-1.2.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/lib/commons-fileupload-1.3.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/lib/commons-io-2.4.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/lib/commons-lang-2.6.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/lib/commons-logging-1.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/lib/commons-math3-3.6.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/lib/commons-pool-1.3.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/lib/commons-pool2-2.4.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/lib/curvesapi-1.05.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/lib/ehcache-core-2.0.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/lib/fastjson-1.1.41.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/lib/freemarker-2.3.20.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/lib/jackson-annotations-2.8.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/lib/jackson-core-2.8.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/lib/jackson-core-asl-1.9.13.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/lib/jackson-databind-2.8.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/lib/jackson-mapper-asl-1.9.13.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/lib/javaee-api-7.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/lib/javax.inject-1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/lib/javax.mail-1.5.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/lib/jedis-2.9.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/lib/jna-4.5.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/lib/jna-platform-4.5.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/lib/jsqlparser-0.9.5.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/lib/jstl-1.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/lib/log4j-1.2.17.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/lib/mybatis-3.2.8.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/lib/mybatis-ehcache-1.0.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/lib/mybatis-spring-1.2.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/lib/mysql-connector-java-8.0.13.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/lib/netty-3.10.5.Final.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/lib/ooxml-schemas-1.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/lib/org.apache.poi.xwpf.converter.core-1.0.6.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/lib/pagehelper-5.0.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/lib/poi-4.0.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/lib/poi-ooxml-4.0.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/lib/poi-ooxml-schemas-4.0.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/lib/protobuf-java-3.6.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/lib/slf4j-api-1.7.18.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/lib/slf4j-log4j12-1.7.18.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/lib/spring-aop-4.2.5.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/lib/spring-aspects-4.2.5.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/lib/spring-beans-4.2.5.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/lib/spring-context-4.2.5.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/lib/spring-context-support-4.2.5.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/lib/spring-core-4.2.5.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/lib/spring-data-redis-1.6.2.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/lib/spring-expression-4.2.5.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/lib/spring-jdbc-4.2.5.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/lib/spring-oxm-4.2.5.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/lib/spring-test-4.2.5.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/lib/spring-tx-4.2.5.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/lib/spring-web-4.2.5.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/lib/spring-webmvc-4.2.5.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/lib/xmlbeans-3.0.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/WEB-INF/web.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-8.5.34/webapps/zrtjoa/index.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/.project" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/addStudent.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/bjgl.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/bjgl_ck.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/bjgl_skls.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/bjgl_xg.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/bjgl_xz.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/bmgl.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/bmgl_xsxx.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/bmgl_xzbj.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/bzrgl_bhjl.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/bzrgl_bhjl_ck.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/bzrgl_bhjl_xg.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/bzrgl_bhjl_xz.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/bzrgl_bjgzjh.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/bzrgl_bjgzjh_ck.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/bzrgl_bjgzjh_xg.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/bzrgl_bjgzjh_xz.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/bzrgl_bjgzjh_xz_alert.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/bzrgl_bjgzjh_xz_alert2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/bzrgl_bjwtyjy.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/bzrgl_bjwtyjy_ck.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/bzrgl_bjwtyjy_xg.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/bzrgl_bjwtyjy_xz.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/bzrgl_bwh.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/bzrgl_bwh_xg.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/bzrgl_bwh_xz.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/bzrgl_bzrgzsj.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/bzrgl_bzrgzsj_ck.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/bzrgl_bzrgzsj_xg.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/bzrgl_bzrgzsj_xz.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/bzrgl_bzrgzzj.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/bzrgl_bzrgzzj_ck.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/bzrgl_bzrgzzj_xg.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/bzrgl_bzrgzzj_xz.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/bzrgl_hjjl.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/bzrgl_hjjl_ck.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/bzrgl_hjjl_xg.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/bzrgl_hjjl_xz.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/bzrgl_hmc.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/bzrgl_hmc_alert.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/bzrgl_tsxyjl.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/bzrgl_tsxyjl_ck.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/bzrgl_tsxyjl_xg.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/bzrgl_tsxyjl_xz.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/bzrgl_tsxyjl_xz_name_alert.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/bzrgl_tsxyjl_xz_name_alert2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/bzrgl_tsxyjl_xz_tuiban_alert.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/bzrgl_tsxyjl_xz_tuiban_alert2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/bzrgl_xxhdjl.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/bzrgl_xxhdjl_ck.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/bzrgl_xxhdjl_xg.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/bzrgl_xxhdjl_xz.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/change.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/common/comm_left.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/css/all.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/css/bjgl.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/css/bjgl_xz_xg.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/css/bmgl.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/css/bmgl_xzbj+xsxx.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/css/bmgl_xzbj_xsxx.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/css/bmgl_ydda.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/css/bzrgl.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/css/bzrgl_tsxyjl_time.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/css/common.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/css/common_style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/css/dagl_dsj.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/css/demo.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/css/iconfont-shezhi.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/css/jsgl_jsbdqx.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/css/jsgl_jsxg.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/css/jslb.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/css/jxgl.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/css/loaders.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/css/login.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/css/loginStudy.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/css/lsgl.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/css/pkgl.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/css/sjtj_xsl.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/css/styles.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/css/xqgl.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/css/xwhgl.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/css/yhgl.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/css/yhgl_lsgl_jsxz.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/css/yhgl_xsgl.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/dagl_dsj.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/dagl_dsjck.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/dagl_dsjxg.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/dagl_dsjxz.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/dagl_hjqk.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/dagl_hjqkck.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/dagl_hjqkxg.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/dagl_hjqkxz.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/dagl_kyhd.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/dagl_kyhdck.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/dagl_kyhdxg.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/dagl_kyhdxz.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/dagl_xjda.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/dagl_xyhd.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/dagl_xyhdck.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/dagl_xyhdxg.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/dagl_xyhdxz.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/dagl_zyjs.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/dagl_zyjsck.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/dagl_zyjsxg.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/dagl_zyjsxz.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/font/iconfont(2).css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/font/iconfont(3).css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/font/iconfont-daochu.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/font/iconfont-zdpk.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/font/iconfont.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/images/Starry.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/images/cancel.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/images/down.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/images/key.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/images/line.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/images/lock_icon_copy.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/images/login_bg.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/images/login_fm.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/images/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/images/logoLogin.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/images/tick.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/images/up.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/images/user-bg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/images/user_icon_copy.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/images/welcome.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/images/welcome.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/images/xgPassword.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/js/Particleground.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/js/Treatment.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/js/YMDClass.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/js/baseISSObject.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/js/baseISSOnline.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/js/bjgl.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/js/bjgl_ck.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/js/bjgl_ckls.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/js/bjgl_xz.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/js/bmgl_tc.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/js/bmgl_xzbj.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/js/bzrgl.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/js/bzrgl_bhjl.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/js/bzrgl_bhjl_xg.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/js/bzrgl_bhjl_xz.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/js/bzrgl_bjgzjh.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/js/bzrgl_bjgzjh__xz_select.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/js/bzrgl_bjgzjh_xz.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/js/bzrgl_bjwtyjy.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/js/bzrgl_bjwtyjy_xg.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/js/bzrgl_bjwtyjy_xz.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/js/bzrgl_bwh.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/js/bzrgl_bzrgzsj.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/js/bzrgl_bzrgzzj.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/js/bzrgl_hjjl.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/js/bzrgl_hmc.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/js/bzrgl_hmc_alert.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/js/bzrgl_tsxyjl.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/js/bzrgl_tsxyjl_xg.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/js/bzrgl_tsxyjl_xz.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/js/bzrgl_tsxyjl_xz_name_select.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/js/bzrgl_tsxyjl_xz_name_select2.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/js/bzrgl_tsxyjl_xz_tuiban_select.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/js/bzrgl_tsxyjl_xz_tuiban_select2.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/js/bzrgl_xxhdjl.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/js/common.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/js/commonId.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/js/dagl_dsj.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/js/dagl_hjqk.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/js/dagl_kyhd.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/js/dagl_xjda.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/js/dagl_xyhd.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/js/dagl_zyjs.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/js/dateUtil.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/js/echarts.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/js/jquery.date_input.pack.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/js/jquery.mockjax.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/js/jsgl_jsbdqx.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/js/jsgl_jsbdyh.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/js/jsgl_jsck.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/js/jsgl_jslb.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/js/jsgl_jslbckjs.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/js/jsgl_jslbgl.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/js/jsgl_jslbsyls.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/js/jsgl_jsxg.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/js/jsgl_jsxz.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/js/jsgl_power.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/js/jxgl.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/js/jxgl_dk.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/js/jxgl_dk_ck.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/js/jxgl_dk_xz.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/js/jxgl_dk_xz_select.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/js/jxgl_qj.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/js/jxgl_qj_ck.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/js/jxgl_qj_xz.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/js/jxgl_qj_xz_select.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/js/jxgl_tk.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/js/jxgl_tk_ck.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/js/jxgl_tk_xz.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/js/jxgl_tk_xz_select.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/js/loginStudy.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/js/logo.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/js/pkgl_ksdgl.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/js/pkgl_zdpk.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/js/pkgl_zdpk_select.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/js/sjfx_dc.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/js/sjtj_jltj.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/js/sjtj_nltj.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/js/sjtj_wttj.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/js/sjtj_xbtj.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/js/sjtj_xsl.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/js/sjtj_xylsl.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/js/sjtj_xyzrs.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/js/stopExecutionOnTimeout.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/js/xqgl.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/js/xwhgl.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/js/xwhrz.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/js/yhgl_lsgl.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/js/yhgl_lsgl_jsck.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/js/yhgl_lsgl_jsxg.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/js/yhgl_lsgl_jsxz.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/js/yhgl_lsgl_select.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/js/yhgl_lsgl_select_cate_major.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/js/yhgl_xsgl.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/js/yhgl_xsgl_xsck.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/js/yhgl_xsgl_xsxg.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/js/yhgl_xsgl_xsxz.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/jsgl_jsbd.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/jsgl_jsbdqx.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/jsgl_jsbdyh.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/jsgl_jsck.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/jsgl_jsxg.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/jsgl_jsxz.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/jslb_jslb.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/jslb_jslbckjs.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/jslb_jslbgl.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/jslb_jslbglxg.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/jslb_jslbjsxg.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/jslb_jslbjsxz.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/jslb_jslbsyls.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/jslb_jslbxz.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/jxgl_dk.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/jxgl_dk_ck.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/jxgl_dk_xz.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/jxgl_dk_xz_alert.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/jxgl_qj.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/jxgl_qj_ck.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/jxgl_qj_xz.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/jxgl_qj_xz_alert.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/jxgl_qj_xz_classrome_alert.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/jxgl_tk.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/jxgl_tk_ck.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/jxgl_tk_xz.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/jxgl_tk_xz_alert.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/login.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/loginPassword.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/loginStudy.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/logout.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/member-add.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/pkgl_ksdgl.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/pkgl_ksdxg.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/pkgl_ksdxz.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/pkgl_sdpk.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/pkgl_sdpk_gk.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/pkgl_xzbj.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/pkgl_zdpk.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/plugins/form/formSelects-v4.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/plugins/form/formSelects-v4.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/plugins/formSelect-v3.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/plugins/formSelect-v4.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/plugins/formSelect-v4.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/plugins/jQuery/jquery-3.3.1.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/plugins/jQuery/jquery-3.3.1.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/plugins/layui-v2.4.3/layui/css/layui.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/plugins/layui-v2.4.3/layui/css/layui.mobile.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/plugins/layui-v2.4.3/layui/css/modules/code.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/plugins/layui-v2.4.3/layui/css/modules/laydate/default/laydate.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/plugins/layui-v2.4.3/layui/css/modules/layer/default/icon-ext.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/plugins/layui-v2.4.3/layui/css/modules/layer/default/icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/plugins/layui-v2.4.3/layui/css/modules/layer/default/layer.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/plugins/layui-v2.4.3/layui/css/modules/layer/default/loading-0.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/plugins/layui-v2.4.3/layui/css/modules/layer/default/loading-1.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/plugins/layui-v2.4.3/layui/css/modules/layer/default/loading-2.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/plugins/layui-v2.4.3/layui/font/iconfont.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/plugins/layui-v2.4.3/layui/font/iconfont.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/plugins/layui-v2.4.3/layui/font/iconfont.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/plugins/layui-v2.4.3/layui/font/iconfont.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/plugins/layui-v2.4.3/layui/images/face/0.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/plugins/layui-v2.4.3/layui/images/face/1.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/plugins/layui-v2.4.3/layui/images/face/10.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/plugins/layui-v2.4.3/layui/images/face/11.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/plugins/layui-v2.4.3/layui/images/face/12.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/plugins/layui-v2.4.3/layui/images/face/13.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/plugins/layui-v2.4.3/layui/images/face/14.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/plugins/layui-v2.4.3/layui/images/face/15.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/plugins/layui-v2.4.3/layui/images/face/16.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/plugins/layui-v2.4.3/layui/images/face/17.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/plugins/layui-v2.4.3/layui/images/face/18.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/plugins/layui-v2.4.3/layui/images/face/19.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/plugins/layui-v2.4.3/layui/images/face/2.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/plugins/layui-v2.4.3/layui/images/face/20.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/plugins/layui-v2.4.3/layui/images/face/21.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/plugins/layui-v2.4.3/layui/images/face/22.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/plugins/layui-v2.4.3/layui/images/face/23.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/plugins/layui-v2.4.3/layui/images/face/24.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/plugins/layui-v2.4.3/layui/images/face/25.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/plugins/layui-v2.4.3/layui/images/face/26.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/plugins/layui-v2.4.3/layui/images/face/27.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/plugins/layui-v2.4.3/layui/images/face/28.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/plugins/layui-v2.4.3/layui/images/face/29.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/plugins/layui-v2.4.3/layui/images/face/3.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/plugins/layui-v2.4.3/layui/images/face/30.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/plugins/layui-v2.4.3/layui/images/face/31.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/plugins/layui-v2.4.3/layui/images/face/32.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/plugins/layui-v2.4.3/layui/images/face/33.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/plugins/layui-v2.4.3/layui/images/face/34.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/plugins/layui-v2.4.3/layui/images/face/35.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/plugins/layui-v2.4.3/layui/images/face/36.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/plugins/layui-v2.4.3/layui/images/face/37.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/plugins/layui-v2.4.3/layui/images/face/38.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/plugins/layui-v2.4.3/layui/images/face/39.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/plugins/layui-v2.4.3/layui/images/face/4.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/plugins/layui-v2.4.3/layui/images/face/40.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/plugins/layui-v2.4.3/layui/images/face/41.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/plugins/layui-v2.4.3/layui/images/face/42.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/plugins/layui-v2.4.3/layui/images/face/43.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/plugins/layui-v2.4.3/layui/images/face/44.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/plugins/layui-v2.4.3/layui/images/face/45.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/plugins/layui-v2.4.3/layui/images/face/46.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/plugins/layui-v2.4.3/layui/images/face/47.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/plugins/layui-v2.4.3/layui/images/face/48.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/plugins/layui-v2.4.3/layui/images/face/49.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/plugins/layui-v2.4.3/layui/images/face/5.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/plugins/layui-v2.4.3/layui/images/face/50.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/plugins/layui-v2.4.3/layui/images/face/51.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/plugins/layui-v2.4.3/layui/images/face/52.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/plugins/layui-v2.4.3/layui/images/face/53.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/plugins/layui-v2.4.3/layui/images/face/54.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/plugins/layui-v2.4.3/layui/images/face/55.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/plugins/layui-v2.4.3/layui/images/face/56.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/plugins/layui-v2.4.3/layui/images/face/57.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/plugins/layui-v2.4.3/layui/images/face/58.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/plugins/layui-v2.4.3/layui/images/face/59.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/plugins/layui-v2.4.3/layui/images/face/6.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/plugins/layui-v2.4.3/layui/images/face/60.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/plugins/layui-v2.4.3/layui/images/face/61.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/plugins/layui-v2.4.3/layui/images/face/62.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/plugins/layui-v2.4.3/layui/images/face/63.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/plugins/layui-v2.4.3/layui/images/face/64.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/plugins/layui-v2.4.3/layui/images/face/65.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/plugins/layui-v2.4.3/layui/images/face/66.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/plugins/layui-v2.4.3/layui/images/face/67.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/plugins/layui-v2.4.3/layui/images/face/68.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/plugins/layui-v2.4.3/layui/images/face/69.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/plugins/layui-v2.4.3/layui/images/face/7.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/plugins/layui-v2.4.3/layui/images/face/70.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/plugins/layui-v2.4.3/layui/images/face/71.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/plugins/layui-v2.4.3/layui/images/face/8.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/plugins/layui-v2.4.3/layui/images/face/9.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/plugins/layui-v2.4.3/layui/lay/modules/carousel.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/plugins/layui-v2.4.3/layui/lay/modules/code.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/plugins/layui-v2.4.3/layui/lay/modules/colorpicker.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/plugins/layui-v2.4.3/layui/lay/modules/element.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/plugins/layui-v2.4.3/layui/lay/modules/flow.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/plugins/layui-v2.4.3/layui/lay/modules/form.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/plugins/layui-v2.4.3/layui/lay/modules/jquery.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/plugins/layui-v2.4.3/layui/lay/modules/laydate.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/plugins/layui-v2.4.3/layui/lay/modules/layedit.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/plugins/layui-v2.4.3/layui/lay/modules/layer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/plugins/layui-v2.4.3/layui/lay/modules/laypage.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/plugins/layui-v2.4.3/layui/lay/modules/laytpl.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/plugins/layui-v2.4.3/layui/lay/modules/mobile.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/plugins/layui-v2.4.3/layui/lay/modules/rate.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/plugins/layui-v2.4.3/layui/lay/modules/slider.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/plugins/layui-v2.4.3/layui/lay/modules/table.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/plugins/layui-v2.4.3/layui/lay/modules/tree.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/plugins/layui-v2.4.3/layui/lay/modules/upload.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/plugins/layui-v2.4.3/layui/lay/modules/util.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/plugins/layui-v2.4.3/layui/layui.all.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/plugins/layui-v2.4.3/layui/layui.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/plugins/vue2.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/plugins/zTree/jquery-1.4.4.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/plugins/zTree/jquery.ztree.core.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/plugins/zTree/jquery.ztree.excheck.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/plugins/zTree/zTreeStandard.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/plugins/zTree/zTreeStyle.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/sjfx_xyzrs_xzbj.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/sjtj_jltj.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/sjtj_nltj.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/sjtj_wttj.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/sjtj_xbtj.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/sjtj_xsl.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/sjtj_xylsl.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/sjtj_xyzrs.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/time/demo.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/time/demo_jxgl_qj.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/time/jeDate-test.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/time/jedate.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/time/jedate.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/time/jedate.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/time/jedatefont.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/time/jedatefont.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/time/jedatefont.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/time/jedatefont.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/xqgl.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/xqgl_ck.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/xqgl_xg.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/xqgl_xz.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/xwhgl.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/xwhgl_xz.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/xwhrz.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/xwhrz_ck.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/xwhrz_xg.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/xwhrz_xz.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/yhgl_error.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/yhgl_lsgl.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/yhgl_lsgl_fzbj.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/yhgl_lsgl_jsck.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/yhgl_lsgl_jsxg.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/yhgl_lsgl_jsxz.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/yhgl_lsgl_xg_alert.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/yhgl_xsgl.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/yhgl_xsgl_xsck.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/yhgl_xsgl_xsxg.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/yhgl_xsgl_xsxz.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/elder_edu_sys.sql" beforeDir="false" afterPath="$PROJECT_DIR$/elder_edu_sys.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nginx-1.15.9/logs/access.log" beforeDir="false" afterPath="$PROJECT_DIR$/nginx-1.15.9/logs/access.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/.idea/artifacts/zrtjoa_war.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/.idea/artifacts/zrtjoa_war_exploded.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/annotation/PagingQuery.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/common/BaseController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/common/ResultUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/common/TimeUtil.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/common/VeDate.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/constant/SysConstant.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/controller/ClassesController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/controller/CommonController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/controller/CourseController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/controller/IndexController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/controller/RosterController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/controller/ScheduleClassController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/controller/SpecialManagerController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/controller/StudentRecordController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/controller/TeachManagerController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/controller/TermController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/controller/archive/ActivitiesController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/controller/archive/AwardController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/controller/archive/MemorabiliaController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/controller/archive/ResourceController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/controller/archive/ScientificController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/controller/auth/PowerController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/controller/auth/RoleController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/controller/log/ActivityReordController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/controller/log/AwardRecordController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/controller/log/ClassSuggestController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/controller/log/MeetRecordController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/controller/log/WorkNotesController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/controller/log/WorkPlanController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/controller/log/WorkSummaryComtroller.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/controller/statistics/StudentBaseInfoStatistics.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/controller/statistics/StudentNumberStatistics.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/controller/student/IdentityController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/controller/student/StudentController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/controller/studymeet/StudyLogController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/controller/studymeet/StudyMeetController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/controller/teacher/TeacherController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/dao/ActivitiesDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/dao/ActivityRecordDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/dao/AwardDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/dao/AwardRecordDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/dao/CategoryDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/dao/ClassSuggestDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/dao/ClassesDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/dao/ClassrecordDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/dao/ClassroomDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/dao/ClasstypeDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/dao/CourseTimeDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/dao/CoursesDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/dao/IdentitysDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/dao/InforRemindDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/dao/MeetRecordDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/dao/MemorabiliaDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/dao/PlanRecordDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/dao/PowerDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/dao/ProfessionDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/dao/ResourceDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/dao/RoleDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/dao/RosterDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/dao/ScientificDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/dao/SpecialManagerDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/dao/StudentDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/dao/StudentEnterDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/dao/StudentRecordDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/dao/StudyLogDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/dao/StudyMeetDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/dao/TeachManagerDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/dao/TeacherDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/dao/TermDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/dao/WorkNotesDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/dao/WorkPlanDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/dao/WorkSummaryDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/dao/initializingDao/CourseTimeInitializingDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/dao/initializingDao/RedisInitializing.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/dao/initializingDao/RoleInitializingDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/dto/StuAndStuEnter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/entity/Activities.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/entity/ActivityRecord.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/entity/Award.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/entity/AwardRecord.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/entity/Category.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/entity/ClassSuggest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/entity/Classes.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/entity/Classrecord.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/entity/Classroom.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/entity/Classtype.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/entity/CourseTime.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/entity/Courses.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/entity/Identitys.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/entity/InforRemind.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/entity/MeetRecord.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/entity/Memorabilia.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/entity/PlanRecord.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/entity/Power.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/entity/Profession.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/entity/Resource.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/entity/Role.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/entity/Roster.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/entity/Scientific.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/entity/SpecialManager.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/entity/Student.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/entity/StudentEnter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/entity/StudentRecord.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/entity/StudyLog.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/entity/StudyMeet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/entity/TeachManager.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/entity/Teacher.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/entity/Term.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/entity/User.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/entity/WeekClass.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/entity/WorkNotes.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/entity/WorkPlan.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/entity/WorkSummary.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/enums/CategoryEnum.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/enums/StatusEnum.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/enums/WeekEnum.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/exception/ExceptionEnum.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/exception/TjoaException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/exception/TjoaExceptionResolver.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/filter/AuthFilter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/filter/SimpleCORSFilter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/interceptor/AuthInterceptor.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/service/ActivitiesService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/service/ActivityRecordService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/service/AwardRecordService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/service/AwardServie.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/service/CategoryService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/service/ClassRoomService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/service/ClassSuggestService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/service/ClassesService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/service/CourseService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/service/IdentityService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/service/MeetRecordService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/service/MemorabiliaService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/service/PowerService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/service/ProfessionService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/service/ResourceService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/service/RoleService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/service/RosterService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/service/ScheduleClassService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/service/ScientificService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/service/SpecialManagerService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/service/StudentRecordService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/service/StudentService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/service/StudyLogService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/service/StudyMeetService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/service/TeachManagerService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/service/TeacherService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/service/TermService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/service/WorkNotesService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/service/WorkPlanService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/service/WorkSummaryService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/service/impl/ActivitiesServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/service/impl/ActivityRecordServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/service/impl/AwardRecordServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/service/impl/AwardServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/service/impl/ClassRoomServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/service/impl/ClassSuggestServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/service/impl/ClassesServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/service/impl/CourseServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/service/impl/IdentityServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/service/impl/MeetRecordServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/service/impl/MemorabiliaServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/service/impl/PowerServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/service/impl/ResourceServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/service/impl/RoleServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/service/impl/RosterServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/service/impl/ScheduleClassServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/service/impl/ScientificServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/service/impl/SpecialManagerServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/service/impl/StudentRecordServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/service/impl/StudentServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/service/impl/StudyLogServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/service/impl/StudyMeetServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/service/impl/TeachManagerServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/service/impl/TeacherServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/service/impl/TermServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/service/impl/WorkNotesServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/service/impl/WorkPlanServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/service/impl/WorkSummaryServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/service/impl/categoryServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/service/impl/professionServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/service/statistics/StuBaseStatisticsService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/service/statistics/StuNumStatisticsService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/service/statistics/impl/StuBaseStatisticsServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/service/statistics/impl/StuNumStatisticsServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/sysAop/PagingAop.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/timeTask/TermTimeTask.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/util/DocUtil.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/util/ExcelUtil.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/util/FileUtil.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/util/ObectUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/util/WordDocument.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/zrtjoa/vo/PowerVo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/resource/jdbc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/resource/log4j.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/resource/mapper/ActivitiesMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/back_server/src/main/resource/mapper/ActivitiesMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/resource/mapper/ActivityRecordMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/back_server/src/main/resource/mapper/ActivityRecordMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/resource/mapper/AwardMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/back_server/src/main/resource/mapper/AwardMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/resource/mapper/AwardRecordMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/back_server/src/main/resource/mapper/AwardRecordMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/resource/mapper/CategoryMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/resource/mapper/ClassSuggestMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/back_server/src/main/resource/mapper/ClassSuggestMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/resource/mapper/ClassesMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/resource/mapper/ClassrecordMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/resource/mapper/ClassroomMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/back_server/src/main/resource/mapper/ClassroomMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/resource/mapper/ClasstypeMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/resource/mapper/CourseTimeMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/resource/mapper/CoursesMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/back_server/src/main/resource/mapper/CoursesMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/resource/mapper/IdentityMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/resource/mapper/InforRemindMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/resource/mapper/MeetRecordMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/back_server/src/main/resource/mapper/MeetRecordMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/resource/mapper/MemorabiliaMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/back_server/src/main/resource/mapper/MemorabiliaMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/resource/mapper/PlanRecordMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/resource/mapper/PowerMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/back_server/src/main/resource/mapper/PowerMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/resource/mapper/ProfessionMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/resource/mapper/ResourceMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/back_server/src/main/resource/mapper/ResourceMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/resource/mapper/RoleMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/resource/mapper/RosterMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/back_server/src/main/resource/mapper/RosterMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/resource/mapper/ScientificMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/back_server/src/main/resource/mapper/ScientificMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/resource/mapper/SpecialManagerMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/back_server/src/main/resource/mapper/SpecialManagerMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/resource/mapper/StudentEnterMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/resource/mapper/StudentMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/resource/mapper/StudentRecordMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/resource/mapper/StudyLogMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/resource/mapper/StudyMeetMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/resource/mapper/TeachManagerMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/resource/mapper/TeacherMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/resource/mapper/TermMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/resource/mapper/WorkNotesMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/back_server/src/main/resource/mapper/WorkNotesMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/resource/mapper/WorkPlanMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/back_server/src/main/resource/mapper/WorkPlanMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/resource/mapper/WorkSummaryMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/back_server/src/main/resource/mapper/WorkSummaryMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/resource/redis.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/resource/spring-mvc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/resource/spring-mybatis.xml" beforeDir="false" afterPath="$PROJECT_DIR$/back_server/src/main/resource/spring-mybatis.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/resource/spring-task.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/resource/templates/activities.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/resource/templates/activitiesrecord.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/resource/templates/award.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/resource/templates/awardrecord.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/resource/templates/leave.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/resource/templates/memorabilia.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/resource/templates/resource.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/resource/templates/scientific.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/resource/templates/specialmanager.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/resource/templates/test.ftl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/resource/templates/worknotes.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/resource/templates/workplan.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/resource/templates/worksummary.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/test/com/zrtjoa/base/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/back_server/src/main/test/com/zhu/test/Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/webapp/WEB-INF/jsp/error.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/webapp/WEB-INF/web.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/webapp/index.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/zrtjoa.iml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -1380,24 +429,7 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\zwy\project\svn\zrtjoa\service" />
-      <recent name="C:\zwy\project\svn\zrtjoa\customer" />
-    </key>
-  </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration default="true" type="ClojureREPL" factoryName="Local" activateToolWindowBeforeRun="false">
       <setting name="displayName" value="" />
       <setting name="replType" value="NREPL" />
@@ -1410,22 +442,10 @@
       <setting name="fixLineNumbers" value="false" />
       <method v="2" />
     </configuration>
-    <configuration default="true" type="ClojureREPL" factoryName="Remote" activateToolWindowBeforeRun="false">
-      <setting name="displayName" value="" />
-      <setting name="host" value="" />
-      <setting name="port" value="0" />
-      <setting name="replType" value="NREPL" />
-      <setting name="configType" value="SPECIFY" />
-      <setting name="fixLineNumbers" value="false" />
-      <method v="2" />
-    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SshConsoleOptionsProvider">
     <option name="myEncoding" value="UTF-8" />
-  </component>
-  <component name="SvnConfiguration">
-    <configuration>C:\Users\admin\AppData\Roaming\Subversion</configuration>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -1443,45 +463,62 @@
       <workItem from="1610598581608" duration="1330000" />
       <workItem from="1610603972266" duration="665000" />
       <workItem from="1610609678880" duration="1860000" />
+      <workItem from="1610674535727" duration="491000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="修改敏感信息及项目结构" />
     <option name="LAST_COMMIT_MESSAGE" value="修改敏感信息及项目结构" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="1809" y="-68" key="CommitChangelistDialog2" timestamp="1610610144250">
+    <state x="1809" y="-68" key="CommitChangelistDialog2" timestamp="1610674981802">
       <screen x="1366" y="-180" width="1920" height="1050" />
     </state>
-    <state x="1809" y="-68" key="CommitChangelistDialog2/0.0.1366.738/1366.-180.1920.1050@1366.-180.1920.1050" timestamp="1610610144250" />
+    <state x="1809" y="-68" key="CommitChangelistDialog2/0.0.1366.738/1366.-180.1920.1050@1366.-180.1920.1050" timestamp="1610674981802" />
     <state x="2106" y="115" key="FileChooserDialogImpl" timestamp="1610604640539">
       <screen x="1366" y="-180" width="1920" height="1080" />
     </state>
     <state x="2106" y="115" key="FileChooserDialogImpl/0.0.1366.768/1366.-180.1920.1080@1366.-180.1920.1080" timestamp="1610604640539" />
-    <state width="1877" height="277" key="GridCell.Tab.0.bottom" timestamp="1610610144515">
+    <state width="938" height="277" key="GridCell.Tab.0.bottom" timestamp="1610675032947">
       <screen x="1366" y="-180" width="1920" height="1050" />
     </state>
-    <state width="1877" height="277" key="GridCell.Tab.0.bottom/0.0.1366.738/1366.-180.1920.1050@1366.-180.1920.1050" timestamp="1610610144515" />
-    <state width="1877" height="277" key="GridCell.Tab.0.center" timestamp="1610610144515">
+    <state width="938" height="277" key="GridCell.Tab.0.bottom/0.0.1366.738/1366.-180.1920.1050@1366.-180.1920.1050" timestamp="1610675032947" />
+    <state width="938" height="277" key="GridCell.Tab.0.center" timestamp="1610675032947">
       <screen x="1366" y="-180" width="1920" height="1050" />
     </state>
-    <state width="1877" height="277" key="GridCell.Tab.0.center/0.0.1366.738/1366.-180.1920.1050@1366.-180.1920.1050" timestamp="1610610144515" />
-    <state width="1877" height="277" key="GridCell.Tab.0.left" timestamp="1610610144515">
+    <state width="938" height="277" key="GridCell.Tab.0.center/0.0.1366.738/1366.-180.1920.1050@1366.-180.1920.1050" timestamp="1610675032947" />
+    <state width="938" height="277" key="GridCell.Tab.0.left" timestamp="1610675032947">
       <screen x="1366" y="-180" width="1920" height="1050" />
     </state>
-    <state width="1877" height="277" key="GridCell.Tab.0.left/0.0.1366.738/1366.-180.1920.1050@1366.-180.1920.1050" timestamp="1610610144515" />
-    <state width="1877" height="277" key="GridCell.Tab.0.right" timestamp="1610610144515">
+    <state width="938" height="277" key="GridCell.Tab.0.left/0.0.1366.738/1366.-180.1920.1050@1366.-180.1920.1050" timestamp="1610675032947" />
+    <state width="938" height="277" key="GridCell.Tab.0.right" timestamp="1610675032947">
       <screen x="1366" y="-180" width="1920" height="1050" />
     </state>
-    <state width="1877" height="277" key="GridCell.Tab.0.right/0.0.1366.738/1366.-180.1920.1050@1366.-180.1920.1050" timestamp="1610610144515" />
-    <state x="1864" y="6" key="SettingsEditor" timestamp="1610604643389">
-      <screen x="1366" y="-180" width="1920" height="1080" />
+    <state width="938" height="277" key="GridCell.Tab.0.right/0.0.1366.738/1366.-180.1920.1050@1366.-180.1920.1050" timestamp="1610675032947" />
+    <state x="443" y="30" key="SettingsEditor" timestamp="1610674813848">
+      <screen x="0" y="0" width="1366" height="738" />
     </state>
+    <state x="443" y="30" key="SettingsEditor/0.0.1366.738/1366.-180.1920.1050@1366.-180.1920.1050" timestamp="1610674813848" />
     <state x="1864" y="6" key="SettingsEditor/0.0.1366.768/1366.-180.1920.1080@1366.-180.1920.1080" timestamp="1610604643389" />
+    <state x="2134" y="260" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1610674993766">
+      <screen x="1366" y="-180" width="1920" height="1050" />
+    </state>
+    <state x="2134" y="260" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.738/1366.-180.1920.1050@1366.-180.1920.1050" timestamp="1610674993766" />
     <state x="2012" y="56" width="628" height="578" key="find.popup" timestamp="1610610321412">
       <screen x="1366" y="-180" width="1920" height="1050" />
     </state>

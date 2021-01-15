@@ -1,5 +1,0 @@
-redis-server.exe redis.windows.conf
-
-redis-cli.exe
-
-config set requirepass root

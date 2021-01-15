@@ -43,11 +43,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a23d5f46-ed1a-4f8a-8ebe-c4ec36a21c09" name="Default Changelist" comment="修改敏感信息及项目结构">
+    <list default="true" id="a23d5f46-ed1a-4f8a-8ebe-c4ec36a21c09" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/apache-tomcat-7.0.88-src/java/javax/servlet/resources/j2ee_web_services_client_1_1.xsd" beforeDir="false" afterPath="$PROJECT_DIR$/Tomcat/apache-tomcat-7.0.88-src/java/javax/servlet/resources/j2ee_web_services_client_1_1.xsd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back_server/back_server.iml" beforeDir="false" afterPath="$PROJECT_DIR$/back_server/back_server.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back_server/src/main/resource/jdbc.properties" beforeDir="false" afterPath="$PROJECT_DIR$/back_server/src/main/resource/jdbc.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,6 +81,7 @@
     <option name="showVisibilityIcons" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -290,8 +289,30 @@
       <workItem from="1610603972266" duration="665000" />
       <workItem from="1610609678880" duration="1860000" />
       <workItem from="1610674535727" duration="491000" />
-      <workItem from="1610675688701" duration="1972000" />
+      <workItem from="1610675688701" duration="4179000" />
     </task>
+    <task id="LOCAL-00001" summary="修改项目结构">
+      <created>1610679267428</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1610679267428</updated>
+    </task>
+    <task id="LOCAL-00002" summary="修改敏感信息">
+      <created>1610679383232</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1610679383232</updated>
+    </task>
+    <task id="LOCAL-00003" summary="修改敏感信息">
+      <created>1610679395895</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1610679395895</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -311,7 +332,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="修改敏感信息及项目结构" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改敏感信息及项目结构" />
+    <MESSAGE value="修改项目结构" />
+    <MESSAGE value="修改敏感信息" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改敏感信息" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1952" y="23" key="#Inspections" timestamp="1610676033020">
@@ -322,14 +345,14 @@
       <screen x="1366" y="-180" width="1920" height="1050" />
     </state>
     <state x="2065" y="171" key="#Notifications/0.0.1366.738/1366.-180.1920.1050@1366.-180.1920.1050" timestamp="1610675715060" />
-    <state x="1780" y="0" width="1092" height="728" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1610679138848">
+    <state x="1780" y="0" width="1092" height="728" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1610680762173">
       <screen x="1366" y="-180" width="1920" height="1050" />
     </state>
-    <state x="1780" y="0" width="1092" height="728" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.738/1366.-180.1920.1050@1366.-180.1920.1050" timestamp="1610679138848" />
-    <state x="1809" y="-68" key="CommitChangelistDialog2" timestamp="1610676482202">
+    <state x="1780" y="0" width="1092" height="728" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.738/1366.-180.1920.1050@1366.-180.1920.1050" timestamp="1610680762173" />
+    <state x="1809" y="-68" key="CommitChangelistDialog2" timestamp="1610679394618">
       <screen x="1366" y="-180" width="1920" height="1050" />
     </state>
-    <state x="1809" y="-68" key="CommitChangelistDialog2/0.0.1366.738/1366.-180.1920.1050@1366.-180.1920.1050" timestamp="1610676482202" />
+    <state x="1809" y="-68" key="CommitChangelistDialog2/0.0.1366.738/1366.-180.1920.1050@1366.-180.1920.1050" timestamp="1610679394618" />
     <state x="2106" y="115" key="FileChooserDialogImpl" timestamp="1610604640539">
       <screen x="1366" y="-180" width="1920" height="1080" />
     </state>
@@ -355,6 +378,10 @@
     </state>
     <state x="443" y="30" key="SettingsEditor/0.0.1366.738/1366.-180.1920.1050@1366.-180.1920.1050" timestamp="1610674813848" />
     <state x="1864" y="6" key="SettingsEditor/0.0.1366.768/1366.-180.1920.1080@1366.-180.1920.1080" timestamp="1610604643389" />
+    <state x="1918" y="78" key="Vcs.Push.Dialog.v2" timestamp="1610679411262">
+      <screen x="1366" y="-180" width="1920" height="1050" />
+    </state>
+    <state x="1918" y="78" key="Vcs.Push.Dialog.v2/0.0.1366.738/1366.-180.1920.1050@1366.-180.1920.1050" timestamp="1610679411262" />
     <state x="2134" y="260" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1610675758699">
       <screen x="1366" y="-180" width="1920" height="1050" />
     </state>

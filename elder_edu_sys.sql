@@ -1,10 +1,5 @@
 /*
  Navicat Premium Data Transfer
-
- Source Server         : 111.231.115.198
- Source Server Type    : MySQL
- Source Server Version : 80022
- Source Host           : 111.231.115.198:3306
  Source Schema         : elder_edu_sys
 
  Target Server Type    : MySQL

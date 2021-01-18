@@ -39,14 +39,14 @@ public class CourseTimeInitializingDao implements InitializingBean {
      *
      * @date 2018/12/8 11:27
      */
-    private static List<CourseTime> courseTime= new ArrayList<>();
+    private static final List<CourseTime> COURSE_TIME = new ArrayList<>();
 
     /**
      *  有效时间段
      *
      * @date 2018/12/8 11:27
      */
-    private static List<String> timeList = new ArrayList<>();
+    private static final List<String> TIME_LIST = new ArrayList<>();
 
     @Autowired
     private CourseTimeDao courseTimeDao ;
@@ -69,23 +69,23 @@ public class CourseTimeInitializingDao implements InitializingBean {
         courseTimeList = courseTimeDao.queryAllTimeSlot();
 
         //todo-此处不安全，如果同时有另外的请求，因为时间list被清空，其查询为空
-        courseTime.clear();
-        timeList.clear();
+        COURSE_TIME.clear();
+        TIME_LIST.clear();
         courseTimeList.forEach(ctl->{
             if(SysConstant.IsEnable.ENABLE.equals(ctl.getStatus())){
-                courseTime.add(ctl);
-                timeList.add(ctl.getTime());
+                COURSE_TIME.add(ctl);
+                TIME_LIST.add(ctl.getTime());
             }
         });
     }
 
 
     public static List<String> getActiveTime(){
-        return timeList ;
+        return TIME_LIST ;
     }
 
     public static List<CourseTime> queryActiveCourseTime(){
-        return courseTime ;
+        return COURSE_TIME;
     }
 
     public Integer addCourseTime(CourseTime oneTime){
@@ -129,7 +129,7 @@ public class CourseTimeInitializingDao implements InitializingBean {
      * @date 2018/12/10 9:54
      */
     public static CourseTime queryTimeSlotBySlotId(String courseid) {
-        List<CourseTime> newCourseTime = courseTime.stream().filter(ct->courseid.equals(ct.getId().toString())).collect(Collectors.toList());
+        List<CourseTime> newCourseTime = COURSE_TIME.stream().filter(ct->courseid.equals(ct.getId().toString())).collect(Collectors.toList());
         return newCourseTime.size()==0?new CourseTime():newCourseTime.get(0);
     }
 

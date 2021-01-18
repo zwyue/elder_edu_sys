@@ -37,19 +37,6 @@ public class IdentityController extends BaseController {
     }
 
     /**
-      * 学生身份维护新增页面
-      * @author yangli
-      * @date 2019/1/11
-      */
-    /*@RequestMapping(value = "add",method = RequestMethod.GET)
-    public ModelAndView add(){
-        ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("student/identity/identity_add");
-        return modelAndView;
-        //return "student/identity/identity_add";
-    }*/
-
-    /**
       * 学生身份新增保存
       * @author yangli
       * @date 2019/1/11

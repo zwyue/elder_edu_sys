@@ -8,13 +8,12 @@ import com.zhu.base.vo.PowerVo;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpSession;
-import javax.ws.rs.DELETE;
-import javax.ws.rs.GET;
-import javax.ws.rs.POST;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -39,9 +38,8 @@ public class PowerController extends BaseController {
     @Autowired
     private PowerService powerService ;
 
-    @RequestMapping("/powers")
-    @POST
-    public Map powers() {
+    @PostMapping("/powers")
+    public Map<String, Object> powers() {
         List<PowerVo> powerVos = powerService.queryPowerList(null);
         return ResultUtils.success(powerVos);
     }
@@ -52,9 +50,8 @@ public class PowerController extends BaseController {
      * @author zwy
      * @date 2019/1/2 13:27
      */
-    @RequestMapping("/query-menu")
-    @GET
-    public Map queryMenu(HttpSession httpSession){
+    @GetMapping("/query-menu")
+    public Map<String, Object> queryMenu(HttpSession httpSession){
         logger.info(".....登陆后请求菜单");
         Map<String,Object> map = new HashMap<>(MAP_DEFAULT_SIZE);
         map.put("menu",getMenuPower(httpSession));

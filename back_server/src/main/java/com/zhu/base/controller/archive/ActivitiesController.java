@@ -9,14 +9,11 @@ import com.zhu.base.entity.Teacher;
 import com.zhu.base.service.ActivitiesService;
 import com.zhu.base.util.DocUtil;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import javax.ws.rs.GET;
 import java.util.HashMap;
 import java.util.Map;
 

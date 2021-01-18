@@ -38,7 +38,7 @@ public class RoleController {
      */
     @RequestMapping("/role-list")
     @GET
-    public Map queryRoleList(Role role,Integer page,Integer size){
+    public Map<String, Object> queryRoleList(Role role,Integer page,Integer size){
         logger.info("........查看角色列表.......");
         return ResultUtils.success(roleService.queryRole(role,page,size));
     }
@@ -51,7 +51,7 @@ public class RoleController {
      */
     @RequestMapping(value = "/create")
     @POST
-    public Map createNewRole(Role role){
+    public Map<String, Object> createNewRole(Role role){
         roleService.createNewRole(role);
         return ResultUtils.success() ;
     }
@@ -64,7 +64,7 @@ public class RoleController {
      */
     @RequestMapping(value = "/delete")
     @DELETE
-    public Map deleteRoleByRoleId(Integer roleId){
+    public Map<String, Object> deleteRoleByRoleId(Integer roleId){
         logger.info(".......删除角色.......id:{}",roleId);
         Role role = roleService.selectByPrimaryKey(roleId);
         if("班主任".equals(role.getRolename()) || "管理员".equals(role.getRolename())){
@@ -83,7 +83,7 @@ public class RoleController {
      */
     @RequestMapping(value = "/allocate")
     @POST
-    public Map allocateRole(Integer userId,Integer roleId){
+    public Map<String, Object> allocateRole(Integer userId,Integer roleId){
         logger.info("......{}用户绑定角色{}......",userId,roleId);
         roleService.allocateRole(userId,roleId);
         return ResultUtils.success();
@@ -97,8 +97,8 @@ public class RoleController {
      */
     @RequestMapping(value = "/untiedrole")
     @POST
-    public Map untiedRole(Teacher teacher){
-        logger.info("......{}用户绑定角色{}......",teacher.getId());
+    public Map<String, Object> untiedRole(Teacher teacher){
+        logger.info("......用户绑定角色{}......",teacher.getId());
         return ResultUtils.success(roleService.untiedRole(teacher));
     }
 
@@ -110,7 +110,7 @@ public class RoleController {
      */
     @RequestMapping("/detail")
     @GET
-    public Map roleDetail(Integer roleId){
+    public Map<String, Object> roleDetail(Integer roleId){
         return ResultUtils.success(roleService.queryRoleDetail(roleId)) ;
     }
 
@@ -122,7 +122,7 @@ public class RoleController {
      */
     @RequestMapping("/update")
     @GET
-    public Map updateRole(Role role){
+    public Map<String, Object> updateRole(Role role){
         return ResultUtils.success(roleService.updateRole(role)) ;
     }
 }

@@ -1,2 +1,10 @@
 /.idea/
 /back_server/src/main/resource/jdbc.properties
+target
+/build
+/out
+/.gradle
+/.idea
+/*.iml
+/.classpath
+/.project
